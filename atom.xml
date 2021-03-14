@@ -6,7 +6,7 @@
   <link href="https://maple-pro.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://maple-pro.github.io/blog/"/>
-  <updated>2021-03-13T11:31:32.155Z</updated>
+  <updated>2021-03-14T15:06:58.910Z</updated>
   <id>https://maple-pro.github.io/blog/</id>
   
   <author>
@@ -21,10 +21,10 @@
     <link href="https://maple-pro.github.io/blog/2021/03/13/CF%20618%20(Div.2)/"/>
     <id>https://maple-pro.github.io/blog/2021/03/13/CF%20618%20(Div.2)/</id>
     <published>2021-03-13T11:40:36.000Z</published>
-    <updated>2021-03-13T11:31:32.155Z</updated>
+    <updated>2021-03-14T15:06:58.910Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;1300A-Non-zero&quot;&gt;&lt;a href=&quot;#1300A-Non-zero&quot; class=&quot;headerlink&quot; title=&quot;1300A. Non-zero*&quot;&gt;&lt;/a&gt;1300A. Non-zero*&lt;/h2&gt;&lt;p&gt;很简单，先判断数组中有多少个零，再判断数组各元素之和+零的个数是否等于零。若等于，输出零的个数+1；若不等于，输出零的个数。&lt;/p&gt;</summary>
+    <summary type="html">Codeforces Round 618, div.2</summary>
     
     
     
@@ -38,10 +38,10 @@
     <link href="https://maple-pro.github.io/blog/2021/03/13/CF%20620%20(Div.2)/"/>
     <id>https://maple-pro.github.io/blog/2021/03/13/CF%20620%20(Div.2)/</id>
     <published>2021-03-13T11:30:36.000Z</published>
-    <updated>2021-03-13T11:31:44.148Z</updated>
+    <updated>2021-03-14T15:09:53.100Z</updated>
     
     
-    <summary type="html">&lt;p&gt;今天被自己写的代码恶心到了……挂出来引以为戒&lt;/p&gt;</summary>
+    <summary type="html">Codeforces Round 620, div.2</summary>
     
     
     
@@ -55,11 +55,10 @@
     <link href="https://maple-pro.github.io/blog/2021/03/13/CF%20652%20(Div.2)/"/>
     <id>https://maple-pro.github.io/blog/2021/03/13/CF%20652%20(Div.2)/</id>
     <published>2021-03-13T11:24:36.000Z</published>
-    <updated>2021-03-13T11:31:56.369Z</updated>
+    <updated>2021-03-14T15:10:06.582Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;A-FashionanLee&quot;&gt;&lt;a href=&quot;#A-FashionanLee&quot; class=&quot;headerlink&quot; title=&quot;A. FashionanLee*&quot;&gt;&lt;/a&gt;A. FashionanLee*&lt;/h2&gt;&lt;p&gt;签到题&lt;/p&gt;
-&lt;p&gt;利用凸多边形外角和为360°可得，当$ 90 \pmod{360/n} = 0 $ 时，满足要求&lt;/p&gt;</summary>
+    <summary type="html">Codeforces Round 652, div.2</summary>
     
     
     
@@ -73,15 +72,10 @@
     <link href="https://maple-pro.github.io/blog/2021/03/13/CF%20661%20(Div.3)/"/>
     <id>https://maple-pro.github.io/blog/2021/03/13/CF%20661%20(Div.3)/</id>
     <published>2021-03-13T11:22:36.000Z</published>
-    <updated>2021-03-13T11:32:14.740Z</updated>
+    <updated>2021-03-14T15:10:25.809Z</updated>
     
     
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;我胡汉三又回来啦，这段时间会更新题解和MIT6.828的内容，可能会更其他的学习笔记什么的&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;A-Remove-Smallest&quot;&gt;&lt;a href=&quot;#A-Remove-Smallest&quot; class=&quot;headerlink&quot; title=&quot;A. Remove Smallest*&quot;&gt;&lt;/a&gt;A. Remove Smallest*&lt;/h2&gt;&lt;p&gt;贪心，排序。&lt;/p&gt;
-&lt;p&gt;签到题。&lt;/p&gt;
-&lt;p&gt;把数据排序一下，然后遍历即可。&lt;/p&gt;</summary>
+    <summary type="html">Codeforces Round 661, div.3</summary>
     
     
     
@@ -95,12 +89,10 @@
     <link href="https://maple-pro.github.io/blog/2021/03/13/Edu%20CF%20R%2090%20(Div.2)/"/>
     <id>https://maple-pro.github.io/blog/2021/03/13/Edu%20CF%20R%2090%20(Div.2)/</id>
     <published>2021-03-13T11:20:36.000Z</published>
-    <updated>2021-03-13T11:32:55.122Z</updated>
+    <updated>2021-03-14T15:10:57.414Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;A-Donut-Shops&quot;&gt;&lt;a href=&quot;#A-Donut-Shops&quot; class=&quot;headerlink&quot; title=&quot;A. Donut Shops*&quot;&gt;&lt;/a&gt;A. Donut Shops*&lt;/h2&gt;&lt;p&gt;两个临界条件：&lt;/p&gt;
-&lt;p&gt;买一个时如果甲店更便宜，$ x1=1 $，否则，$ x1=-1 $；&lt;/p&gt;
-&lt;p&gt;买$ b $件时如果乙店更便宜，$ x2=b $，否则，$ x2=-1 $。&lt;/p&gt;</summary>
+    <summary type="html">Educational Codeforces Round 90, div.2</summary>
     
     
     
@@ -114,13 +106,10 @@
     <link href="https://maple-pro.github.io/blog/2021/03/13/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E6%96%B0%E7%94%9F%E5%AF%92%E5%81%87%E9%9B%86%E8%AE%AD---Day5/"/>
     <id>https://maple-pro.github.io/blog/2021/03/13/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E6%96%B0%E7%94%9F%E5%AF%92%E5%81%87%E9%9B%86%E8%AE%AD---Day5/</id>
     <published>2021-03-13T11:16:36.000Z</published>
-    <updated>2021-03-13T11:24:10.595Z</updated>
+    <updated>2021-03-14T15:19:06.295Z</updated>
     
     
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;开始写题解了，一方面做一个记录，一方面督促自己。奥里给！&lt;br&gt;题号后的 * 为难度系数&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;A-Solving-Order&quot;&gt;&lt;a href=&quot;#A-Solving-Order&quot; class=&quot;headerlink&quot; title=&quot;A. Solving Order*&quot;&gt;&lt;/a&gt;A. Solving Order*&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=5702&quot;&gt;HDU - 5702&lt;/a&gt;&lt;br&gt;结构体排序&lt;/p&gt;</summary>
+    <summary type="html">Editorial for training in WHU, day 5.</summary>
     
     
     
@@ -134,16 +123,16 @@
     <link href="https://maple-pro.github.io/blog/2021/03/13/Java%E5%AD%A6%E4%B9%A0%EF%BC%9A4.%20Array%20and%20Collection/"/>
     <id>https://maple-pro.github.io/blog/2021/03/13/Java%E5%AD%A6%E4%B9%A0%EF%BC%9A4.%20Array%20and%20Collection/</id>
     <published>2021-03-13T11:14:36.000Z</published>
-    <updated>2021-03-13T11:20:38.882Z</updated>
+    <updated>2021-03-14T15:19:14.724Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;4-1-枚举&quot;&gt;&lt;a href=&quot;#4-1-枚举&quot; class=&quot;headerlink&quot; title=&quot;4.1 枚举&quot;&gt;&lt;/a&gt;4.1 枚举&lt;/h1&gt;</summary>
+    <summary type="html">Introduce the array and collection in java.</summary>
     
     
     
-    <category term="Java" scheme="https://maple-pro.github.io/blog/categories/Java/"/>
+    <category term="学习笔记" scheme="https://maple-pro.github.io/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="学习笔记" scheme="https://maple-pro.github.io/blog/categories/Java/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="Java" scheme="https://maple-pro.github.io/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/"/>
     
     
   </entry>
@@ -153,23 +142,16 @@
     <link href="https://maple-pro.github.io/blog/2021/03/13/Java%E5%AD%A6%E4%B9%A0%EF%BC%9A3.%20Methods/"/>
     <id>https://maple-pro.github.io/blog/2021/03/13/Java%E5%AD%A6%E4%B9%A0%EF%BC%9A3.%20Methods/</id>
     <published>2021-03-13T11:12:36.000Z</published>
-    <updated>2021-03-13T11:20:34.097Z</updated>
+    <updated>2021-03-14T15:15:56.040Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;3-1-Method-Call-Stack-and-Activation-Records&quot;&gt;&lt;a href=&quot;#3-1-Method-Call-Stack-and-Activation-Records&quot; class=&quot;headerlink&quot; title=&quot;3.1 Method-Call Stack and Activation Records&quot;&gt;&lt;/a&gt;3.1 Method-Call Stack and Activation Records&lt;/h1&gt;&lt;h2 id=&quot;3-1-1-Stack-data-structure&quot;&gt;&lt;a href=&quot;#3-1-1-Stack-data-structure&quot; class=&quot;headerlink&quot; title=&quot;3.1.1 Stack data structure&quot;&gt;&lt;/a&gt;3.1.1 Stack data structure&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Pushing&lt;/strong&gt;: Placing a dish on the pile at the top&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Popping&lt;/strong&gt;: Removing a dish from the pile from the top&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;LIFO&lt;/strong&gt; data structures: The last item pushed(inserted) on the stack is the first item popped(removed) from the stack. (&lt;strong&gt;last-in, first-out&lt;/strong&gt;)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;</summary>
+    <summary type="html">Introduce the method-call stack and activation records in java.</summary>
     
     
     
-    <category term="Java" scheme="https://maple-pro.github.io/blog/categories/Java/"/>
+    <category term="学习笔记" scheme="https://maple-pro.github.io/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="学习笔记" scheme="https://maple-pro.github.io/blog/categories/Java/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="Java" scheme="https://maple-pro.github.io/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/"/>
     
     
   </entry>
@@ -179,16 +161,16 @@
     <link href="https://maple-pro.github.io/blog/2021/03/13/Java%E5%AD%A6%E4%B9%A0%EF%BC%9A2.%20Basic%20Java%20Grammar/"/>
     <id>https://maple-pro.github.io/blog/2021/03/13/Java%E5%AD%A6%E4%B9%A0%EF%BC%9A2.%20Basic%20Java%20Grammar/</id>
     <published>2021-03-13T11:10:36.000Z</published>
-    <updated>2021-03-13T11:20:28.795Z</updated>
+    <updated>2021-03-14T15:15:15.682Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;2-1-Data-Type&quot;&gt;&lt;a href=&quot;#2-1-Data-Type&quot; class=&quot;headerlink&quot; title=&quot;2.1 Data Type&quot;&gt;&lt;/a&gt;2.1 Data Type&lt;/h1&gt;&lt;h2 id=&quot;2-1-1-基本数据类型&quot;&gt;&lt;a href=&quot;#2-1-1-基本数据类型&quot; class=&quot;headerlink&quot; title=&quot;2.1.1 基本数据类型&quot;&gt;&lt;/a&gt;2.1.1 基本数据类型&lt;/h2&gt;&lt;p&gt;数值类型：byte, short, int, long, float, double&lt;br&gt;其它类型：char, boolean&lt;br&gt;（无unsigned类型）&lt;/p&gt;</summary>
+    <summary type="html">Basic Java grammar, data type</summary>
     
     
     
-    <category term="Java" scheme="https://maple-pro.github.io/blog/categories/Java/"/>
+    <category term="学习笔记" scheme="https://maple-pro.github.io/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="学习笔记" scheme="https://maple-pro.github.io/blog/categories/Java/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="Java" scheme="https://maple-pro.github.io/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/"/>
     
     
   </entry>
@@ -198,16 +180,16 @@
     <link href="https://maple-pro.github.io/blog/2021/03/13/Java%E5%AD%A6%E4%B9%A0%EF%BC%9A1-Introduction-to-Java/"/>
     <id>https://maple-pro.github.io/blog/2021/03/13/Java%E5%AD%A6%E4%B9%A0%EF%BC%9A1-Introduction-to-Java/</id>
     <published>2021-03-13T11:07:36.000Z</published>
-    <updated>2021-03-13T11:20:25.100Z</updated>
+    <updated>2021-03-14T15:15:12.445Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;1-1-A-Typical-Java-Development-Environment&quot;&gt;&lt;a href=&quot;#1-1-A-Typical-Java-Development-Environment&quot; class=&quot;headerlink&quot; title=&quot;1.1 A Typical Java Development Environment&quot;&gt;&lt;/a&gt;1.1 A Typical Java Development Environment&lt;/h1&gt;&lt;h2 id=&quot;1-1-1-The-steps-to-create-and-execute-a-Java-application&quot;&gt;&lt;a href=&quot;#1-1-1-The-steps-to-create-and-execute-a-Java-application&quot; class=&quot;headerlink&quot; title=&quot;1.1.1 The steps to create and execute a Java application&quot;&gt;&lt;/a&gt;1.1.1 The steps to create and execute a Java application&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Phase 1: Edit&lt;/strong&gt;&lt;br&gt;Program is created in an editor and &lt;strong&gt;stored on disk&lt;/strong&gt; in a file whose name ends with &lt;em&gt;&lt;strong&gt;.java&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</summary>
+    <summary type="html">Introduce to java basic information</summary>
     
     
     
-    <category term="Java" scheme="https://maple-pro.github.io/blog/categories/Java/"/>
+    <category term="学习笔记" scheme="https://maple-pro.github.io/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="学习笔记" scheme="https://maple-pro.github.io/blog/categories/Java/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="Java" scheme="https://maple-pro.github.io/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/"/>
     
     
   </entry>
@@ -217,13 +199,10 @@
     <link href="https://maple-pro.github.io/blog/2021/03/13/site-records/"/>
     <id>https://maple-pro.github.io/blog/2021/03/13/site-records/</id>
     <published>2021-03-13T10:11:00.000Z</published>
-    <updated>2021-03-13T10:24:45.676Z</updated>
+    <updated>2021-03-14T15:19:10.882Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;域名和服务器选择&quot;&gt;&lt;a href=&quot;#域名和服务器选择&quot; class=&quot;headerlink&quot; title=&quot;域名和服务器选择&quot;&gt;&lt;/a&gt;域名和服务器选择&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;域名在&lt;a href=&quot;https://www.namesilo.com/&quot;&gt;NameSilo&lt;/a&gt;上买的，一年7刀（网上可以找到优惠码，可以优惠1刀）。服务器在[Vultr](https://    &lt;a href=&quot;http://www.vultr.com)上买的,走的日本线路,最便宜的那种,一个月5刀./&quot;&gt;www.vultr.com)上买的，走的日本线路，最便宜的那种，一个月5刀。&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这么简单的东西我居然也能踩坑，我也是服了。&lt;/p&gt;</summary>
+    <summary type="html">Record how I build my WordPress site.</summary>
     
     
     
@@ -237,10 +216,10 @@
     <link href="https://maple-pro.github.io/blog/2021/03/13/hello-world/"/>
     <id>https://maple-pro.github.io/blog/2021/03/13/hello-world/</id>
     <published>2021-03-13T04:42:11.994Z</published>
-    <updated>2021-03-13T11:17:13.708Z</updated>
+    <updated>2021-03-14T15:12:33.237Z</updated>
     
     
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;</summary>
+    <summary type="html">How to use hexo</summary>
     
     
     
