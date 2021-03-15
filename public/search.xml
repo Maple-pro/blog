@@ -992,7 +992,7 @@
 <li><code>Add (x, d)</code>：让$ A_x $增加$ d $</li>
 <li><code>Query (R)</code>：以$ O(log n) $的复杂度计算前缀和</li>
 </ul>
-<h3 id="1-1-lowbit"><a href="#1-1-lowbit" class="headerlink" title="1.1 lowbit"></a>1.1 lowbit</h3><p><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210315200852481.png" alt="image-20210315200852481"></p>
+<p><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210315200852481.png" alt="image-20210315200852481"></p>
 <p><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210315200956732.png" alt="image-20210315200956732"></p>
 <p><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210315201046181.png" alt="image-20210315201046181"></p>
 <p>注意：</p>

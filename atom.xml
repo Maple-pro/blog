@@ -6,7 +6,7 @@
   <link href="https://maple-pro.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://maple-pro.github.io/blog/"/>
-  <updated>2021-03-15T12:27:59.363Z</updated>
+  <updated>2021-03-15T12:30:24.997Z</updated>
   <id>https://maple-pro.github.io/blog/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://maple-pro.github.io/blog/2021/03/15/%E7%AE%97%E6%B3%95%EF%BC%9A%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%EF%BC%88Binary-Indexed-Tree%EF%BC%89/"/>
     <id>https://maple-pro.github.io/blog/2021/03/15/%E7%AE%97%E6%B3%95%EF%BC%9A%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%EF%BC%88Binary-Indexed-Tree%EF%BC%89/</id>
     <published>2021-03-15T11:58:36.000Z</published>
-    <updated>2021-03-15T12:27:59.363Z</updated>
+    <updated>2021-03-15T12:30:24.997Z</updated>
     
     
     <summary type="html">介绍树状数组的原理、代码实现和相应例题。参考《算法竞赛入门经典 训练指南》</summary>
