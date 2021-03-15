@@ -244,6 +244,9 @@
         <category>学习笔记</category>
         <category>Java</category>
       </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
   </entry>
   <entry>
     <title>Java学习：2. Basic Java Grammar</title>
@@ -330,6 +333,9 @@
         <category>学习笔记</category>
         <category>Java</category>
       </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
   </entry>
   <entry>
     <title>Java学习：3. Methods</title>
@@ -497,6 +503,9 @@
         <category>学习笔记</category>
         <category>Java</category>
       </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
   </entry>
   <entry>
     <title>Java学习：4. Array and Collection</title>
@@ -672,6 +681,9 @@
         <category>学习笔记</category>
         <category>Java</category>
       </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hello World</title>
@@ -749,6 +761,213 @@
       <categories>
         <category>题解</category>
       </categories>
+  </entry>
+  <entry>
+    <title>云计算1：大数据与云计算</title>
+    <url>/blog/2021/03/15/CloudComputing-1/</url>
+    <content><![CDATA[<h1 id="云计算1：大数据与云计算"><a href="#云计算1：大数据与云计算" class="headerlink" title="云计算1：大数据与云计算"></a>云计算1：大数据与云计算</h1><h2 id="1-IaaS-vs-PaaS-vs-SaaS"><a href="#1-IaaS-vs-PaaS-vs-SaaS" class="headerlink" title="1. IaaS vs PaaS vs SaaS"></a>1. IaaS vs PaaS vs SaaS</h2><p><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/v2-1a82f8a4997b0ba53d801639d4c6706e_r.jpg" alt="preview"></p>
+<ul>
+<li>IaaS: Infrastructure as a Service<ul>
+<li>a virtual machine</li>
+</ul>
+</li>
+<li>PaaS: Platform as a Service</li>
+<li>SaaS: Software as a Service</li>
+</ul>
+<h2 id="2-CAP-Principle"><a href="#2-CAP-Principle" class="headerlink" title="2. CAP Principle"></a>2. CAP Principle</h2><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20210303161406.png"  />
+
+<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20210303161730.png"  />
+
+<ul>
+<li>Consistency（一致性）<ul>
+<li>一个写操作返回成功，那么之后的读请求都必须读到这个新数据；如果返回失败，那么所有读操作都不能读到这个数据。所有节点访问同一份最新的数据。</li>
+</ul>
+</li>
+<li>Availability（可用性）<ul>
+<li>对数据更新具备高可用性，请求能够及时处理，不会一直等待，即使出现节点失效。</li>
+</ul>
+</li>
+<li>Partition Tolerance（分区容错性）<ul>
+<li>能容忍网络分区，在网络断开的情况下，被分隔的节点仍能正常对外提供服务。</li>
+</ul>
+</li>
+</ul>
+<p>不可能都达成，最多只能满足其中两个。</p>
+<p>理解CAP理论最简单的方式是想像两个副本处于分区两侧，即两个副本之间的网络断开，不能通信。</p>
+<blockquote>
+<ul>
+<li>如果允许其中一个副本更新，则会导致数据不一致，即丧失了C性质。</li>
+<li>如果为了保证一致性，将分区某一侧的副本设置为不可用，那么又丧失了A性质。</li>
+<li>除非两个副本可以互相通信，才能既保证C又保证A，这又会导致丧失P性质。</li>
+</ul>
+</blockquote>
+<p>一般来说，使用网络通信的分布式系统，无法舍弃P性质，那么就只能在一致性C和可用性A上做一个艰难的选择。</p>
+<h2 id="3-BASE-Theorem"><a href="#3-BASE-Theorem" class="headerlink" title="3. BASE Theorem"></a>3. BASE Theorem</h2><ul>
+<li>BA: Basically Available，基本可用</li>
+<li>S: Soft state，软状态</li>
+<li>E: Eventually consistent，最终一致</li>
+</ul>
+<p>核心思想：如果无法做到强一致性，或者做到强一致性要付出很大的代价，那么应用可以根据自身业务特点，采用适当的方式来使系统达到最终一致性，只要对最终用户没有影响，或者影响是可接受的即可。</p>
+<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20210303162448.png"  />
+
+<h2 id="4-奇数个节点（Zookeeper）"><a href="#4-奇数个节点（Zookeeper）" class="headerlink" title="4. 奇数个节点（Zookeeper）"></a>4. 奇数个节点（Zookeeper）</h2><ul>
+<li>防止由脑裂造成的集群不可用</li>
+<li>在容错能力相同的情况下，奇数台更节省资源</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>云计算2：Google云计算</title>
+    <url>/blog/2021/03/15/CloudComputing-2/</url>
+    <content><![CDATA[<h1 id="云计算2：Google云计算"><a href="#云计算2：Google云计算" class="headerlink" title="云计算2：Google云计算"></a>云计算2：Google云计算</h1><h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h2><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/hadoop-an-industry-perspective-8-728.jpg" alt="Apache Hadoop Ecosystem"  />
+
+<p>Hadoop实际上就是谷歌三宝的开源实现，Hadoop MapReduce对应Google MapReduce，HBase对应BigTable，HDFS对应GFS，Zookeepr对应Chubby。</p>
+<ul>
+<li>HDFS（或GFS）为上层提供高效的非结构化存储服务;</li>
+<li>HBase（或BigTable）是提供结构化数据服务的分布式数据库;</li>
+<li>Hadoop MapReduce（或Google MapReduce）是一种并行计算的编程模型，用于作业调度。</li>
+</ul>
+<h2 id="2-Google文件系统GFS"><a href="#2-Google文件系统GFS" class="headerlink" title="2. Google文件系统GFS"></a>2. Google文件系统GFS</h2><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210310144620112.png" alt="image-20210310144620112"  />
+
+<h3 id="2-1-系统架构"><a href="#2-1-系统架构" class="headerlink" title="2.1 系统架构"></a>2.1 系统架构</h3><p>GFS的系统架构如图2-1所示。GFS将整个系统的节点分为三类角色：Client（客户端）、Master（主服务器）和Chunk  Server（数据块服务器）。</p>
+<ul>
+<li>Client是GFS提供给应用程序的访问接口，它是一组专用接口，不遵守POSIX规范，以库文件的形式提供。应用程序直接调用这些库函数，并与该库链接在一起。</li>
+<li>Master是GFS的管理节点，在逻辑上只有一个，它保存系统的元数据，负责整个文件系统的管理，是GFS文件系统中的“大脑”。</li>
+<li>Chunk Server负责具体的存储工作。数据以文件的形式存储在Chunk Server上，Chunk Server的个数可以有多个，它的数目直接决定了GFS的规模。GFS将文件按照固定大小进行分块，默认是64MB，每一块称为一个Chunk（数据块），每个Chunk都有一个对应的索引号（Index）。</li>
+</ul>
+<h4 id="1-存取数据"><a href="#1-存取数据" class="headerlink" title="1. 存取数据"></a>1. 存取数据</h4><p>客户端在访问GFS时，首先访问Master节点，获取与之进行交互的Chunk Server信息，然后直接访问这些Chunk  Server，完成数据存取工作。</p>
+<p>GFS的这种设计方法实现了控制流和数据流的分离。Client与Master之间只有控制流，而无数据流，极大地降低了Master的负载。</p>
+<p>Client与Chunk  Server之间直接传输数据流，同时由于文件被分成多个Chunk进行分布式存储，Client可以同时访问多个Chunk  Server，从而使得整个系统的I/O高度并行，系统整体性能得到提高。</p>
+<h4 id="2-写入数据"><a href="#2-写入数据" class="headerlink" title="2. 写入数据"></a>2. 写入数据</h4><p>使用租约机制来保障在跨多个副本的数据写入中保持顺序一致性，减轻master的负担，有主副本所在的Chunk Server来负责控制流水线的安排。</p>
+<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/v2-73bf6805cb88448095875d3dd190d0af_720w.jpg" alt="img"  />
+
+<ol>
+<li>客户端向 Master 询问要写的 Chunk 的<strong>主副本和其他副本的位置</strong>。如果还没有主副本，那么 Master 就通过租约授权一个。</li>
+<li>Master 会给客户端这些位置信息，客户端会将其缓存起来。并且除非主副本不可达或者其租约到期，客户端不会再向 Master 发送请求。</li>
+<li>客户端将要写的数据推送给各个副本所在的服务器。这里需要注意的一个设计是，GFS 将<strong>数据流和控制流进行了解耦</strong>，即客户端可以以任何顺序进行数据推送而不用像控制流一样先到主备份再到从备份。这样可以使我们独立优化数据流的推送，甚至可以并行推送；对于大数据块写入是很有好处的，下面章节会详细讨论这个事情。每个 ChunkServer 收到数据后不立即落盘，而是使用 LRU 策略放在缓存里，这也是一个将网络IO和硬盘IO进行解耦的一个操作，一是为了提高效率，一是等待<strong>主备份安排写入顺序</strong>。</li>
+<li>当客户端被告知所有副本的数据推送完成后，会向主备份服务器发送写（落盘）请求。主备份所在服务器会把多个并发客户端（如果有的话）的写请求安排一个写入顺序（给每个写请求指定一个<strong>序列号</strong>），并将其写入前面所说的操作日志。</li>
+<li>主备份所在服务器将客户端的写请求以及序列号转给其他副本所在服务器。有了这个唯一对应的序列号，所有副本的落盘顺序就能保持一致。</li>
+<li>所有从备份服务器落完盘后给主备份所在服务器复命。</li>
+<li>主备份所在服务器回复客户端，如果任何副本写入出现了问题，都会报告给客户端。如果遇到问题，可能有两种：a. 所有副本数据均未落盘。b.部分副本数据落盘成功。对于后者就会出现不一致的状态。<strong>客户端</strong>的<strong>库代码</strong>（意味着不用应用代码进行处理）检测到错误后会进行重试，因此在真正成功写入之前，步骤 3~7 可能会重复多次。</li>
+</ol>
+<h4 id="3-分布式事务"><a href="#3-分布式事务" class="headerlink" title="3. 分布式事务"></a>3. 分布式事务</h4><p><strong>两阶段提交</strong>：两阶段提交，顾名思义就是要分两步提交。</p>
+<ul>
+<li>prepare: 存在一个负责协调各个本地资源管理器的事务管理器，本地资源管理器一般是由数据库实现，事务管理器在第一阶段的时候询问各个资源管理器是否都就绪？</li>
+<li>commit/rollback: 如果收到每个资源的回复都是 yes，则在第二阶段提交事务，如果其中任意一个资源的回复是 no, 则回滚事务。</li>
+</ul>
+<h4 id="4-特点"><a href="#4-特点" class="headerlink" title="4. 特点"></a>4. 特点</h4><ol>
+<li>采用中心服务器模式</li>
+<li>不缓存数据</li>
+<li>在用户态下实现</li>
+</ol>
+<h2 id="3-分布式数据处理MapReduce"><a href="#3-分布式数据处理MapReduce" class="headerlink" title="3. 分布式数据处理MapReduce"></a>3. 分布式数据处理MapReduce</h2><h3 id="3-1-编程模型"><a href="#3-1-编程模型" class="headerlink" title="3.1 编程模型"></a>3.1 编程模型</h3><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210310153753017.png" alt="image-20210310153753017"  />
+
+<p><strong>Map函数</strong>：对一部分原始数据进行指定的操作。每个Map操作都针对不同的原始数据，因此Map与Map之间是互相独立的，这使得它们可以充分并行化。</p>
+<p><strong>Reduce操作</strong>：对每个Map所产生的一部分中间结果进行合并操作，每个Reduce所处理的Map中间结果是互不交叉的，所有Reduce产生的最终结果经过简单连接就形成了完整的结果集。</p>
+<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210310154255885.png" alt="image-20210310154255885"  />
+
+<h3 id="3-2-容错机制"><a href="#3-2-容错机制" class="headerlink" title="3.2 容错机制"></a>3.2 容错机制</h3><ul>
+<li>Master失效<ul>
+<li>Master会周期性地设置检查点（checkpoint），并导出Master的数据。一旦某个任务失效，系统就从最近的一个检查点恢复并重新执行。由于只有一个Master在运行，如果Master失效了，则只能终止整个MapReduce程序的运行并重新开始。</li>
+</ul>
+</li>
+<li>Worker失效<ul>
+<li>Master会<strong>周期性地给Worker发送ping</strong>命令，如果没有Worker的应答，则Master认为Worker失效，终止对这个Worker的任务调度，把失效Worker的任务调度到其他Worker上重新执行。</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-其它的MapReduce"><a href="#4-其它的MapReduce" class="headerlink" title="4. 其它的MapReduce"></a>4. 其它的MapReduce</h2><h3 id="4-1-Java-Stream接口"><a href="#4-1-Java-Stream接口" class="headerlink" title="4.1 Java Stream接口"></a>4.1 Java Stream接口</h3><p><a href="https://www.runoob.com/java/java8-streams.html">https://www.runoob.com/java/java8-streams.html</a></p>
+<p><a href="https://blog.csdn.net/yy339452689/article/details/110956119">Stream详解</a></p>
+<p><a href="https://blog.csdn.net/yrsg666/article/details/92837145">spark中RDD算子分类整理</a></p>
+<p><a href="https://blog.csdn.net/qq_35885488/article/details/103185724">Spark无状态和有状态转化操作介绍</a></p>
+<p><a href="https://blog.csdn.net/zhangvalue/article/details/84780428">Spark基础 DAG</a></p>
+<p><a href="https://blog.csdn.net/beautiful_huang/article/details/104267573">kafka 转换算子</a></p>
+<p>Lambda表达式：函数式编程</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Java EE: Spring</title>
+    <url>/blog/2021/03/15/Java-EE-Spring/</url>
+    <content><![CDATA[<blockquote>
+<p>SSM:</p>
+<p>Spring</p>
+<p>SpringMVC</p>
+<p>Mybatis: ORM的一种(object ralation Mapping)，轻量级</p>
+</blockquote>
+<h1 id="1-Spring概述"><a href="#1-Spring概述" class="headerlink" title="1. Spring概述"></a>1. Spring概述</h1><ul>
+<li>Spring是分层的Java SE/EE应用</li>
+<li>以IoC (Inverse Of Control, 反转控制) 和AOP (Aspect Oriented Programming, 面向切面编程) 为内核<ul>
+<li>AOP是OOP的补充</li>
+<li>Java是静态语言，AOP使用反射等技术上改变Java的原生类</li>
+<li>AOP动态生成class对象</li>
+<li>IoC：创建模式，单例模式，多例模式…</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-面向对象的SOLID原则"><a href="#2-面向对象的SOLID原则" class="headerlink" title="2. 面向对象的SOLID原则"></a>2. 面向对象的SOLID原则</h1><ul>
+<li>Single Responsibility Principle (单一责任原则)</li>
+<li>Open-Closed Principle (开放封闭原则)</li>
+<li>Liskov Substitution Principle (里氏替换原则)</li>
+<li>Interface Segregation Principle (接口分离原则)</li>
+<li>Dependency Inversion Principle (依赖倒置原则)</li>
+</ul>
+<h1 id="3-反射"><a href="#3-反射" class="headerlink" title="3. 反射"></a>3. 反射</h1><ul>
+<li><p>RT-TI (Run Time Type Identificaiton)</p>
+</li>
+<li><p>反射的入口是Class类的对象</p>
+</li>
+<li><p>反射在java.lang.reflect包中</p>
+</li>
+<li><p>得到Class类对象的三种方式</p>
+</li>
+<li><p>调用类的构造函数</p>
+</li>
+<li><p>调用类的方法</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestReflect</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException </span>&#123;</span><br><span class="line">        <span class="comment">// 反射：通过Class类的对象为入口</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 得到Class类的对象</span></span><br><span class="line">        <span class="comment">// 1. getClass方法</span></span><br><span class="line">        String s = <span class="string">&quot;ab&quot;</span>;</span><br><span class="line">        Class aClass = s.getClass(); <span class="comment">// 一定有Class类的对象</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2. .class</span></span><br><span class="line">        Class c = <span class="keyword">int</span>.class; <span class="comment">// 不关注类的示例，直接去拿类对象，和类耦合(编译期错误）</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3. Class.forName</span></span><br><span class="line">        <span class="comment">// Class c2 = Class.forName(&quot;abc11&quot;); // 不关注类的实例，且不与类耦合（运行期错误）</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 得到constructor</span></span><br><span class="line">        <span class="comment">// Car.class.newInstance(); // 调用类的无参构造函数, 如果没有会报异常</span></span><br><span class="line"></span><br><span class="line">        Constructor constructor = Car.class.getConstructor(<span class="keyword">int</span>.class); <span class="comment">// 依据参数确定构造函数</span></span><br><span class="line">        Car newCar = (Car) constructor.newInstance(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 得到method</span></span><br><span class="line">        Method m = Car.class.getDeclaredMethod(<span class="string">&quot;f&quot;</span>, <span class="keyword">null</span>);</span><br><span class="line">        m.invoke(newCar, <span class="keyword">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TestReflect</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;in car f()...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="4-Spring中的IoC-amp-DI"><a href="#4-Spring中的IoC-amp-DI" class="headerlink" title="4. Spring中的IoC &amp; DI"></a>4. Spring中的IoC &amp; DI</h1><ul>
+<li><p>IoC：运行时创建对象 (JavaBean对象)</p>
+</li>
+<li><p>DI：将创建的对象根据依赖关系注入进去</p>
+</li>
+<li><p>Spring是一个管理对象的容器，用&lt;key, value&gt;对的形式来管理</p>
+</li>
+</ul>
+<h1 id="5-Annotation的定义与使用"><a href="#5-Annotation的定义与使用" class="headerlink" title="5. Annotation的定义与使用"></a>5. Annotation的定义与使用</h1><ul>
+<li>MetaAnnotation（元注解）：给注解的注解<ul>
+<li>@Documented :被注解的类会被记录在Java documentation中</li>
+<li>@Target(ElementType.TYPE)：表示注解可以用的地方</li>
+<li>@Retention(RetentionPolicy.RUNTIME)：表示注解写给谁看的，Annotation最远可以到什么地方<ul>
+<li>SOURCE：编译器</li>
+<li>CLASS：class loader</li>
+<li>RUNTIME: JVM</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>属性的定义</li>
+<li>使用反射来帮助找到Annotation（RUNTIME）</li>
+<li>Annotation之间的关系：<ul>
+<li>使用注解之间的修饰（相当于继承），除了元注解</li>
+<li>注解之间没有继承的关系</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@MyAnno(detail = &quot;abc&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        MyAnno myAnno = (MyAnno) Test.class.getAnnotation(MyAnno.class);</span><br><span class="line">        System.out.println(myAnno.value());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Documented</span></span><br><span class="line"><span class="meta">@Target(&#123;ElementType.TYPE, ElementType.METHOD&#125;)</span></span><br><span class="line"><span class="meta">@Retention(RetentionPolicy.RUNTIME)</span></span><br><span class="line"><span class="meta">@interface</span> MyAnno &#123;</span><br><span class="line">    <span class="function">String <span class="title">detail</span><span class="params">()</span></span>; <span class="comment">// MyAnno中有一个属性叫做detail</span></span><br><span class="line">    <span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> &quot;xyz&quot;</span>; <span class="comment">// 属性名为value时可以不写&quot;value = ...&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="6-Spring中DI的细节"><a href="#6-Spring中DI的细节" class="headerlink" title="6. Spring中DI的细节"></a>6. Spring中DI的细节</h1><ul>
+<li>一个接口实现两个类，且未指定，注入哪个？<ul>
+<li>会报异常</li>
+<li>@Autowired</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>JavaEE</tag>
+      </tags>
   </entry>
   <entry>
     <title>All categories</title>

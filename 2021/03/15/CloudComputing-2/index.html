@@ -22,19 +22,25 @@
     var CONFIG = {"hostname":"maple-pro.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"./public/search.xml"};
   </script>
 
-  <meta name="description" content="Record how I build my WordPress site.">
+  <meta name="description" content="介绍Google云计算的Google三宝：GFS, MapReduce, BigTable">
 <meta property="og:type" content="article">
-<meta property="og:title" content="建站记录">
-<meta property="og:url" content="https://maple-pro.github.io/blog/2021/03/13/site-records/index.html">
+<meta property="og:title" content="云计算2：Google云计算">
+<meta property="og:url" content="https://maple-pro.github.io/blog/2021/03/15/CloudComputing-2/index.html">
 <meta property="og:site_name" content="Maples&#39; Space">
-<meta property="og:description" content="Record how I build my WordPress site.">
+<meta property="og:description" content="介绍Google云计算的Google三宝：GFS, MapReduce, BigTable">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-03-13T10:11:00.000Z">
-<meta property="article:modified_time" content="2021-03-14T15:19:10.882Z">
+<meta property="og:image" content="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/hadoop-an-industry-perspective-8-728.jpg">
+<meta property="og:image" content="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210310144620112.png">
+<meta property="og:image" content="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/v2-73bf6805cb88448095875d3dd190d0af_720w.jpg">
+<meta property="og:image" content="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210310153753017.png">
+<meta property="og:image" content="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210310154255885.png">
+<meta property="article:published_time" content="2021-03-15T08:44:51.000Z">
+<meta property="article:modified_time" content="2021-03-15T09:00:46.313Z">
 <meta property="article:author" content="Maples">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/hadoop-an-industry-perspective-8-728.jpg">
 
-<link rel="canonical" href="https://maple-pro.github.io/blog/2021/03/13/site-records/">
+<link rel="canonical" href="https://maple-pro.github.io/blog/2021/03/15/CloudComputing-2/">
 
 
 <script id="page-configurations">
@@ -47,7 +53,7 @@
   };
 </script>
 
-  <title>建站记录 | Maples' Space</title>
+  <title>云计算2：Google云计算 | Maples' Space</title>
   
 
 
@@ -194,7 +200,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://maple-pro.github.io/blog/2021/03/13/site-records/">
+    <link itemprop="mainEntityOfPage" href="https://maple-pro.github.io/blog/2021/03/15/CloudComputing-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/blog/images/portrait.jpg">
@@ -207,7 +213,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          建站记录
+          云计算2：Google云计算
         </h1>
 
         <div class="post-meta">
@@ -216,24 +222,9 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2021-03-13 18:11:00" itemprop="dateCreated datePublished" datetime="2021-03-13T18:11:00+08:00">2021-03-13</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-14 23:19:10" itemprop="dateModified" datetime="2021-03-14T23:19:10+08:00">2021-03-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/" itemprop="url" rel="index"><span itemprop="name">生活记录</span></a>
-                </span>
+              <time title="Created: 2021-03-15 16:44:51 / Modified: 17:00:46" itemprop="dateCreated datePublished" datetime="2021-03-15T16:44:51+08:00">2021-03-15</time>
             </span>
 
           
@@ -245,8 +236,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/blog/2021/03/13/site-records/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/03/13/site-records/" itemprop="commentCount"></span>
+    <a title="disqus" href="/blog/2021/03/15/CloudComputing-2/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/03/15/CloudComputing-2/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -255,15 +246,15 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>1.2k</span>
+              <span>2.5k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>1 mins.</span>
+              <span>2 mins.</span>
             </span>
-            <div class="post-description">Record how I build my WordPress site.</div>
+            <div class="post-description">介绍Google云计算的Google三宝：GFS, MapReduce, BigTable</div>
 
         </div>
       </header>
@@ -274,36 +265,70 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="域名和服务器选择"><a href="#域名和服务器选择" class="headerlink" title="域名和服务器选择"></a>域名和服务器选择</h2><blockquote>
-<p>域名在<a target="_blank" rel="noopener" href="https://www.namesilo.com/">NameSilo</a>上买的，一年7刀（网上可以找到优惠码，可以优惠1刀）。服务器在[Vultr](https://    <a target="_blank" rel="noopener" href="http://www.vultr.com)上买的,走的日本线路,最便宜的那种,一个月5刀./">www.vultr.com)上买的，走的日本线路，最便宜的那种，一个月5刀。</a></p>
-</blockquote>
-<p>这么简单的东西我居然也能踩坑，我也是服了。</p>
-<pre><code>    首先，如果域名和服务器其中一个是在国内整的，那么就需要备案。So，要么都买国内的，要么都买国外的。国内速度快，不过需要备案，备案挺快的；国外的速度没那么快，不过可以用服务器来整点活，而且不需要备案。
+        <h1 id="云计算2：Google云计算"><a href="#云计算2：Google云计算" class="headerlink" title="云计算2：Google云计算"></a>云计算2：Google云计算</h1><h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h2><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/hadoop-an-industry-perspective-8-728.jpg" alt="Apache Hadoop Ecosystem"  />
 
-    国内的话服务器可以买阿里云、华为云、腾讯云、百度云的，他们有学生优惠，比如阿里云10元/月。国外服务器的话，可以网上搜，比如Vultr、Linode等。Vultr上新手注册可以领100刀，但是要从特定的网址那里注册，还有一些其他的优惠。我的服务器速度也不太快，就不推荐了。
+<p>Hadoop实际上就是谷歌三宝的开源实现，Hadoop MapReduce对应Google MapReduce，HBase对应BigTable，HDFS对应GFS，Zookeepr对应Chubby。</p>
+<ul>
+<li>HDFS（或GFS）为上层提供高效的非结构化存储服务;</li>
+<li>HBase（或BigTable）是提供结构化数据服务的分布式数据库;</li>
+<li>Hadoop MapReduce（或Google MapReduce）是一种并行计算的编程模型，用于作业调度。</li>
+</ul>
+<h2 id="2-Google文件系统GFS"><a href="#2-Google文件系统GFS" class="headerlink" title="2. Google文件系统GFS"></a>2. Google文件系统GFS</h2><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210310144620112.png" alt="image-20210310144620112"  />
 
-    之后就是把域名解析到IP地址上，服务器在哪里买的就在那里整，大概15分钟后就可以了。
-</code></pre>
-<h2 id="远程连接服务器安装WordPress"><a href="#远程连接服务器安装WordPress" class="headerlink" title="远程连接服务器安装WordPress"></a>远程连接服务器安装WordPress</h2><p>下载安装Xshell，新建会话，填写用户名和密码等（在购买的服务器的详细信息上会有）。这样就远程连接到服务器了。</p>
-<h2 id="安装nginx，-MySQL，PHP，WordPress"><a href="#安装nginx，-MySQL，PHP，WordPress" class="headerlink" title="安装nginx， MySQL，PHP，WordPress"></a>安装nginx， MySQL，PHP，WordPress</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq874455953/article/details/81603241">教程</a></p>
-<h2 id="WordPress插件"><a href="#WordPress插件" class="headerlink" title="WordPress插件"></a>WordPress插件</h2><p><strong>Crayon Syntax Highlighter （Crayon语法显示）</strong>：代码高亮显示</p>
-<p><strong>Jetpack</strong>：支持markdown，latex的输入，以及网站统计等强大的功能</p>
-<p><strong>LaTeX2HTML</strong>：支持latex的输入，这个插件的公式渲染会比较好</p>
-<p><strong>Mammoth .docx converter</strong>：支持将word文档作为文章输入</p>
-<p><strong>ThirstyAffiliates</strong>：快速生成短链接（不过我也没怎么用过）</p>
-<p><strong>UpdraftPlus-备份/恢复</strong>：备份和恢复网站，升级还能迁移网站     </p>
-<p><strong>WP Tabel Tag Gen</strong>：输入表格</p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><strong>主题</strong>：Kratos</p>
-<p><strong>字体样式</strong>：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">&quot;Helvetica Neue&quot;</span>,Helvetica,Arial,<span class="string">&quot;Microsoft Yahei&quot;</span>,<span class="string">&quot;Hiragino Sans GB&quot;</span>,<span class="string">&quot;Heiti SC&quot;</span>,<span class="string">&quot;WenQuanYi Micro Hei&quot;</span>,sans-serif;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-1-系统架构"><a href="#2-1-系统架构" class="headerlink" title="2.1 系统架构"></a>2.1 系统架构</h3><p>GFS的系统架构如图2-1所示。GFS将整个系统的节点分为三类角色：Client（客户端）、Master（主服务器）和Chunk  Server（数据块服务器）。</p>
+<ul>
+<li>Client是GFS提供给应用程序的访问接口，它是一组专用接口，不遵守POSIX规范，以库文件的形式提供。应用程序直接调用这些库函数，并与该库链接在一起。</li>
+<li>Master是GFS的管理节点，在逻辑上只有一个，它保存系统的元数据，负责整个文件系统的管理，是GFS文件系统中的“大脑”。</li>
+<li>Chunk Server负责具体的存储工作。数据以文件的形式存储在Chunk Server上，Chunk Server的个数可以有多个，它的数目直接决定了GFS的规模。GFS将文件按照固定大小进行分块，默认是64MB，每一块称为一个Chunk（数据块），每个Chunk都有一个对应的索引号（Index）。</li>
+</ul>
+<h4 id="1-存取数据"><a href="#1-存取数据" class="headerlink" title="1. 存取数据"></a>1. 存取数据</h4><p>客户端在访问GFS时，首先访问Master节点，获取与之进行交互的Chunk Server信息，然后直接访问这些Chunk  Server，完成数据存取工作。</p>
+<p>GFS的这种设计方法实现了控制流和数据流的分离。Client与Master之间只有控制流，而无数据流，极大地降低了Master的负载。</p>
+<p>Client与Chunk  Server之间直接传输数据流，同时由于文件被分成多个Chunk进行分布式存储，Client可以同时访问多个Chunk  Server，从而使得整个系统的I/O高度并行，系统整体性能得到提高。</p>
+<h4 id="2-写入数据"><a href="#2-写入数据" class="headerlink" title="2. 写入数据"></a>2. 写入数据</h4><p>使用租约机制来保障在跨多个副本的数据写入中保持顺序一致性，减轻master的负担，有主副本所在的Chunk Server来负责控制流水线的安排。</p>
+<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/v2-73bf6805cb88448095875d3dd190d0af_720w.jpg" alt="img"  />
 
-<p><strong>表格样式</strong>：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">table</span>,<span class="selector-tag">th</span>,<span class="selector-tag">td</span>&#123;</span><br><span class="line">        <span class="attribute">border-collapse</span>:collapse;</span><br><span class="line">        <span class="attribute">border</span>:<span class="number">1px</span> solid black;</span><br><span class="line">        <span class="attribute">margin</span>:auto;</span><br><span class="line">	      <span class="attribute">text-align</span>:center;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>客户端向 Master 询问要写的 Chunk 的<strong>主副本和其他副本的位置</strong>。如果还没有主副本，那么 Master 就通过租约授权一个。</li>
+<li>Master 会给客户端这些位置信息，客户端会将其缓存起来。并且除非主副本不可达或者其租约到期，客户端不会再向 Master 发送请求。</li>
+<li>客户端将要写的数据推送给各个副本所在的服务器。这里需要注意的一个设计是，GFS 将<strong>数据流和控制流进行了解耦</strong>，即客户端可以以任何顺序进行数据推送而不用像控制流一样先到主备份再到从备份。这样可以使我们独立优化数据流的推送，甚至可以并行推送；对于大数据块写入是很有好处的，下面章节会详细讨论这个事情。每个 ChunkServer 收到数据后不立即落盘，而是使用 LRU 策略放在缓存里，这也是一个将网络IO和硬盘IO进行解耦的一个操作，一是为了提高效率，一是等待<strong>主备份安排写入顺序</strong>。</li>
+<li>当客户端被告知所有副本的数据推送完成后，会向主备份服务器发送写（落盘）请求。主备份所在服务器会把多个并发客户端（如果有的话）的写请求安排一个写入顺序（给每个写请求指定一个<strong>序列号</strong>），并将其写入前面所说的操作日志。</li>
+<li>主备份所在服务器将客户端的写请求以及序列号转给其他副本所在服务器。有了这个唯一对应的序列号，所有副本的落盘顺序就能保持一致。</li>
+<li>所有从备份服务器落完盘后给主备份所在服务器复命。</li>
+<li>主备份所在服务器回复客户端，如果任何副本写入出现了问题，都会报告给客户端。如果遇到问题，可能有两种：a. 所有副本数据均未落盘。b.部分副本数据落盘成功。对于后者就会出现不一致的状态。<strong>客户端</strong>的<strong>库代码</strong>（意味着不用应用代码进行处理）检测到错误后会进行重试，因此在真正成功写入之前，步骤 3~7 可能会重复多次。</li>
+</ol>
+<h4 id="3-分布式事务"><a href="#3-分布式事务" class="headerlink" title="3. 分布式事务"></a>3. 分布式事务</h4><p><strong>两阶段提交</strong>：两阶段提交，顾名思义就是要分两步提交。</p>
+<ul>
+<li>prepare: 存在一个负责协调各个本地资源管理器的事务管理器，本地资源管理器一般是由数据库实现，事务管理器在第一阶段的时候询问各个资源管理器是否都就绪？</li>
+<li>commit/rollback: 如果收到每个资源的回复都是 yes，则在第二阶段提交事务，如果其中任意一个资源的回复是 no, 则回滚事务。</li>
+</ul>
+<h4 id="4-特点"><a href="#4-特点" class="headerlink" title="4. 特点"></a>4. 特点</h4><ol>
+<li>采用中心服务器模式</li>
+<li>不缓存数据</li>
+<li>在用户态下实现</li>
+</ol>
+<h2 id="3-分布式数据处理MapReduce"><a href="#3-分布式数据处理MapReduce" class="headerlink" title="3. 分布式数据处理MapReduce"></a>3. 分布式数据处理MapReduce</h2><h3 id="3-1-编程模型"><a href="#3-1-编程模型" class="headerlink" title="3.1 编程模型"></a>3.1 编程模型</h3><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210310153753017.png" alt="image-20210310153753017"  />
 
-<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>用的是WordPress模板，没有自己整活，缺少了那种感觉。</p>
-<p>也没有弄清Linux系统、和网站前后端的东西。</p>
-<p>以后还会用这个服务器整点其他活（这个坑我挖下了，看我什么时候填起来）</p>
-<p>敬请期待！</p>
+<p><strong>Map函数</strong>：对一部分原始数据进行指定的操作。每个Map操作都针对不同的原始数据，因此Map与Map之间是互相独立的，这使得它们可以充分并行化。</p>
+<p><strong>Reduce操作</strong>：对每个Map所产生的一部分中间结果进行合并操作，每个Reduce所处理的Map中间结果是互不交叉的，所有Reduce产生的最终结果经过简单连接就形成了完整的结果集。</p>
+<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210310154255885.png" alt="image-20210310154255885"  />
+
+<h3 id="3-2-容错机制"><a href="#3-2-容错机制" class="headerlink" title="3.2 容错机制"></a>3.2 容错机制</h3><ul>
+<li>Master失效<ul>
+<li>Master会周期性地设置检查点（checkpoint），并导出Master的数据。一旦某个任务失效，系统就从最近的一个检查点恢复并重新执行。由于只有一个Master在运行，如果Master失效了，则只能终止整个MapReduce程序的运行并重新开始。</li>
+</ul>
+</li>
+<li>Worker失效<ul>
+<li>Master会<strong>周期性地给Worker发送ping</strong>命令，如果没有Worker的应答，则Master认为Worker失效，终止对这个Worker的任务调度，把失效Worker的任务调度到其他Worker上重新执行。</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-其它的MapReduce"><a href="#4-其它的MapReduce" class="headerlink" title="4. 其它的MapReduce"></a>4. 其它的MapReduce</h2><h3 id="4-1-Java-Stream接口"><a href="#4-1-Java-Stream接口" class="headerlink" title="4.1 Java Stream接口"></a>4.1 Java Stream接口</h3><p><a target="_blank" rel="noopener" href="https://www.runoob.com/java/java8-streams.html">https://www.runoob.com/java/java8-streams.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/yy339452689/article/details/110956119">Stream详解</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/yrsg666/article/details/92837145">spark中RDD算子分类整理</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35885488/article/details/103185724">Spark无状态和有状态转化操作介绍</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zhangvalue/article/details/84780428">Spark基础 DAG</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/beautiful_huang/article/details/104267573">kafka 转换算子</a></p>
+<p>Lambda表达式：函数式编程</p>
 
     </div>
 
@@ -319,12 +344,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/blog/2021/03/13/hello-world/" rel="prev" title="Hello World">
-      <i class="fa fa-chevron-left"></i> Hello World
+    <a href="/blog/2021/03/15/Java-EE-Spring/" rel="prev" title="Java EE: Spring">
+      <i class="fa fa-chevron-left"></i> Java EE: Spring
     </a></div>
       <div class="post-nav-item">
-    <a href="/blog/2021/03/13/Java%E5%AD%A6%E4%B9%A0%EF%BC%9A1-Introduction-to-Java/" rel="next" title="Java学习：1. Introduction to Java">
-      Java学习：1. Introduction to Java <i class="fa fa-chevron-right"></i>
+    <a href="/blog/2021/03/15/CloudComputing-1/" rel="next" title="云计算1：大数据与云计算">
+      云计算1：大数据与云计算 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -391,7 +416,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%9F%E5%90%8D%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%80%89%E6%8B%A9"><span class="nav-text">域名和服务器选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85WordPress"><span class="nav-text">远程连接服务器安装WordPress</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85nginx%EF%BC%8C-MySQL%EF%BC%8CPHP%EF%BC%8CWordPress"><span class="nav-text">安装nginx， MySQL，PHP，WordPress</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WordPress%E6%8F%92%E4%BB%B6"><span class="nav-text">WordPress插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-text">其他</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%BA%E7%82%B9"><span class="nav-text">缺点</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%91%E8%AE%A1%E7%AE%972%EF%BC%9AGoogle%E4%BA%91%E8%AE%A1%E7%AE%97"><span class="nav-text">云计算2：Google云计算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Introduction"><span class="nav-text">1. Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Google%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9FGFS"><span class="nav-text">2. Google文件系统GFS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84"><span class="nav-text">2.1 系统架构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%AD%98%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="nav-text">1. 存取数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%86%99%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="nav-text">2. 写入数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1"><span class="nav-text">3. 分布式事务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E7%89%B9%E7%82%B9"><span class="nav-text">4. 特点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86MapReduce"><span class="nav-text">3. 分布式数据处理MapReduce</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%9E%8B"><span class="nav-text">3.1 编程模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E5%AE%B9%E9%94%99%E6%9C%BA%E5%88%B6"><span class="nav-text">3.2 容错机制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%85%B6%E5%AE%83%E7%9A%84MapReduce"><span class="nav-text">4. 其它的MapReduce</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-Java-Stream%E6%8E%A5%E5%8F%A3"><span class="nav-text">4.1 Java Stream接口</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -566,9 +591,9 @@
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://maple-pro.github.io/blog/2021/03/13/site-records/";
-    this.page.identifier = "2021/03/13/site-records/";
-    this.page.title = "建站记录";
+    this.page.url = "https://maple-pro.github.io/blog/2021/03/15/CloudComputing-2/";
+    this.page.identifier = "2021/03/15/CloudComputing-2/";
+    this.page.title = "云计算2：Google云计算";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {

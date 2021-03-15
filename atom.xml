@@ -6,7 +6,7 @@
   <link href="https://maple-pro.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://maple-pro.github.io/blog/"/>
-  <updated>2021-03-14T15:40:03.155Z</updated>
+  <updated>2021-03-15T08:58:24.046Z</updated>
   <id>https://maple-pro.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,53 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>云计算1：大数据与云计算</title>
+    <link href="https://maple-pro.github.io/blog/2021/03/15/CloudComputing-1/"/>
+    <id>https://maple-pro.github.io/blog/2021/03/15/CloudComputing-1/</id>
+    <published>2021-03-15T08:44:51.000Z</published>
+    <updated>2021-03-15T08:58:24.046Z</updated>
+    
+    
+    <summary type="html">介绍云计算和大数据</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>云计算2：Google云计算</title>
+    <link href="https://maple-pro.github.io/blog/2021/03/15/CloudComputing-2/"/>
+    <id>https://maple-pro.github.io/blog/2021/03/15/CloudComputing-2/</id>
+    <published>2021-03-15T08:44:51.000Z</published>
+    <updated>2021-03-15T09:00:46.313Z</updated>
+    
+    
+    <summary type="html">介绍Google云计算的Google三宝：GFS, MapReduce, BigTable</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java EE: Spring</title>
+    <link href="https://maple-pro.github.io/blog/2021/03/15/Java-EE-Spring/"/>
+    <id>https://maple-pro.github.io/blog/2021/03/15/Java-EE-Spring/</id>
+    <published>2021-03-15T08:44:51.000Z</published>
+    <updated>2021-03-15T08:51:55.049Z</updated>
+    
+    
+    <summary type="html">Introduce to Spring framework.</summary>
+    
+    
+    
+    
+    <category term="JavaEE" scheme="https://maple-pro.github.io/blog/tags/JavaEE/"/>
+    
+  </entry>
   
   <entry>
     <title>Codeforces 618 (Div.2)</title>
@@ -123,7 +170,7 @@
     <link href="https://maple-pro.github.io/blog/2021/03/13/Java%E5%AD%A6%E4%B9%A0%EF%BC%9A4.%20Array%20and%20Collection/"/>
     <id>https://maple-pro.github.io/blog/2021/03/13/Java%E5%AD%A6%E4%B9%A0%EF%BC%9A4.%20Array%20and%20Collection/</id>
     <published>2021-03-13T11:14:36.000Z</published>
-    <updated>2021-03-14T15:19:14.724Z</updated>
+    <updated>2021-03-15T08:46:05.389Z</updated>
     
     
     <summary type="html">Introduce the array and collection in java.</summary>
@@ -135,6 +182,8 @@
     <category term="Java" scheme="https://maple-pro.github.io/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/"/>
     
     
+    <category term="Java" scheme="https://maple-pro.github.io/blog/tags/Java/"/>
+    
   </entry>
   
   <entry>
@@ -142,7 +191,7 @@
     <link href="https://maple-pro.github.io/blog/2021/03/13/Java%E5%AD%A6%E4%B9%A0%EF%BC%9A3.%20Methods/"/>
     <id>https://maple-pro.github.io/blog/2021/03/13/Java%E5%AD%A6%E4%B9%A0%EF%BC%9A3.%20Methods/</id>
     <published>2021-03-13T11:12:36.000Z</published>
-    <updated>2021-03-14T15:15:56.040Z</updated>
+    <updated>2021-03-15T08:45:59.795Z</updated>
     
     
     <summary type="html">Introduce the method-call stack and activation records in java.</summary>
@@ -154,6 +203,8 @@
     <category term="Java" scheme="https://maple-pro.github.io/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/"/>
     
     
+    <category term="Java" scheme="https://maple-pro.github.io/blog/tags/Java/"/>
+    
   </entry>
   
   <entry>
@@ -161,7 +212,7 @@
     <link href="https://maple-pro.github.io/blog/2021/03/13/Java%E5%AD%A6%E4%B9%A0%EF%BC%9A2.%20Basic%20Java%20Grammar/"/>
     <id>https://maple-pro.github.io/blog/2021/03/13/Java%E5%AD%A6%E4%B9%A0%EF%BC%9A2.%20Basic%20Java%20Grammar/</id>
     <published>2021-03-13T11:10:36.000Z</published>
-    <updated>2021-03-14T15:15:15.682Z</updated>
+    <updated>2021-03-15T08:45:56.408Z</updated>
     
     
     <summary type="html">Basic Java grammar, data type</summary>
@@ -173,6 +224,8 @@
     <category term="Java" scheme="https://maple-pro.github.io/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/"/>
     
     
+    <category term="Java" scheme="https://maple-pro.github.io/blog/tags/Java/"/>
+    
   </entry>
   
   <entry>
@@ -180,7 +233,7 @@
     <link href="https://maple-pro.github.io/blog/2021/03/13/Java%E5%AD%A6%E4%B9%A0%EF%BC%9A1-Introduction-to-Java/"/>
     <id>https://maple-pro.github.io/blog/2021/03/13/Java%E5%AD%A6%E4%B9%A0%EF%BC%9A1-Introduction-to-Java/</id>
     <published>2021-03-13T11:07:36.000Z</published>
-    <updated>2021-03-14T15:40:28.987Z</updated>
+    <updated>2021-03-15T08:45:52.724Z</updated>
     
     
     <summary type="html">Introduce to java basic information</summary>
@@ -191,6 +244,8 @@
     
     <category term="Java" scheme="https://maple-pro.github.io/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/"/>
     
+    
+    <category term="Java" scheme="https://maple-pro.github.io/blog/tags/Java/"/>
     
   </entry>
   
