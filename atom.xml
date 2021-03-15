@@ -6,7 +6,7 @@
   <link href="https://maple-pro.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://maple-pro.github.io/blog/"/>
-  <updated>2021-03-15T09:05:09.507Z</updated>
+  <updated>2021-03-15T12:27:59.363Z</updated>
   <id>https://maple-pro.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法：树状数组/二叉索引树（Binary Indexed Tree）</title>
+    <link href="https://maple-pro.github.io/blog/2021/03/15/%E7%AE%97%E6%B3%95%EF%BC%9A%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%EF%BC%88Binary-Indexed-Tree%EF%BC%89/"/>
+    <id>https://maple-pro.github.io/blog/2021/03/15/%E7%AE%97%E6%B3%95%EF%BC%9A%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%EF%BC%88Binary-Indexed-Tree%EF%BC%89/</id>
+    <published>2021-03-15T11:58:36.000Z</published>
+    <updated>2021-03-15T12:27:59.363Z</updated>
+    
+    
+    <summary type="html">介绍树状数组的原理、代码实现和相应例题。参考《算法竞赛入门经典 训练指南》</summary>
+    
+    
+    
+    <category term="算法" scheme="https://maple-pro.github.io/blog/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="树状数组" scheme="https://maple-pro.github.io/blog/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/"/>
+    
+    <category term="二叉索引树" scheme="https://maple-pro.github.io/blog/tags/%E4%BA%8C%E5%8F%89%E7%B4%A2%E5%BC%95%E6%A0%91/"/>
+    
+  </entry>
   
   <entry>
     <title>云计算1：大数据与云计算</title>
