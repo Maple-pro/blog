@@ -815,6 +815,10 @@
 <li>在容错能力相同的情况下，奇数台更节省资源</li>
 </ul>
 ]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>云计算</category>
+      </categories>
   </entry>
   <entry>
     <title>云计算2：Google云计算</title>
@@ -884,6 +888,10 @@
 <p><a href="https://blog.csdn.net/beautiful_huang/article/details/104267573">kafka 转换算子</a></p>
 <p>Lambda表达式：函数式编程</p>
 ]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>云计算</category>
+      </categories>
   </entry>
   <entry>
     <title>Java EE: Spring</title>
@@ -965,6 +973,10 @@
 </li>
 </ul>
 ]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>JavaEE</category>
+      </categories>
       <tags>
         <tag>JavaEE</tag>
       </tags>

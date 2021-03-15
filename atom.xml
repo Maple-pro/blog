@@ -6,7 +6,7 @@
   <link href="https://maple-pro.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://maple-pro.github.io/blog/"/>
-  <updated>2021-03-15T08:58:24.046Z</updated>
+  <updated>2021-03-15T09:05:09.507Z</updated>
   <id>https://maple-pro.github.io/blog/</id>
   
   <author>
@@ -21,12 +21,16 @@
     <link href="https://maple-pro.github.io/blog/2021/03/15/CloudComputing-1/"/>
     <id>https://maple-pro.github.io/blog/2021/03/15/CloudComputing-1/</id>
     <published>2021-03-15T08:44:51.000Z</published>
-    <updated>2021-03-15T08:58:24.046Z</updated>
+    <updated>2021-03-15T09:05:09.507Z</updated>
     
     
     <summary type="html">介绍云计算和大数据</summary>
     
     
+    
+    <category term="学习笔记" scheme="https://maple-pro.github.io/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="云计算" scheme="https://maple-pro.github.io/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
     
     
   </entry>
@@ -36,12 +40,16 @@
     <link href="https://maple-pro.github.io/blog/2021/03/15/CloudComputing-2/"/>
     <id>https://maple-pro.github.io/blog/2021/03/15/CloudComputing-2/</id>
     <published>2021-03-15T08:44:51.000Z</published>
-    <updated>2021-03-15T09:00:46.313Z</updated>
+    <updated>2021-03-15T09:05:03.242Z</updated>
     
     
     <summary type="html">介绍Google云计算的Google三宝：GFS, MapReduce, BigTable</summary>
     
     
+    
+    <category term="学习笔记" scheme="https://maple-pro.github.io/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="云计算" scheme="https://maple-pro.github.io/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
     
     
   </entry>
@@ -51,12 +59,16 @@
     <link href="https://maple-pro.github.io/blog/2021/03/15/Java-EE-Spring/"/>
     <id>https://maple-pro.github.io/blog/2021/03/15/Java-EE-Spring/</id>
     <published>2021-03-15T08:44:51.000Z</published>
-    <updated>2021-03-15T08:51:55.049Z</updated>
+    <updated>2021-03-15T09:05:12.420Z</updated>
     
     
     <summary type="html">Introduce to Spring framework.</summary>
     
     
+    
+    <category term="学习笔记" scheme="https://maple-pro.github.io/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="JavaEE" scheme="https://maple-pro.github.io/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JavaEE/"/>
     
     
     <category term="JavaEE" scheme="https://maple-pro.github.io/blog/tags/JavaEE/"/>
