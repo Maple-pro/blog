@@ -6,7 +6,7 @@
   <link href="https://maple-pro.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://maple-pro.github.io/blog/"/>
-  <updated>2021-03-15T12:30:24.997Z</updated>
+  <updated>2021-03-17T04:45:52.388Z</updated>
   <id>https://maple-pro.github.io/blog/</id>
   
   <author>
@@ -17,11 +17,53 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>算法：线段树</title>
+    <link href="https://maple-pro.github.io/blog/2021/03/16/%E7%AE%97%E6%B3%95%EF%BC%9A%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
+    <id>https://maple-pro.github.io/blog/2021/03/16/%E7%AE%97%E6%B3%95%EF%BC%9A%E7%BA%BF%E6%AE%B5%E6%A0%91/</id>
+    <published>2021-03-16T12:37:19.000Z</published>
+    <updated>2021-03-17T04:45:52.388Z</updated>
+    
+    
+    <summary type="html">介绍线段树的原理、代码实现和相应例题。参考《算法竞赛入门经典 训练指南》等资料。</summary>
+    
+    
+    
+    <category term="算法" scheme="https://maple-pro.github.io/blog/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="线段树" scheme="https://maple-pro.github.io/blog/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java学习：5. Java Stream</title>
+    <link href="https://maple-pro.github.io/blog/2021/03/16/Java%E5%AD%A6%E4%B9%A0%EF%BC%9A5-Java-Stream/"/>
+    <id>https://maple-pro.github.io/blog/2021/03/16/Java%E5%AD%A6%E4%B9%A0%EF%BC%9A5-Java-Stream/</id>
+    <published>2021-03-15T16:09:22.000Z</published>
+    <updated>2021-03-16T05:40:00.386Z</updated>
+    
+    
+    <summary type="html">介绍Java 8中的Stream接口，函数式编程，MapReduce</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://maple-pro.github.io/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="Java" scheme="https://maple-pro.github.io/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/"/>
+    
+    
+    <category term="Java" scheme="https://maple-pro.github.io/blog/tags/Java/"/>
+    
+    <category term="MapReduce" scheme="https://maple-pro.github.io/blog/tags/MapReduce/"/>
+    
+  </entry>
+  
+  <entry>
     <title>算法：树状数组/二叉索引树（Binary Indexed Tree）</title>
     <link href="https://maple-pro.github.io/blog/2021/03/15/%E7%AE%97%E6%B3%95%EF%BC%9A%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%EF%BC%88Binary-Indexed-Tree%EF%BC%89/"/>
     <id>https://maple-pro.github.io/blog/2021/03/15/%E7%AE%97%E6%B3%95%EF%BC%9A%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%EF%BC%88Binary-Indexed-Tree%EF%BC%89/</id>
     <published>2021-03-15T11:58:36.000Z</published>
-    <updated>2021-03-15T12:30:24.997Z</updated>
+    <updated>2021-03-17T04:05:10.031Z</updated>
     
     
     <summary type="html">介绍树状数组的原理、代码实现和相应例题。参考《算法竞赛入门经典 训练指南》</summary>
@@ -38,11 +80,11 @@
   </entry>
   
   <entry>
-    <title>云计算1：大数据与云计算</title>
+    <title>云计算：1. 大数据与云计算</title>
     <link href="https://maple-pro.github.io/blog/2021/03/15/CloudComputing-1/"/>
     <id>https://maple-pro.github.io/blog/2021/03/15/CloudComputing-1/</id>
     <published>2021-03-15T08:44:51.000Z</published>
-    <updated>2021-03-15T09:05:09.507Z</updated>
+    <updated>2021-03-15T16:11:41.979Z</updated>
     
     
     <summary type="html">介绍云计算和大数据</summary>
@@ -57,11 +99,11 @@
   </entry>
   
   <entry>
-    <title>云计算2：Google云计算</title>
+    <title>云计算：2. Google云计算</title>
     <link href="https://maple-pro.github.io/blog/2021/03/15/CloudComputing-2/"/>
     <id>https://maple-pro.github.io/blog/2021/03/15/CloudComputing-2/</id>
     <published>2021-03-15T08:44:51.000Z</published>
-    <updated>2021-03-15T09:05:03.242Z</updated>
+    <updated>2021-03-15T16:11:49.735Z</updated>
     
     
     <summary type="html">介绍Google云计算的Google三宝：GFS, MapReduce, BigTable</summary>
