@@ -1105,6 +1105,45 @@
       </tags>
   </entry>
   <entry>
+    <title>云计算：3. 容器</title>
+    <url>/blog/2021/03/17/CloudComputing-3/</url>
+    <content><![CDATA[<h1 id="云计算：3-容器"><a href="#云计算：3-容器" class="headerlink" title="云计算：3. 容器"></a>云计算：3. 容器</h1><h2 id="1-Docker镜像"><a href="#1-Docker镜像" class="headerlink" title="1. Docker镜像"></a>1. Docker镜像</h2><ul>
+<li>容器镜像打包了应用及其依赖（包含完整操作系统的所有文件和目录）</li>
+<li>容器镜像包含了应用运行所需要的所有依赖。</li>
+<li>实现了本地环境与云端环境的高一致性</li>
+<li>通过6个Namespace和Cgroup为每个应用创建隔离的运行环境</li>
+</ul>
+<p><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210317142915755.png" alt="image-20210317142915755"></p>
+<h2 id="2-Container-VS-VM-Virtual-Machine"><a href="#2-Container-VS-VM-Virtual-Machine" class="headerlink" title="2. Container VS VM (Virtual Machine)"></a>2. Container VS VM (Virtual Machine)</h2><p><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210317143240171.png" alt="image-20210317143240171"></p>
+<ul>
+<li>Virtual Machine<ul>
+<li>Hypervisor：例如Win10等操作系统</li>
+<li>Guest Operating System：消耗资源很大</li>
+<li>优点：隔离性很好</li>
+<li>缺点：CPU、硬盘、内存占用高，启动速度慢</li>
+</ul>
+</li>
+<li>Container<ul>
+<li>Host Operating System: Linux操作系统</li>
+<li>Docker: Docker Engine</li>
+<li>App: Docker image</li>
+<li>优点：占用资源小，响应速度快</li>
+<li>缺点：隔离性没有VM好（一定是缺点吗？）</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210317144952233.png" alt="image-20210317144952233"></p>
+<h2 id="3-容器编排引擎"><a href="#3-容器编排引擎" class="headerlink" title="3. 容器编排引擎"></a>3. 容器编排引擎</h2><p>Kubernetes, MESOS, Docker Swarm</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>云计算</category>
+      </categories>
+      <tags>
+        <tag>容器</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>All categories</title>
     <url>/blog/categories/index.html</url>
     <content><![CDATA[]]></content>
@@ -11403,6 +11442,7 @@ section.resume-section .resume-section-content {
 <p>动态规划：WHUOJ-2768 方格取数</p>
 <p>dfs: WHUOJ-2657 岛屿面积有多大</p>
 <p>dfs: leetcode-695 岛屿的最大面积</p>
+<p>链表：leetcode-92 反转链表Ⅱ</p>
 ]]></content>
   </entry>
 </search>
