@@ -168,6 +168,13 @@ IP is the only choice if we want to use the Internet.
 
 # 3. The IP Service
 
+features:
+
+- Datagram, hop by hop
+- Unreliable
+- Best-effort
+- Connectionless
+
 ## 3.1 The Internet Protocol
 
 <img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409162154225.png" alt="image-20210409162154225" style="zoom:80%;" />
@@ -212,4 +219,56 @@ The IP service sends **Datagrams** from end host to end host; it is **unreliable
 ## 3.5 IPv4 Datagram
 
 <img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210603232035399.png" alt="image-20210603232035399" style="zoom:80%;" />
+
+- Destination IP Address
+- Source IP Address
+- Protocol ID
+  - tells what's inside the data field
+  - e.g. 6 -> TCP segments
+- Version
+  - the version of IP: IPv4, IPv6
+- Total Packet Length
+  - be up 64kBytes
+- Time to Live (TTL)
+  - prevent packets looping in the network forever
+  - Every router is required to decrement the TTL field
+  - If it reaches zero, the router should drop the packet
+- Packet ID & Flags & Fragment Offset
+  - help to fragment IP packets into small **self-contained** packets
+- Type of Service
+- Header Length
+- Checksum
+  - a checksum is calculated over the whole header
+
+# 4. Packet
+
+application: stream of data
+
+transport: segments of data
+
+network: packets of data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
