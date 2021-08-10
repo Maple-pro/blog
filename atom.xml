@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Maples&#39; Space</title>
+  <icon>https://blog.maples31.com/blog/icon.png</icon>
+  
+  <link href="https://blog.maples31.com/blog/atom.xml" rel="self"/>
+  
+  <link href="https://blog.maples31.com/blog/"/>
+  <updated>2021-08-08T12:08:05.660Z</updated>
+  <id>https://blog.maples31.com/blog/</id>
+  
+  <author>
+    <name>Maples</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端面试题</title>
+    <link href="https://blog.maples31.com/blog/2021/08/08/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>https://blog.maples31.com/blog/2021/08/08/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/</id>
+    <published>2021-08-08T11:55:05.000Z</published>
+    <updated>2021-08-08T12:08:05.660Z</updated>
+    
+    
+    <summary type="html">记录前端面试题</summary>
+    
+    
+    
+    <category term="前端" scheme="https://blog.maples31.com/blog/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="javascript" scheme="https://blog.maples31.com/blog/tags/javascript/"/>
+    
+    <category term="css" scheme="https://blog.maples31.com/blog/tags/css/"/>
+    
+    <category term="vue" scheme="https://blog.maples31.com/blog/tags/vue/"/>
+    
+    <category term="前端" scheme="https://blog.maples31.com/blog/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="小程序" scheme="https://blog.maples31.com/blog/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    <category term="react" scheme="https://blog.maples31.com/blog/tags/react/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>秋招面经</title>
+    <link href="https://blog.maples31.com/blog/2021/07/19/%E7%A7%8B%E6%8B%9B%E9%9D%A2%E7%BB%8F/"/>
+    <id>https://blog.maples31.com/blog/2021/07/19/%E7%A7%8B%E6%8B%9B%E9%9D%A2%E7%BB%8F/</id>
+    <published>2021-07-19T15:03:20.000Z</published>
+    <updated>2021-08-10T15:26:37.061Z</updated>
+    
+    
+    <summary type="html">记录 2021 年秋招前端实习生面试</summary>
+    
+    
+    
+    <category term="记录" scheme="https://blog.maples31.com/blog/categories/%E8%AE%B0%E5%BD%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>React.js记录</title>
+    <link href="https://blog.maples31.com/blog/2021/06/01/React-js%E8%AE%B0%E5%BD%95/"/>
+    <id>https://blog.maples31.com/blog/2021/06/01/React-js%E8%AE%B0%E5%BD%95/</id>
+    <published>2021-06-01T15:34:16.000Z</published>
+    <updated>2021-06-02T03:08:12.833Z</updated>
+    
+    
+    <summary type="html">记录React.js的一些知识点</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://blog.maples31.com/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="React" scheme="https://blog.maples31.com/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/React/"/>
+    
+    
+    <category term="React" scheme="https://blog.maples31.com/blog/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>春招面经</title>
+    <link href="https://blog.maples31.com/blog/2021/05/06/%E6%98%A5%E6%8B%9B%E9%9D%A2%E7%BB%8F/"/>
+    <id>https://blog.maples31.com/blog/2021/05/06/%E6%98%A5%E6%8B%9B%E9%9D%A2%E7%BB%8F/</id>
+    <published>2021-05-06T15:09:43.000Z</published>
+    <updated>2021-08-05T13:07:24.406Z</updated>
+    
+    
+    <summary type="html">记录 2021 年春招前端实习生面试</summary>
+    
+    
+    
+    <category term="记录" scheme="https://blog.maples31.com/blog/categories/%E8%AE%B0%E5%BD%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>算法：SPFA算法</title>
+    <link href="https://blog.maples31.com/blog/2021/04/14/%E7%AE%97%E6%B3%95%EF%BC%9ASPFA%E7%AE%97%E6%B3%95/"/>
+    <id>https://blog.maples31.com/blog/2021/04/14/%E7%AE%97%E6%B3%95%EF%BC%9ASPFA%E7%AE%97%E6%B3%95/</id>
+    <published>2021-04-14T11:06:09.000Z</published>
+    <updated>2021-04-14T12:08:34.467Z</updated>
+    
+    
+    <summary type="html">SPFA的板子</summary>
+    
+    
+    
+    <category term="算法" scheme="https://blog.maples31.com/blog/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="图" scheme="https://blog.maples31.com/blog/tags/%E5%9B%BE/"/>
+    
+    <category term="最短路" scheme="https://blog.maples31.com/blog/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Educational Codeforces 107 (Div.2)</title>
+    <link href="https://blog.maples31.com/blog/2021/04/13/Edu-CF-107-Div-2/"/>
+    <id>https://blog.maples31.com/blog/2021/04/13/Edu-CF-107-Div-2/</id>
+    <published>2021-04-13T15:04:31.000Z</published>
+    <updated>2021-04-13T15:24:50.351Z</updated>
+    
+    
+    <summary type="html">Educational Codeforces Round 107, div.2</summary>
+    
+    
+    
+    <category term="题解" scheme="https://blog.maples31.com/blog/categories/%E9%A2%98%E8%A7%A3/"/>
+    
+    
+    <category term="大模拟" scheme="https://blog.maples31.com/blog/tags/%E5%A4%A7%E6%A8%A1%E6%8B%9F/"/>
+    
+    <category term="贪心" scheme="https://blog.maples31.com/blog/tags/%E8%B4%AA%E5%BF%83/"/>
+    
+    <category term="构造算法" scheme="https://blog.maples31.com/blog/tags/%E6%9E%84%E9%80%A0%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法：Dijkstra算法</title>
+    <link href="https://blog.maples31.com/blog/2021/04/13/%E7%AE%97%E6%B3%95%EF%BC%9ADijkstra%E7%AE%97%E6%B3%95/"/>
+    <id>https://blog.maples31.com/blog/2021/04/13/%E7%AE%97%E6%B3%95%EF%BC%9ADijkstra%E7%AE%97%E6%B3%95/</id>
+    <published>2021-04-13T02:53:32.000Z</published>
+    <updated>2021-04-14T11:19:45.047Z</updated>
+    
+    
+    <summary type="html">Dijkstra + DFS的板子</summary>
+    
+    
+    
+    <category term="算法" scheme="https://blog.maples31.com/blog/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="dfs" scheme="https://blog.maples31.com/blog/tags/dfs/"/>
+    
+    <category term="图" scheme="https://blog.maples31.com/blog/tags/%E5%9B%BE/"/>
+    
+    <category term="最短路" scheme="https://blog.maples31.com/blog/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CCF-202012-3: 带配额的文件系统</title>
+    <link href="https://blog.maples31.com/blog/2021/04/08/CCF-202012-3-%E5%B8%A6%E9%85%8D%E9%A2%9D%E7%9A%84%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://blog.maples31.com/blog/2021/04/08/CCF-202012-3-%E5%B8%A6%E9%85%8D%E9%A2%9D%E7%9A%84%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</id>
+    <published>2021-04-08T14:31:23.000Z</published>
+    <updated>2021-04-08T14:47:49.376Z</updated>
+    
+    
+    <summary type="html">CCF认证202012-3，一道很复杂的大模拟</summary>
+    
+    
+    
+    <category term="题解" scheme="https://blog.maples31.com/blog/categories/%E9%A2%98%E8%A7%A3/"/>
+    
+    
+    <category term="大模拟" scheme="https://blog.maples31.com/blog/tags/%E5%A4%A7%E6%A8%A1%E6%8B%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CS144: 2. Transport</title>
+    <link href="https://blog.maples31.com/blog/2021/04/08/CS144-2-Transport/"/>
+    <id>https://blog.maples31.com/blog/2021/04/08/CS144-2-Transport/</id>
+    <published>2021-04-08T07:43:05.000Z</published>
+    <updated>2021-08-08T12:06:37.744Z</updated>
+    
+    
+    <summary type="html">Stanford课程CS144，介绍运输层</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://blog.maples31.com/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="CS144" scheme="https://blog.maples31.com/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CS144/"/>
+    
+    
+    <category term="TCP" scheme="https://blog.maples31.com/blog/tags/TCP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CS144: 1. Internet and IP</title>
+    <link href="https://blog.maples31.com/blog/2021/04/08/CS144-1-Internet-and-IP/"/>
+    <id>https://blog.maples31.com/blog/2021/04/08/CS144-1-Internet-and-IP/</id>
+    <published>2021-04-08T07:42:50.000Z</published>
+    <updated>2021-08-08T12:38:18.465Z</updated>
+    
+    
+    <summary type="html">Stanford课程CS144，介绍Internet和IP</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://blog.maples31.com/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="CS144" scheme="https://blog.maples31.com/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CS144/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>云计算：5. 分布式锁服务Chubby</title>
+    <link href="https://blog.maples31.com/blog/2021/04/07/CloudComputing-5/"/>
+    <id>https://blog.maples31.com/blog/2021/04/07/CloudComputing-5/</id>
+    <published>2021-04-07T06:09:36.000Z</published>
+    <updated>2021-04-12T16:34:45.031Z</updated>
+    
+    
+    <summary type="html">介绍google的分布式锁服务---Chubby</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://blog.maples31.com/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="云计算" scheme="https://blog.maples31.com/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>并查集刷题</title>
+    <link href="https://blog.maples31.com/blog/2021/04/03/%E5%B9%B6%E6%9F%A5%E9%9B%86%E5%88%B7%E9%A2%98/"/>
+    <id>https://blog.maples31.com/blog/2021/04/03/%E5%B9%B6%E6%9F%A5%E9%9B%86%E5%88%B7%E9%A2%98/</id>
+    <published>2021-04-03T13:22:12.000Z</published>
+    <updated>2021-04-04T04:14:58.098Z</updated>
+    
+    
+    <summary type="html">并查集刷题记录。题单：https://vjudge.net/contest/246016#overview</summary>
+    
+    
+    
+    <category term="题解" scheme="https://blog.maples31.com/blog/categories/%E9%A2%98%E8%A7%A3/"/>
+    
+    
+    <category term="并查集" scheme="https://blog.maples31.com/blog/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>树和二叉树刷题</title>
+    <link href="https://blog.maples31.com/blog/2021/04/01/%E6%A0%91%E5%92%8C%E4%BA%8C%E5%8F%89%E6%A0%91%E5%88%B7%E9%A2%98/"/>
+    <id>https://blog.maples31.com/blog/2021/04/01/%E6%A0%91%E5%92%8C%E4%BA%8C%E5%8F%89%E6%A0%91%E5%88%B7%E9%A2%98/</id>
+    <published>2021-04-01T09:13:09.000Z</published>
+    <updated>2021-04-03T11:28:51.358Z</updated>
+    
+    
+    <summary type="html">树和二叉树刷题记录。题单：https://vjudge.net/contest/246458#overview</summary>
+    
+    
+    
+    <category term="题解" scheme="https://blog.maples31.com/blog/categories/%E9%A2%98%E8%A7%A3/"/>
+    
+    
+    <category term="树" scheme="https://blog.maples31.com/blog/tags/%E6%A0%91/"/>
+    
+    <category term="二叉树" scheme="https://blog.maples31.com/blog/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    
+    <category term="dfs" scheme="https://blog.maples31.com/blog/tags/dfs/"/>
+    
+    <category term="StringStream" scheme="https://blog.maples31.com/blog/tags/StringStream/"/>
+    
+    <category term="递归" scheme="https://blog.maples31.com/blog/tags/%E9%80%92%E5%BD%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>云计算：4. BigTable</title>
+    <link href="https://blog.maples31.com/blog/2021/03/31/CloudComputing-4/"/>
+    <id>https://blog.maples31.com/blog/2021/03/31/CloudComputing-4/</id>
+    <published>2021-03-31T06:12:25.000Z</published>
+    <updated>2021-03-31T06:33:09.032Z</updated>
+    
+    
+    <summary type="html">介绍Google三宝中的分布式结构化数据表BigTable和HBase</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://blog.maples31.com/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="云计算" scheme="https://blog.maples31.com/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>蓝桥杯选拔赛</title>
+    <link href="https://blog.maples31.com/blog/2021/03/21/%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%80%89%E6%8B%94%E8%B5%9B/"/>
+    <id>https://blog.maples31.com/blog/2021/03/21/%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%80%89%E6%8B%94%E8%B5%9B/</id>
+    <published>2021-03-21T03:41:52.000Z</published>
+    <updated>2021-03-23T09:09:54.979Z</updated>
+    
+    
+    <summary type="html">蓝桥杯选拔赛。涉及排序，分治法求中位数，动态规划</summary>
+    
+    
+    
+    <category term="题解" scheme="https://blog.maples31.com/blog/categories/%E9%A2%98%E8%A7%A3/"/>
+    
+    
+    <category term="排序" scheme="https://blog.maples31.com/blog/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+    <category term="中位数" scheme="https://blog.maples31.com/blog/tags/%E4%B8%AD%E4%BD%8D%E6%95%B0/"/>
+    
+    <category term="分治" scheme="https://blog.maples31.com/blog/tags/%E5%88%86%E6%B2%BB/"/>
+    
+    <category term="第k大" scheme="https://blog.maples31.com/blog/tags/%E7%AC%ACk%E5%A4%A7/"/>
+    
+    <category term="动态规划" scheme="https://blog.maples31.com/blog/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>云计算：3. 容器</title>
+    <link href="https://blog.maples31.com/blog/2021/03/17/CloudComputing-3/"/>
+    <id>https://blog.maples31.com/blog/2021/03/17/CloudComputing-3/</id>
+    <published>2021-03-17T06:12:43.000Z</published>
+    <updated>2021-04-07T06:20:40.108Z</updated>
+    
+    
+    <summary type="html">介绍云计算和大数据</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://blog.maples31.com/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="云计算" scheme="https://blog.maples31.com/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
+    
+    
+    <category term="docker" scheme="https://blog.maples31.com/blog/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法：线段树</title>
+    <link href="https://blog.maples31.com/blog/2021/03/16/%E7%AE%97%E6%B3%95%EF%BC%9A%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
+    <id>https://blog.maples31.com/blog/2021/03/16/%E7%AE%97%E6%B3%95%EF%BC%9A%E7%BA%BF%E6%AE%B5%E6%A0%91/</id>
+    <published>2021-03-16T12:37:19.000Z</published>
+    <updated>2021-04-07T07:11:36.550Z</updated>
+    
+    
+    <summary type="html">介绍线段树的原理、代码实现和相应例题。参考《算法竞赛入门经典 训练指南》等资料。</summary>
+    
+    
+    
+    <category term="算法" scheme="https://blog.maples31.com/blog/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="线段树" scheme="https://blog.maples31.com/blog/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java学习：5. Java Stream</title>
+    <link href="https://blog.maples31.com/blog/2021/03/16/Java%E5%AD%A6%E4%B9%A0%EF%BC%9A5-Java-Stream/"/>
+    <id>https://blog.maples31.com/blog/2021/03/16/Java%E5%AD%A6%E4%B9%A0%EF%BC%9A5-Java-Stream/</id>
+    <published>2021-03-15T16:09:22.000Z</published>
+    <updated>2021-03-24T06:12:18.040Z</updated>
+    
+    
+    <summary type="html">介绍Java 8中的Stream接口，函数式编程，MapReduce</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://blog.maples31.com/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="Java" scheme="https://blog.maples31.com/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/"/>
+    
+    
+    <category term="Java" scheme="https://blog.maples31.com/blog/tags/Java/"/>
+    
+    <category term="MapReduce" scheme="https://blog.maples31.com/blog/tags/MapReduce/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法：树状数组/二叉索引树（Binary Indexed Tree）</title>
+    <link href="https://blog.maples31.com/blog/2021/03/15/%E7%AE%97%E6%B3%95%EF%BC%9A%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%EF%BC%88Binary-Indexed-Tree%EF%BC%89/"/>
+    <id>https://blog.maples31.com/blog/2021/03/15/%E7%AE%97%E6%B3%95%EF%BC%9A%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%EF%BC%88Binary-Indexed-Tree%EF%BC%89/</id>
+    <published>2021-03-15T11:58:36.000Z</published>
+    <updated>2021-04-07T07:11:46.944Z</updated>
+    
+    
+    <summary type="html">介绍树状数组的原理、代码实现和相应例题。参考《算法竞赛入门经典 训练指南》</summary>
+    
+    
+    
+    <category term="算法" scheme="https://blog.maples31.com/blog/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="树状数组" scheme="https://blog.maples31.com/blog/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/"/>
+    
+    <category term="二叉索引树" scheme="https://blog.maples31.com/blog/tags/%E4%BA%8C%E5%8F%89%E7%B4%A2%E5%BC%95%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>云计算：1. 大数据与云计算</title>
+    <link href="https://blog.maples31.com/blog/2021/03/15/CloudComputing-1/"/>
+    <id>https://blog.maples31.com/blog/2021/03/15/CloudComputing-1/</id>
+    <published>2021-03-15T08:44:51.000Z</published>
+    <updated>2021-03-15T16:11:41.979Z</updated>
+    
+    
+    <summary type="html">介绍云计算和大数据</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://blog.maples31.com/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="云计算" scheme="https://blog.maples31.com/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
+    
+    
+  </entry>
+  
+</feed>

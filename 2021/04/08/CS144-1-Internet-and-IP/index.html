@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Georgia:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/blog/lib/pace/pace-theme-minimal.min.css">
+  <script src="/blog/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.maples31.com","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"./public/search.xml"};
+  </script>
+
+  <meta name="description" content="Stanford课程CS144，介绍Internet和IP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CS144: 1. Internet and IP">
+<meta property="og:url" content="https://blog.maples31.com/blog/2021/04/08/CS144-1-Internet-and-IP/index.html">
+<meta property="og:site_name" content="Maples&#39; Space">
+<meta property="og:description" content="Stanford课程CS144，介绍Internet和IP">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409114932469.png">
+<meta property="og:image" content="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409115424186.png">
+<meta property="og:image" content="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409120641088.png">
+<meta property="og:image" content="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409120932994.png">
+<meta property="og:image" content="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409121246937.png">
+<meta property="og:image" content="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409121357730.png">
+<meta property="og:image" content="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409122652010.png">
+<meta property="og:image" content="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409123615601.png">
+<meta property="og:image" content="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409125350838.png">
+<meta property="og:image" content="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409125453888.png">
+<meta property="og:image" content="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409125603400.png">
+<meta property="og:image" content="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409162154225.png">
+<meta property="og:image" content="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409162645925.png">
+<meta property="og:image" content="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210603232035399.png">
+<meta property="article:published_time" content="2021-04-08T07:42:50.000Z">
+<meta property="article:modified_time" content="2021-08-08T12:38:18.465Z">
+<meta property="article:author" content="Maples">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409114932469.png">
+
+<link rel="canonical" href="https://blog.maples31.com/blog/2021/04/08/CS144-1-Internet-and-IP/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>CS144: 1. Internet and IP | Maples' Space</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/blog/atom.xml" title="Maples' Space" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Maples' Space</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-records">
+
+    <a href="/blog/exercise-record/" rel="section"><i class="fa fa-sticky-note fa-fw"></i>Records</a>
+
+  </li>
+        <li class="menu-item menu-item-notebook">
+
+    <a href="https://1drv.ms/u/s!Av8S2d1dTNHYhWuM6M7EOOrqDjP3" rel="noopener" target="_blank"><i class="fa fa-book-dead fa-fw"></i>Notebook</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blog.maples31.com/blog/2021/04/08/CS144-1-Internet-and-IP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/portrait.jpg">
+      <meta itemprop="name" content="Maples">
+      <meta itemprop="description" content="Talk is cheap. Show me the code.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Maples' Space">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CS144: 1. Internet and IP
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-04-08 15:42:50" itemprop="dateCreated datePublished" datetime="2021-04-08T15:42:50+08:00">2021-04-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-08-08 20:38:18" itemprop="dateModified" datetime="2021-08-08T20:38:18+08:00">2021-08-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CS144/" itemprop="url" rel="index"><span itemprop="name">CS144</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>8.7k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>8 mins.</span>
+            </span>
+            <div class="post-description">Stanford课程CS144，介绍Internet和IP</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="1-Network-Applications"><a href="#1-Network-Applications" class="headerlink" title="1. Network Applications"></a>1. Network Applications</h1><ul>
+<li>Read and write data over network</li>
+<li>Dominant model: <strong>bidirectional</strong>, <strong>reliable</strong> byte stream connection<ul>
+<li>One side reads what the other writes</li>
+<li>Operates in both directions</li>
+<li>Reliable (unless connection breaks)</li>
+</ul>
+</li>
+</ul>
+<p>Blow we will introduce three examples: the world wide web, BitTorrent and Skype</p>
+<ul>
+<li><strong>the world wide web</strong>: A <strong>client-server model</strong>. A client opens a connection to a server and requests documents. The server responds with the  documents.</li>
+<li><strong>BitTorrent</strong>: A <strong>peer-to-peer model</strong>. Swarms of clients open connections to each other to exchange pieces of data, creating a dense network of connections.</li>
+<li><strong>Skype</strong>: A mix of the two models. When Skype clients can communicate directly, they do so in a peer-to-peer fashion. But sometimes the clients can’t  open connections directly, and so instead go through rendezvous or relay servers.</li>
+</ul>
+<h2 id="1-1-World-Wide-Web-HTTP"><a href="#1-1-World-Wide-Web-HTTP" class="headerlink" title="1.1 World Wide Web (HTTP)"></a>1.1 World Wide Web (HTTP)</h2><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409114932469.png" alt="image-20210409114932469" style="zoom:80%;" />
+
+<p>HTTP: Hypertext Transfer Protocol</p>
+<p>GET, PUT, DELETE, INFO</p>
+<p>200 OK response, 400 bad request</p>
+<p>Model: Client sends a request by writing to the connection, the server reads the request, process it, and writes a response to the connection, which the client then reads.</p>
+<h2 id="1-2-BitTorrent"><a href="#1-2-BitTorrent" class="headerlink" title="1.2 BitTorrent"></a>1.2 BitTorrent</h2><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409115424186.png" alt="image-20210409115424186" style="zoom:80%;" />
+
+<p>BitTorrent is a program that allows people to share and exchange large files.</p>
+<p>BitTorrent client requests documents from other clients.</p>
+<p>A single client can request from many others in parallel, BitTorrent breaks files up into chunks of data called <strong>pieces</strong>. </p>
+<p>When a client downloads a complete piece from another client, it then tells other clients it has that piece so they can download it  too. These collections of collaborating clients are called <strong>swarms</strong>.</p>
+<p>BitTorrent uses the exact same mechanism as the world wide web: <strong>a reliable, bidirectional data stream</strong>. When a client wants to download a file, it first has to find something called a <strong>torrent file</strong>.</p>
+<p> This torrent file describes some information about  the data file you want to download. It also tells BitTorrent about who the <strong>tracker</strong> is for that torrent.</p>
+<p>A <strong>tracker</strong> is a node that  keeps track (hence the name) of what clients are members of the swarm. To join a torrent, your client contacts the tracker,  again, over HTTP, to request a list of other clients. Your client opens connections to some of these clients and starts requesting  pieces of the file. Those clients, in turn, can request pieces.</p>
+<p>Furthermore, when a new client <strong>joins the swarm</strong>, it might tell this  new client to connect to your client. So rather than a single connection between a client and one server, you have a dense graph of connections between clients, <strong>dynamically</strong> exchanging data.</p>
+<h2 id="1-3-Skype"><a href="#1-3-Skype" class="headerlink" title="1.3 Skype"></a>1.3 Skype</h2><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409120641088.png" alt="image-20210409120641088" style="zoom:80%;" />
+
+<p><strong>Skype</strong>: the popular voice, chat, and video service. You have two personal computers requesting data from each other</p>
+<p><strong>NAT</strong> (Network Address Translator): If you’re  behind a NAT then you can open connections out to the Internet, but other nodes on the Internet can’t  easily open connections to you. Connections coming from the green side work fine, but connections coming from the red  side don’t.</p>
+<p>So the complication here is that if the client A wants to call the client B, it can’t open a connection. Skype  has to work around this.</p>
+<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409120932994.png" alt="image-20210409120932994" style="zoom:80%;" />
+
+<p><strong>Rendezvous server</strong>: When you log into Skype, your client opens connections to a network of control servers.</p>
+<p><strong>Process</strong>: When client A calls client B, it sends a message to the rendezvous server. Since the server has an open connection to client B, it tells B that there’s a call request from A. The call dialog pops up on client B. If client B accepts the call, then it opens a connection to client A. Client A was trying to open a connection  to client B, but since B was behind a NAT, it couldn’t. So instead it sends a message to a computer that client B is already connected to, which then asks client  B to open a connection back to client A. Since client A isn’t behind a NAT, this connection can open normally.</p>
+<p>This is called a <strong>reverse connection</strong> because it  reverses the expected direction for initiating the connection. Client A is trying to connect to client B, but instead client B opens a connection to client A.</p>
+<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409121246937.png" alt="image-20210409121246937" style="zoom:80%;" />
+
+<p>What does Skype do if both clients are behind NATs?</p>
+<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409121357730.png" alt="image-20210409121357730" style="zoom:80%;" />
+
+<p><strong>Relay</strong>: A kind of server. Relays can’t be  behind NATs.</p>
+<p>If both client A and client B are behind NATs, then the communicate through a  relay. They both open connections to the relay. When client A sends data, the relay forwards  it to client B through the connection that B opened. Similarly, when client B sends data, the  relay forwards it to client A through the connection client A opened.</p>
+<h1 id="2-The-4-Layer-Internet-Model"><a href="#2-The-4-Layer-Internet-Model" class="headerlink" title="2. The 4 Layer Internet Model"></a>2. The 4 Layer Internet Model</h1><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409122652010.png" alt="image-20210409122652010" style="zoom:80%;" />
+
+<p>Each layer  has a different responsibility,  with each layer building a  service on top of the one below,  all the way to the top where we  have the bi-directional reliable  byte stream communication  between applications.</p>
+<h2 id="2-1-Link-Layer"><a href="#2-1-Link-Layer" class="headerlink" title="2.1 Link Layer"></a>2.1 Link Layer</h2><p>The Internet is made up of end-hosts, links and routers. Data is  delivered hop-by-hop over each link in turn.</p>
+<p>A <strong>packet</strong> consists of the  data we want to be delivered,  along with a header that tells the  network where the packet is to  be delivered, where it came  from and so on.</p>
+<p>The Link Layer’s <strong>job</strong>: carry the data over one link at a time.</p>
+<p><strong>Examples</strong>: Ethernet, WIFI</p>
+<h2 id="2-2-Network-Layer"><a href="#2-2-Network-Layer" class="headerlink" title="2.2 Network Layer"></a>2.2 Network Layer</h2><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409123615601.png" alt="image-20210409123615601" style="zoom:80%;" />
+
+<p>The network layer’s <strong>job</strong>: deliver packets end-to-end across the Internet from the source to the destination.</p>
+<p><strong>Packet</strong>: A <strong>self-contained</strong> collection of data, plus a header that describes what the data is, where it is going and where it came from.</p>
+<p>Network layer packets are called <strong>datagrams</strong>. They consist of some data and a head containing the “To” and “From” addresses.</p>
+<h3 id="Process"><a href="#Process" class="headerlink" title="Process"></a>Process</h3><ul>
+<li><p>The Network hands the datagram to the Link Layer below, telling it to send the datagram over the first link. (The Link layer is providing a <strong>service</strong> to the Network Layer.)</p>
+</li>
+<li><p>At the other end of the link is a  <strong>router</strong>. The Link Layer of the  router accepts the datagram  from the link, and hands it up to  the Network Layer in the router. The Network Layer on the  router examines the destination  address of the datagram, and is  responsible for routing the  datagram one hop at a time towards its eventual destination.  It does this by sending to the  Link Layer again, to carry it  over the next link. And so on  until it reaches the Network  Layer at the destination.</p>
+</li>
+</ul>
+<h3 id="Separation"><a href="#Separation" class="headerlink" title="Separation"></a>Separation</h3><p>The Network Layer  does not need to concern itself  with <em>how</em> the Link Layer  sends the datagram over the link. </p>
+<p>This <strong>separation</strong> of concerns between  the Network Layer and the Link  Layer allows each to focus on  its job, without worrying about  how the other layer works. It also means that a single  Network Layer has a <strong>common way</strong> to talk to many different  Link Layers by simply handing them datagrams to send. This  separation of concerns is made  possibly by the <strong>modularity</strong> of  each layer and a common well-defined API to the layer below.</p>
+<h3 id="Special"><a href="#Special" class="headerlink" title="Special"></a>Special</h3><p>We must use the Internet protocol (IP)</p>
+<ul>
+<li>IP <strong>makes a best-effort attempt</strong> to deliver our datagrams to the other hand. But it <strong>makes no promises</strong>.</li>
+<li>IP datagrams can get lost, can be delivered out of order, and can be corrupted. There are <strong>no guarantees</strong>.</li>
+</ul>
+<h2 id="2-3-Transport-Layer"><a href="#2-3-Transport-Layer" class="headerlink" title="2.3 Transport Layer"></a>2.3 Transport Layer</h2><p><strong>TCP</strong> (Transmission Control Protocol): makes sure that data sent  by an application at one end of  the Internet is correctly  delivered (in the right order) to the application at the other end of the Internet.</p>
+<p><strong>UDP</strong> (User Datagram Protocol): just bundles up  application data and hands it to  the Network Layer for delivery  to the other end. UDP offers <strong>no  delivery guarantees</strong>.</p>
+<h2 id="2-4-Application-Layer"><a href="#2-4-Application-Layer" class="headerlink" title="2.4 Application Layer"></a>2.4 Application Layer</h2><p>HTTP (Hypertext Transfer Protocol)</p>
+<h2 id="2-5-ALL"><a href="#2-5-ALL" class="headerlink" title="2.5 ALL"></a>2.5 ALL</h2><p>Each layer communicates with its peer layer: each layer is only  communicating with the same  layer at the other end of the link  or Internet, without regard for  how the layer below gets the  data there.</p>
+<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409125350838.png" alt="image-20210409125350838" style="zoom:80%;" />
+
+<h2 id="2-6-Other"><a href="#2-6-Other" class="headerlink" title="2.6 Other"></a>2.6 Other</h2><h3 id="IP"><a href="#IP" class="headerlink" title="IP"></a>IP</h3><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409125453888.png" alt="image-20210409125453888" style="zoom:80%;" />
+
+<p>IP: the thin waist of the Internet</p>
+<p>IP is the only choice if we want to use the Internet.</p>
+<h3 id="OSI-Model"><a href="#OSI-Model" class="headerlink" title="OSI Model"></a>OSI Model</h3><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409125603400.png" alt="image-20210409125603400" style="zoom:80%;" />
+
+<p>7-layer Open Systems Interconnection model — OSI model</p>
+<ul>
+<li>Physical Layer: defined things like the voltage levels on a cable, or the physical dimensions of a connector</li>
+<li>Presentation Layer: provide services that allow communicating applications to interpret the meaning of data exchanged<ul>
+<li>data compression</li>
+<li>data encryption (self-explanatory)</li>
+<li>data description (data format)</li>
+</ul>
+</li>
+<li>Session Layer: provides for delimiting and synchronization of data exchange<ul>
+<li>build a checkpointing</li>
+<li>recovery scheme</li>
+</ul>
+</li>
+</ul>
+<h1 id="3-The-IP-Service"><a href="#3-The-IP-Service" class="headerlink" title="3. The IP Service"></a>3. The IP Service</h1><p>features:</p>
+<ul>
+<li>Datagram, hop by hop</li>
+<li>Unreliable</li>
+<li>Best-effort</li>
+<li>Connectionless</li>
+</ul>
+<h2 id="3-1-The-Internet-Protocol"><a href="#3-1-The-Internet-Protocol" class="headerlink" title="3.1 The Internet Protocol"></a>3.1 The Internet Protocol</h2><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409162154225.png" alt="image-20210409162154225" style="zoom:80%;" />
+
+<p><strong>IP datagrams</strong> consist of a header and some data.</p>
+<p>When the transport layer has data to send, it hands a <strong>Transport segment</strong> to the Network layer below. The network layer puts the transport segments inside a new <strong>IP datagram</strong>. IP’s job is to deliver the datagram to the other end.</p>
+<p>IP send the datagram to the Link Layer that puts it inside a <strong>Link Frame</strong>, such as an Ethernet packet and ships it off to the first router.</p>
+<ul>
+<li>Application layer: stream of data</li>
+<li>Transport layer: segments of data</li>
+<li>Network layer: packets of data</li>
+</ul>
+<h2 id="3-2-The-IP-Service-Model"><a href="#3-2-The-IP-Service-Model" class="headerlink" title="3.2 The IP Service Model"></a>3.2 The IP Service Model</h2><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409162645925.png" alt="image-20210409162645925" style="zoom:80%;" />
+
+<p>The IP service sends <strong>Datagrams</strong> from end host to end host; it is <strong>unreliable</strong>, but makes a <strong>best-effort</strong> to deliver the datagrams. The network maintains <strong>no per-flow state</strong> associated with the datagrams.</p>
+<blockquote>
+<p>Datagram: The datagram is packet that is routed individually through the network based on the information in its header. —&gt; <strong>self-contained</strong></p>
+<p>IP DA — IP address of the destination</p>
+<p>IP SA — IP source address</p>
+</blockquote>
+<h2 id="3-3-Why-is-the-IP-service-so-simple"><a href="#3-3-Why-is-the-IP-service-so-simple" class="headerlink" title="3.3 Why is the IP service so simple?"></a>3.3 Why is the IP service so simple?</h2><ul>
+<li>Simple, dumb, minimal: Faster, more streamlined and lower cost to build and maintain</li>
+<li>The end-to-end principle: Where possible, implement features in the end host.</li>
+<li>Allow a variety of reliable (or unreliable) services to be built on top.</li>
+<li>Works over any link layer: IP makes very few assumptions about the link layer below.</li>
+</ul>
+<h2 id="3-4-The-Detail-features-of-the-IP-Service-Model"><a href="#3-4-The-Detail-features-of-the-IP-Service-Model" class="headerlink" title="3.4 The Detail/features of the IP Service Model"></a>3.4 The Detail/features of the IP Service Model</h2><ol>
+<li>Tries to prevent packets looping forever.</li>
+<li>Will fragment packets if they are too long.</li>
+<li>Uses a header checksum to reduce chances of delivering datagram to wrong destination.</li>
+<li>Allows for new versions of IP (IPv4 — 32 bit address; IPv6 — 125 bit address)</li>
+<li>Allows for new options to be added to header.</li>
+</ol>
+<h2 id="3-5-IPv4-Datagram"><a href="#3-5-IPv4-Datagram" class="headerlink" title="3.5 IPv4 Datagram"></a>3.5 IPv4 Datagram</h2><img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210603232035399.png" alt="image-20210603232035399" style="zoom:80%;" />
+
+<ul>
+<li>Destination IP Address</li>
+<li>Source IP Address</li>
+<li>Protocol ID<ul>
+<li>tells what’s inside the data field</li>
+<li>e.g. 6 -&gt; TCP segments</li>
+</ul>
+</li>
+<li>Version<ul>
+<li>the version of IP: IPv4, IPv6</li>
+</ul>
+</li>
+<li>Total Packet Length<ul>
+<li>be up 64kBytes</li>
+</ul>
+</li>
+<li>Time to Live (TTL)<ul>
+<li>prevent packets looping in the network forever</li>
+<li>Every router is required to decrement the TTL field</li>
+<li>If it reaches zero, the router should drop the packet</li>
+</ul>
+</li>
+<li>Packet ID &amp; Flags &amp; Fragment Offset<ul>
+<li>help to fragment IP packets into small <strong>self-contained</strong> packets</li>
+</ul>
+</li>
+<li>Type of Service</li>
+<li>Header Length</li>
+<li>Checksum<ul>
+<li>a checksum is calculated over the whole header</li>
+</ul>
+</li>
+</ul>
+<h1 id="4-Packet"><a href="#4-Packet" class="headerlink" title="4. Packet"></a>4. Packet</h1><p>application: stream of data</p>
+<p>transport: segments of data</p>
+<p>network: packets of data</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/2021/04/07/CloudComputing-5/" rel="prev" title="云计算：5. 分布式锁服务Chubby">
+      <i class="fa fa-chevron-left"></i> 云计算：5. 分布式锁服务Chubby
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/2021/04/08/CS144-2-Transport/" rel="next" title="CS144: 2. Transport">
+      CS144: 2. Transport <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Network-Applications"><span class="nav-text">1. Network Applications</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-World-Wide-Web-HTTP"><span class="nav-text">1.1 World Wide Web (HTTP)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-BitTorrent"><span class="nav-text">1.2 BitTorrent</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-Skype"><span class="nav-text">1.3 Skype</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-The-4-Layer-Internet-Model"><span class="nav-text">2. The 4 Layer Internet Model</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Link-Layer"><span class="nav-text">2.1 Link Layer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Network-Layer"><span class="nav-text">2.2 Network Layer</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Process"><span class="nav-text">Process</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Separation"><span class="nav-text">Separation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Special"><span class="nav-text">Special</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Transport-Layer"><span class="nav-text">2.3 Transport Layer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-Application-Layer"><span class="nav-text">2.4 Application Layer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-ALL"><span class="nav-text">2.5 ALL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-Other"><span class="nav-text">2.6 Other</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#IP"><span class="nav-text">IP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OSI-Model"><span class="nav-text">OSI Model</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-The-IP-Service"><span class="nav-text">3. The IP Service</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-The-Internet-Protocol"><span class="nav-text">3.1 The Internet Protocol</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-The-IP-Service-Model"><span class="nav-text">3.2 The IP Service Model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-Why-is-the-IP-service-so-simple"><span class="nav-text">3.3 Why is the IP service so simple?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-The-Detail-features-of-the-IP-Service-Model"><span class="nav-text">3.4 The Detail&#x2F;features of the IP Service Model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-IPv4-Datagram"><span class="nav-text">3.5 IPv4 Datagram</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Packet"><span class="nav-text">4. Packet</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Maples"
+      src="/blog/images/portrait.jpg">
+  <p class="site-author-name" itemprop="name">Maples</p>
+  <div class="site-description" itemprop="description">Talk is cheap. Show me the code.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/tags/">
+          
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/maple-pro" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;maple-pro" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yangfeng@whu.edu.cn" title="E-Mail → mailto:yangfeng@whu.edu.cn" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/blog/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://justloseit.top/" title="http:&#x2F;&#x2F;justloseit.top&#x2F;" rel="noopener" target="_blank">Mobilis In Mobili</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://hzwer.com/" title="http:&#x2F;&#x2F;hzwer.com" rel="noopener" target="_blank">hzwer</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://xidoo123.github.io/" title="http:&#x2F;&#x2F;xidoo123.github.io" rel="noopener" target="_blank">X1do0</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://coolshell.cn/" title="https:&#x2F;&#x2F;coolshell.cn&#x2F;" rel="noopener" target="_blank">CoolShell</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.ruanyifeng.com/blog/" title="http:&#x2F;&#x2F;www.ruanyifeng.com&#x2F;blog&#x2F;" rel="noopener" target="_blank">阮一峰</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://ice1000.org/" title="https:&#x2F;&#x2F;ice1000.org&#x2F;" rel="noopener" target="_blank">ice1000</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Maples</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="Symbols count total">92k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">1:23</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+<script src="/blog/js/bookmark.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/blog/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+
+  
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://blog.maples31.com/blog/2021/04/08/CS144-1-Internet-and-IP/";
+    this.page.identifier = "2021/04/08/CS144-1-Internet-and-IP/";
+    this.page.title = "CS144: 1. Internet and IP";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://Maples.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>
