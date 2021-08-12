@@ -6,7 +6,7 @@
   <link href="https://blog.maples31.com/blog/atom.xml" rel="self"/>
   
   <link href="https://blog.maples31.com/blog/"/>
-  <updated>2021-08-08T12:08:05.660Z</updated>
+  <updated>2021-08-12T13:01:52.693Z</updated>
   <id>https://blog.maples31.com/blog/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>unstated-next 实现组件间数据逻辑共享</title>
+    <link href="https://blog.maples31.com/blog/2021/08/12/unstated-next-%E5%AE%9E%E7%8E%B0%E7%BB%84%E4%BB%B6%E9%97%B4%E6%95%B0%E6%8D%AE%E9%80%BB%E8%BE%91%E5%85%B1%E4%BA%AB/"/>
+    <id>https://blog.maples31.com/blog/2021/08/12/unstated-next-%E5%AE%9E%E7%8E%B0%E7%BB%84%E4%BB%B6%E9%97%B4%E6%95%B0%E6%8D%AE%E9%80%BB%E8%BE%91%E5%85%B1%E4%BA%AB/</id>
+    <published>2021-08-12T12:59:14.000Z</published>
+    <updated>2021-08-12T13:01:52.693Z</updated>
+    
+    
+    <summary type="html">记录React.js的一些知识点</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://blog.maples31.com/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="React" scheme="https://blog.maples31.com/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/React/"/>
+    
+    
+    <category term="React" scheme="https://blog.maples31.com/blog/tags/React/"/>
+    
+    <category term="Hooks" scheme="https://blog.maples31.com/blog/tags/Hooks/"/>
+    
+    <category term="unstated-next" scheme="https://blog.maples31.com/blog/tags/unstated-next/"/>
+    
+  </entry>
+  
+  <entry>
     <title>前端面试题</title>
     <link href="https://blog.maples31.com/blog/2021/08/08/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     <id>https://blog.maples31.com/blog/2021/08/08/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/</id>
     <published>2021-08-08T11:55:05.000Z</published>
-    <updated>2021-08-08T12:08:05.660Z</updated>
+    <updated>2021-08-12T12:52:13.717Z</updated>
     
     
     <summary type="html">记录前端面试题</summary>
@@ -31,17 +56,17 @@
     <category term="前端" scheme="https://blog.maples31.com/blog/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="javascript" scheme="https://blog.maples31.com/blog/tags/javascript/"/>
+    <category term="React" scheme="https://blog.maples31.com/blog/tags/React/"/>
     
-    <category term="css" scheme="https://blog.maples31.com/blog/tags/css/"/>
+    <category term="Javascript" scheme="https://blog.maples31.com/blog/tags/Javascript/"/>
     
-    <category term="vue" scheme="https://blog.maples31.com/blog/tags/vue/"/>
+    <category term="CSS" scheme="https://blog.maples31.com/blog/tags/CSS/"/>
+    
+    <category term="Vue" scheme="https://blog.maples31.com/blog/tags/Vue/"/>
     
     <category term="前端" scheme="https://blog.maples31.com/blog/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="小程序" scheme="https://blog.maples31.com/blog/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-    <category term="react" scheme="https://blog.maples31.com/blog/tags/react/"/>
     
   </entry>
   
@@ -342,7 +367,7 @@
     <link href="https://blog.maples31.com/blog/2021/03/17/CloudComputing-3/"/>
     <id>https://blog.maples31.com/blog/2021/03/17/CloudComputing-3/</id>
     <published>2021-03-17T06:12:43.000Z</published>
-    <updated>2021-04-07T06:20:40.108Z</updated>
+    <updated>2021-08-12T12:52:24.521Z</updated>
     
     
     <summary type="html">介绍云计算和大数据</summary>
@@ -354,7 +379,7 @@
     <category term="云计算" scheme="https://blog.maples31.com/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
     
     
-    <category term="docker" scheme="https://blog.maples31.com/blog/tags/docker/"/>
+    <category term="Docker" scheme="https://blog.maples31.com/blog/tags/Docker/"/>
     
   </entry>
   
@@ -405,7 +430,7 @@
     <link href="https://blog.maples31.com/blog/2021/03/15/%E7%AE%97%E6%B3%95%EF%BC%9A%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%EF%BC%88Binary-Indexed-Tree%EF%BC%89/"/>
     <id>https://blog.maples31.com/blog/2021/03/15/%E7%AE%97%E6%B3%95%EF%BC%9A%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%EF%BC%88Binary-Indexed-Tree%EF%BC%89/</id>
     <published>2021-03-15T11:58:36.000Z</published>
-    <updated>2021-04-07T07:11:46.944Z</updated>
+    <updated>2021-08-12T12:51:30.723Z</updated>
     
     
     <summary type="html">介绍树状数组的原理、代码实现和相应例题。参考《算法竞赛入门经典 训练指南》</summary>
@@ -415,28 +440,11 @@
     <category term="算法" scheme="https://blog.maples31.com/blog/categories/%E7%AE%97%E6%B3%95/"/>
     
     
+    <category term="二叉树" scheme="https://blog.maples31.com/blog/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    
     <category term="树状数组" scheme="https://blog.maples31.com/blog/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/"/>
     
     <category term="二叉索引树" scheme="https://blog.maples31.com/blog/tags/%E4%BA%8C%E5%8F%89%E7%B4%A2%E5%BC%95%E6%A0%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>云计算：1. 大数据与云计算</title>
-    <link href="https://blog.maples31.com/blog/2021/03/15/CloudComputing-1/"/>
-    <id>https://blog.maples31.com/blog/2021/03/15/CloudComputing-1/</id>
-    <published>2021-03-15T08:44:51.000Z</published>
-    <updated>2021-03-15T16:11:41.979Z</updated>
-    
-    
-    <summary type="html">介绍云计算和大数据</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://blog.maples31.com/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="云计算" scheme="https://blog.maples31.com/blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
-    
     
   </entry>
   
