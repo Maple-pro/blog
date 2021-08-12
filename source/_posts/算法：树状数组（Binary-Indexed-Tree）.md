@@ -1,7 +1,7 @@
 ---
 title: 算法：树状数组/二叉索引树（Binary Indexed Tree）
 date: 2021-03-15 19:58:36
-tags: [树状数组, 二叉索引树]
+tags: [树状数组, 二叉索引树, 二叉树]
 categories: [算法]
 description: 介绍树状数组的原理、代码实现和相应例题。参考《算法竞赛入门经典 训练指南》
 mathjax: true
