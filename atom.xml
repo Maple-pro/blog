@@ -6,7 +6,7 @@
   <link href="https://blog.maples31.com/blog/atom.xml" rel="self"/>
   
   <link href="https://blog.maples31.com/blog/"/>
-  <updated>2021-08-12T13:14:01.499Z</updated>
+  <updated>2021-08-17T16:36:16.282Z</updated>
   <id>https://blog.maples31.com/blog/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>深入理解现代 Web 浏览器 (Part 1)</title>
+    <link href="https://blog.maples31.com/blog/2021/08/17/Inside-look-at-modern-web-browser%20(Part%201)/"/>
+    <id>https://blog.maples31.com/blog/2021/08/17/Inside-look-at-modern-web-browser%20(Part%201)/</id>
+    <published>2021-08-17T14:04:04.000Z</published>
+    <updated>2021-08-17T16:36:16.282Z</updated>
+    
+    
+    <summary type="html">介绍 Chrome 浏览器的架构以及 Servicification 和 Site Isolation 特性。&lt;br/&gt;翻译自: https://developers.google.com/web/updates/2018/09/inside-browser-part1</summary>
+    
+    
+    
+    <category term="前端" scheme="https://blog.maples31.com/blog/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="浏览器" scheme="https://blog.maples31.com/blog/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>unstated-next 实现组件间数据逻辑共享</title>
@@ -422,29 +441,6 @@
     <category term="Java" scheme="https://blog.maples31.com/blog/tags/Java/"/>
     
     <category term="MapReduce" scheme="https://blog.maples31.com/blog/tags/MapReduce/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>算法：树状数组/二叉索引树（Binary Indexed Tree）</title>
-    <link href="https://blog.maples31.com/blog/2021/03/15/%E7%AE%97%E6%B3%95%EF%BC%9A%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%EF%BC%88Binary-Indexed-Tree%EF%BC%89/"/>
-    <id>https://blog.maples31.com/blog/2021/03/15/%E7%AE%97%E6%B3%95%EF%BC%9A%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%EF%BC%88Binary-Indexed-Tree%EF%BC%89/</id>
-    <published>2021-03-15T11:58:36.000Z</published>
-    <updated>2021-08-12T12:51:30.723Z</updated>
-    
-    
-    <summary type="html">介绍树状数组的原理、代码实现和相应例题。参考《算法竞赛入门经典 训练指南》</summary>
-    
-    
-    
-    <category term="算法" scheme="https://blog.maples31.com/blog/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="二叉树" scheme="https://blog.maples31.com/blog/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
-    
-    <category term="树状数组" scheme="https://blog.maples31.com/blog/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/"/>
-    
-    <category term="二叉索引树" scheme="https://blog.maples31.com/blog/tags/%E4%BA%8C%E5%8F%89%E7%B4%A2%E5%BC%95%E6%A0%91/"/>
     
   </entry>
   
