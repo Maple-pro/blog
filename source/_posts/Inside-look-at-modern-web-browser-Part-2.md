@@ -1,5 +1,5 @@
 ---
-title: Inside look at modern web browser (Part 2)
+title: 深入理解现代 Web 浏览器 (Part 2)
 date: 2021-08-21 00:21:25
 tags: [浏览器]
 categories: [前端]
