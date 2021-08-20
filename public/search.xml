@@ -2332,7 +2332,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Inside look at modern web browser (Part 2)</title>
+    <title>深入理解现代 Web 浏览器 (Part 2)</title>
     <url>/blog/2021/08/21/Inside-look-at-modern-web-browser-Part-2/</url>
     <content><![CDATA[<h1 id="Part-2-在浏览器导航（Navigation）过程中，发生了什么？"><a href="#Part-2-在浏览器导航（Navigation）过程中，发生了什么？" class="headerlink" title="Part 2. 在浏览器导航（Navigation）过程中，发生了什么？"></a>Part 2. 在浏览器导航（Navigation）过程中，发生了什么？</h1><blockquote>
 <p>Reference: <a href="https://developers.google.com/web/updates/2018/09/inside-browser-part2">https://developers.google.com/web/updates/2018/09/inside-browser-part2</a></p>

@@ -6,7 +6,7 @@
   <link href="https://blog.maples31.com/blog/atom.xml" rel="self"/>
   
   <link href="https://blog.maples31.com/blog/"/>
-  <updated>2021-08-20T17:26:36.680Z</updated>
+  <updated>2021-08-20T17:29:30.889Z</updated>
   <id>https://blog.maples31.com/blog/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Inside look at modern web browser (Part 2)</title>
+    <title>深入理解现代 Web 浏览器 (Part 2)</title>
     <link href="https://blog.maples31.com/blog/2021/08/21/Inside-look-at-modern-web-browser-Part-2/"/>
     <id>https://blog.maples31.com/blog/2021/08/21/Inside-look-at-modern-web-browser-Part-2/</id>
     <published>2021-08-20T16:21:25.000Z</published>
-    <updated>2021-08-20T17:26:36.680Z</updated>
+    <updated>2021-08-20T17:29:30.889Z</updated>
     
     
     <summary type="html">当用户请求一个站点时，浏览器做了什么准备工作去渲染页面？&lt;br/&gt;翻译自：https://developers.google.com/web/updates/2018/09/inside-browser-part2</summary>
