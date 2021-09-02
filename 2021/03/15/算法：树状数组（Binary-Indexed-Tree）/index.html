@@ -354,13 +354,7 @@
 
           </div>
           
-    
-  <div class="comments">
-    <div id="disqus_thread">
-      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-    </div>
-  </div>
-  
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -667,25 +661,24 @@ if (document.querySelectorAll('pre.mermaid').length) {
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
 <script>
-  var disqus_config = function() {
-    this.page.url = "https://blog.maples31.com/blog/2021/03/15/%E7%AE%97%E6%B3%95%EF%BC%9A%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%EF%BC%88Binary-Indexed-Tree%EF%BC%89/";
-    this.page.identifier = "2021/03/15/算法：树状数组（Binary-Indexed-Tree）/";
-    this.page.title = "算法：树状数组/二叉索引树（Binary Indexed Tree）";
-    };
-  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
-    if (window.DISQUS) {
-      DISQUS.reset({
-        reload: true,
-        config: disqus_config
-      });
-    } else {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://Maples.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', '' + +new Date());
-      (d.head || d.body).appendChild(s);
-    }
-  });
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '8cc6c00e57d96b22dc32',
+      clientSecret: '0f33f40938e14b244737ac9d0b9a27156f49e9e3',
+      repo        : 'blog',
+      owner       : 'Maple-pro',
+      admin       : ['Maple-pro'],
+      id          : 'cde225cd7344f9d934560617a9187574',
+        language: 'en',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
 </script>
 
 </body>

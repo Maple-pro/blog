@@ -316,13 +316,7 @@
 
           </div>
           
-    
-  <div class="comments">
-    <div id="disqus_thread">
-      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-    </div>
-  </div>
-  
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -575,25 +569,24 @@ if (document.querySelectorAll('pre.mermaid').length) {
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
 <script>
-  var disqus_config = function() {
-    this.page.url = "https://blog.maples31.com/blog/2021/03/16/Java%E5%AD%A6%E4%B9%A0%EF%BC%9A5-Java-Stream/";
-    this.page.identifier = "2021/03/16/Java学习：5-Java-Stream/";
-    this.page.title = "Java学习：5. Java Stream";
-    };
-  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
-    if (window.DISQUS) {
-      DISQUS.reset({
-        reload: true,
-        config: disqus_config
-      });
-    } else {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://Maples.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', '' + +new Date());
-      (d.head || d.body).appendChild(s);
-    }
-  });
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '8cc6c00e57d96b22dc32',
+      clientSecret: '0f33f40938e14b244737ac9d0b9a27156f49e9e3',
+      repo        : 'blog',
+      owner       : 'Maple-pro',
+      admin       : ['Maple-pro'],
+      id          : 'a8555098d05ca6a645ca2f75922134e3',
+        language: 'en',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
 </script>
 
 </body>

@@ -312,13 +312,7 @@
 
           </div>
           
-    
-  <div class="comments">
-    <div id="disqus_thread">
-      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-    </div>
-  </div>
-  
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -625,25 +619,24 @@ if (document.querySelectorAll('pre.mermaid').length) {
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
 <script>
-  var disqus_config = function() {
-    this.page.url = "https://blog.maples31.com/blog/2021/04/08/CCF-202012-3-%E5%B8%A6%E9%85%8D%E9%A2%9D%E7%9A%84%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/";
-    this.page.identifier = "2021/04/08/CCF-202012-3-带配额的文件系统/";
-    this.page.title = "CCF-202012-3: 带配额的文件系统";
-    };
-  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
-    if (window.DISQUS) {
-      DISQUS.reset({
-        reload: true,
-        config: disqus_config
-      });
-    } else {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://Maples.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', '' + +new Date());
-      (d.head || d.body).appendChild(s);
-    }
-  });
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '8cc6c00e57d96b22dc32',
+      clientSecret: '0f33f40938e14b244737ac9d0b9a27156f49e9e3',
+      repo        : 'blog',
+      owner       : 'Maple-pro',
+      admin       : ['Maple-pro'],
+      id          : 'f551a9aa8581184261730b6563a15a33',
+        language: 'en',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
 </script>
 
 </body>
