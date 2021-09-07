@@ -2082,6 +2082,11 @@
 <td>字节提前批一面</td>
 <td>×</td>
 </tr>
+<tr>
+<td>9.1</td>
+<td>字节正式批一面</td>
+<td>×</td>
+</tr>
 </tbody></table>
 <h1 id="7-18-字节提前批一面"><a href="#7-18-字节提前批一面" class="headerlink" title="7.18 字节提前批一面"></a>7.18 字节提前批一面</h1><blockquote>
 <p>内容：<code>javascript</code>, <code>css</code>, <code>http</code>, <code>vue</code></p>
@@ -2196,6 +2201,38 @@
 <li>h5 怎么调用 native api</li>
 <li>代码：数组合并排序</li>
 <li>代码：js 实现异步调度器 <a href="https://blog.csdn.net/weixin_37680520/article/details/108244727">https://blog.csdn.net/weixin_37680520/article/details/108244727</a></li>
+</ol>
+<h1 id="9-1-字节正式批一面"><a href="#9-1-字节正式批一面" class="headerlink" title="9.1 字节正式批一面"></a>9.1 字节正式批一面</h1><ol>
+<li><p>实习期间做了什么？（这个没答好，感觉要事先准备一下）</p>
+</li>
+<li><p>实习期间做的最有难度的一件事是什么？亮点在哪？</p>
+</li>
+<li><p>埋点是怎么实现的？用户行为链路是怎么实现的？</p>
+</li>
+<li><p>bff 网关介绍一下，是如何完成鉴权的？</p>
+</li>
+<li><p><code>Process.nextTick</code> 的事件循环（node.js 的事件循环）</p>
+</li>
+<li><p>闭包和 <code>var</code> 的理解</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 以下输出是什么？</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> <span class="built_in">console</span>.log(i), <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> <span class="built_in">console</span>.log(i), <span class="number">0</span>);</span><br><span class="line">    &#125;)();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params">j</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> <span class="built_in">console</span>.log(j), <span class="number">0</span>);</span><br><span class="line">    &#125;)(i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 0 1 2 3 4</span></span><br><span class="line"><span class="comment">// 5 5 5 5 5</span></span><br><span class="line"><span class="comment">// 0 1 2 3 4</span></span><br></pre></td></tr></table></figure></li>
+<li><p>说一下 http 三次握手？</p>
+</li>
+<li><p><code>syn</code> 洪水攻击（DDOS 攻击）？和流量大崩溃有什么区别？什么时候需要消耗序列号？</p>
+</li>
+<li><p>http 状态码 307 308 401 是什么？</p>
+</li>
+<li><p>浏览器渲染的过程？composition 的过程？依据什么进行 composition ?</p>
+</li>
+<li><p>浏览器滚动时发生了什么？</p>
+</li>
+<li><p>CSS 中 absolute 的理解</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">.item &#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 10px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 1. item 位置如何？</span><br><span class="line">// 2. app 为 relative 时，item 位置如何？</span><br><span class="line">// 3. app 为 relative, transform 时，item 位置如何？</span><br></pre></td></tr></table></figure></li>
+<li><p>说一下 serverless 和 BFF 的区别</p>
+</li>
+<li><p>CSS 中 fix 的理解</p>
+</li>
+<li><p>浏览器 GPU 加速是什么？</p>
+</li>
 </ol>
 ]]></content>
       <categories>

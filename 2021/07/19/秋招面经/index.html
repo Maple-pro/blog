@@ -31,7 +31,7 @@
 <meta property="og:description" content="记录 2021 年秋招前端实习生面试">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-07-19T15:03:20.000Z">
-<meta property="article:modified_time" content="2021-08-10T16:25:12.776Z">
+<meta property="article:modified_time" content="2021-09-07T06:07:53.415Z">
 <meta property="article:author" content="Maples">
 <meta name="twitter:card" content="summary">
 
@@ -235,7 +235,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-08-11 00:25:12" itemprop="dateModified" datetime="2021-08-11T00:25:12+08:00">2021-08-11</time>
+                <time title="Modified: 2021-09-07 14:07:53" itemprop="dateModified" datetime="2021-09-07T14:07:53+08:00">2021-09-07</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -252,13 +252,13 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>1.4k</span>
+              <span>2.3k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>1 mins.</span>
+              <span>2 mins.</span>
             </span>
             <div class="post-description">记录 2021 年秋招前端实习生面试</div>
 
@@ -302,6 +302,11 @@
 <tr>
 <td>8.9</td>
 <td>字节提前批一面</td>
+<td>×</td>
+</tr>
+<tr>
+<td>9.1</td>
+<td>字节正式批一面</td>
 <td>×</td>
 </tr>
 </tbody></table>
@@ -419,6 +424,38 @@
 <li>代码：数组合并排序</li>
 <li>代码：js 实现异步调度器 <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_37680520/article/details/108244727">https://blog.csdn.net/weixin_37680520/article/details/108244727</a></li>
 </ol>
+<h1 id="9-1-字节正式批一面"><a href="#9-1-字节正式批一面" class="headerlink" title="9.1 字节正式批一面"></a>9.1 字节正式批一面</h1><ol>
+<li><p>实习期间做了什么？（这个没答好，感觉要事先准备一下）</p>
+</li>
+<li><p>实习期间做的最有难度的一件事是什么？亮点在哪？</p>
+</li>
+<li><p>埋点是怎么实现的？用户行为链路是怎么实现的？</p>
+</li>
+<li><p>bff 网关介绍一下，是如何完成鉴权的？</p>
+</li>
+<li><p><code>Process.nextTick</code> 的事件循环（node.js 的事件循环）</p>
+</li>
+<li><p>闭包和 <code>var</code> 的理解</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 以下输出是什么？</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> <span class="built_in">console</span>.log(i), <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> <span class="built_in">console</span>.log(i), <span class="number">0</span>);</span><br><span class="line">    &#125;)();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params">j</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> <span class="built_in">console</span>.log(j), <span class="number">0</span>);</span><br><span class="line">    &#125;)(i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 0 1 2 3 4</span></span><br><span class="line"><span class="comment">// 5 5 5 5 5</span></span><br><span class="line"><span class="comment">// 0 1 2 3 4</span></span><br></pre></td></tr></table></figure></li>
+<li><p>说一下 http 三次握手？</p>
+</li>
+<li><p><code>syn</code> 洪水攻击（DDOS 攻击）？和流量大崩溃有什么区别？什么时候需要消耗序列号？</p>
+</li>
+<li><p>http 状态码 307 308 401 是什么？</p>
+</li>
+<li><p>浏览器渲染的过程？composition 的过程？依据什么进行 composition ?</p>
+</li>
+<li><p>浏览器滚动时发生了什么？</p>
+</li>
+<li><p>CSS 中 absolute 的理解</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">.item &#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 10px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 1. item 位置如何？</span><br><span class="line">// 2. app 为 relative 时，item 位置如何？</span><br><span class="line">// 3. app 为 relative, transform 时，item 位置如何？</span><br></pre></td></tr></table></figure></li>
+<li><p>说一下 serverless 和 BFF 的区别</p>
+</li>
+<li><p>CSS 中 fix 的理解</p>
+</li>
+<li><p>浏览器 GPU 加速是什么？</p>
+</li>
+</ol>
 
     </div>
 
@@ -500,7 +537,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#7-18-%E5%AD%97%E8%8A%82%E6%8F%90%E5%89%8D%E6%89%B9%E4%B8%80%E9%9D%A2"><span class="nav-text">7.18 字节提前批一面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-22-%E5%AD%97%E8%8A%82%E6%8F%90%E5%89%8D%E6%89%B9%E4%B8%80%E9%9D%A2"><span class="nav-text">7.22 字节提前批一面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-3-%E5%AD%97%E8%8A%82%E6%8F%90%E5%89%8D%E6%89%B9%E4%B8%80%E9%9D%A2"><span class="nav-text">8.3 字节提前批一面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-5-%E5%AD%97%E8%8A%82%E6%8F%90%E5%89%8D%E6%89%B9%E4%BA%8C%E9%9D%A2"><span class="nav-text">8.5 字节提前批二面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-9-%E5%AD%97%E8%8A%82%E6%8F%90%E5%89%8D%E6%89%B9%E4%B8%80%E9%9D%A2"><span class="nav-text">8.9 字节提前批一面</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#7-18-%E5%AD%97%E8%8A%82%E6%8F%90%E5%89%8D%E6%89%B9%E4%B8%80%E9%9D%A2"><span class="nav-text">7.18 字节提前批一面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-22-%E5%AD%97%E8%8A%82%E6%8F%90%E5%89%8D%E6%89%B9%E4%B8%80%E9%9D%A2"><span class="nav-text">7.22 字节提前批一面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-3-%E5%AD%97%E8%8A%82%E6%8F%90%E5%89%8D%E6%89%B9%E4%B8%80%E9%9D%A2"><span class="nav-text">8.3 字节提前批一面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-5-%E5%AD%97%E8%8A%82%E6%8F%90%E5%89%8D%E6%89%B9%E4%BA%8C%E9%9D%A2"><span class="nav-text">8.5 字节提前批二面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-9-%E5%AD%97%E8%8A%82%E6%8F%90%E5%89%8D%E6%89%B9%E4%B8%80%E9%9D%A2"><span class="nav-text">8.9 字节提前批一面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#9-1-%E5%AD%97%E8%8A%82%E6%AD%A3%E5%BC%8F%E6%89%B9%E4%B8%80%E9%9D%A2"><span class="nav-text">9.1 字节正式批一面</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -605,12 +642,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">101k</span>
+    <span title="Symbols count total">102k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:32</span>
+    <span title="Reading time total">1:33</span>
 </div>
 
         
