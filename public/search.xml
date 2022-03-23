@@ -2473,7 +2473,11 @@
   <entry>
     <title>每周刷题记录</title>
     <url>/blog/exercise-record/index.html</url>
-    <content><![CDATA[<h3 id="2021-4-18"><a href="#2021-4-18" class="headerlink" title="2021.4.18"></a>2021.4.18</h3><ul>
+    <content><![CDATA[<h3 id="2022-03-23"><a href="#2022-03-23" class="headerlink" title="2022.03.23"></a>2022.03.23</h3><ul>
+<li>字典树：leetcode-440</li>
+<li>滑动窗口：leetcode-3</li>
+</ul>
+<h3 id="2021-4-18"><a href="#2021-4-18" class="headerlink" title="2021.4.18"></a>2021.4.18</h3><ul>
 <li>图，dfs：PAT-A1034 Head of a Gang</li>
 <li>图，bfs：PAT-A1076 Forwards on Weibo</li>
 <li>EDU CF # 107<ul>
