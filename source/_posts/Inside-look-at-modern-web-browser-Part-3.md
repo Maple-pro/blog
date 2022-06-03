@@ -15,6 +15,7 @@ https://developers.google.com/web/updates/2018/09/inside-browser-part3"
 「Renderer Process」设计 web 性能中的许多方面。由于「Renderer Process」中发生的事情非常多，这篇文章只是做一个概览。如果你想挖得更深，[the Performance section of Web Fundamentals](https://developers.google.com/web/fundamentals/performance/why-performance-matters) 有更多介绍。
 
 ## 「Renderer Process」处理 web 内容
+Continue...
 
 
 

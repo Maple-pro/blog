@@ -103,11 +103,14 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: 'git'
+- type: 'git'
   repository:
-    github: git@github.com:Maple-pro/blog.git
+    # github: git@github.com:Maple-pro/blog.git
     gitee: git@gitee.com:maples31/blog.git
   branch: main
+- type: 'git'
+  repository: git@github.com:Maple-pro/blog.git
+  branch: OSS
 
 # Local search
 search:
