@@ -6,9 +6,9 @@ name: deploy blog to OSS
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ OSS ]
+    branches: [ source ]
   pull_request:
-    branches: [ OSS ]
+    branches: [ source ]
 
   # Allows you to run this workflow manually from the Actions tab
 #   workflow_dispatch:
@@ -23,27 +23,47 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-        with:
-            fetch-depth: 0
+      - name: Checkout Repository branch
+        uses: actions/checkout@v3
 
-      - name: Get changed files
-        id: changed-files
-        uses: tj-actions/changed-files@v22.2
+      - name: Setup Node.js 14.5.0
+              uses: actions/setup-node@master
+              with:
+                  node-version: '14.5.0'
 
-      # Runs a single command using the runners shell
-      - name: setup aliyun oss
-        uses: manyuanrong/setup-ossutil@master
-        with:
-          endpoint: "oss-cn-hongkong.aliyuncs.com"
-          access-key-id: ${{ secrets.OSS_KEY_ID }}
-          access-key-secret: ${{ secrets.OSS_KEY_SECRET }}
-      - name: cp aliyun oss
-        run: |
-          for file in ${{ steps.changed-files.outputs.all_changed_files }};
-          do
-            ossutil cp -rf "${file}" "oss://blog-maples31/${file}"
-          done
+            - name: Setup Hexo Dependencies
+              run: |
+                  npm install
+                  npm install -g hexo-cli
+                  hexo clean
+                  hexo generate
+            - name: setup aliyun oss
+              uses: manyuanrong/setup-ossutil@master
+              with:
+                  endpoint: oss-cn-hongkong.aliyuncs.com
+                  access-key-id: ${{ secrets.OSS_KEY_ID }}
+                  access-key-secret: ${{ secrets.OSS_KEY_SECRET }}
+            - name: cp files to aliyun
+              run: ossutil cp -rf public oss://blog-maples31/
+      
+
+      # - name: Get changed files
+      #   id: changed-files
+      #   uses: tj-actions/changed-files@v22.2
+
+      # # Runs a single command using the runners shell
+      # - name: setup aliyun oss
+      #   uses: manyuanrong/setup-ossutil@master
+      #   with:
+      #     endpoint: "oss-cn-hongkong.aliyuncs.com"
+      #     access-key-id: ${{ secrets.OSS_KEY_ID }}
+      #     access-key-secret: ${{ secrets.OSS_KEY_SECRET }}
+      # - name: cp aliyun oss
+      #   run: |
+      #     for file in ${{ steps.changed-files.outputs.all_changed_files }};
+      #     do
+      #       ossutil cp -rf "${file}" "oss://blog-maples31/${file}"
+      #     done
 
       # Runs a set of commands using the runners shell
 #       - name: Run a multi-line script
