@@ -5,28 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 5.4.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/blog/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="/blog/lib/pace/pace-theme-minimal.min.css">
-  <script src="/blog/lib/pace/pace.min.js"></script>
+<link rel="stylesheet" href="//lib.baomitu.com/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.maples31.com","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"./public/search.xml"};
+    var CONFIG = {"hostname":"blog.maples31.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"./public/search.xml"};
   </script>
 
   <meta name="description" content="介绍 Chrome 浏览器的架构以及 Servicification 和 Site Isolation 特性。翻译自: https:&#x2F;&#x2F;developers.google.com&#x2F;web&#x2F;updates&#x2F;2018&#x2F;09&#x2F;inside-browser-part1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="深入理解现代 Web 浏览器 (Part 1)">
-<meta property="og:url" content="https://blog.maples31.com/blog/2021/08/17/Inside-look-at-modern-web-browser%20(Part%201)/index.html">
+<meta property="og:url" content="https://blog.maples31.com/2021/08/17/Inside-look-at-modern-web-browser%20(Part%201)/index.html">
 <meta property="og:site_name" content="Maples&#39; Space">
 <meta property="og:description" content="介绍 Chrome 浏览器的架构以及 Servicification 和 Site Isolation 特性。翻译自: https:&#x2F;&#x2F;developers.google.com&#x2F;web&#x2F;updates&#x2F;2018&#x2F;09&#x2F;inside-browser-part1">
 <meta property="og:locale" content="en_US">
@@ -45,7 +45,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210817224636528.png">
 
-<link rel="canonical" href="https://blog.maples31.com/blog/2021/08/17/Inside-look-at-modern-web-browser%20(Part%201)/">
+<link rel="canonical" href="https://blog.maples31.com/2021/08/17/Inside-look-at-modern-web-browser%20(Part%201)/">
 
 
 <script id="page-configurations">
@@ -89,7 +89,7 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/blog/atom.xml" title="Maples' Space" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="Maples' Space" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -108,7 +108,7 @@
 
   <div class="site-meta">
 
-    <a href="/blog/" class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <h1 class="site-title">Maples' Space</h1>
       <span class="logo-line-after"><i></i></span>
@@ -129,7 +129,7 @@
   <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-about">
@@ -139,22 +139,22 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
 
   </li>
         <li class="menu-item menu-item-records">
 
-    <a href="/blog/exercise-record/" rel="section"><i class="fa fa-sticky-note fa-fw"></i>Records</a>
+    <a href="/exercise-record/" rel="section"><i class="fa fa-sticky-note fa-fw"></i>Records</a>
 
   </li>
         <li class="menu-item menu-item-notebook">
@@ -215,10 +215,10 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://blog.maples31.com/blog/2021/08/17/Inside-look-at-modern-web-browser%20(Part%201)/">
+    <link itemprop="mainEntityOfPage" href="https://blog.maples31.com/2021/08/17/Inside-look-at-modern-web-browser%20(Part%201)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/portrait.jpg">
+      <meta itemprop="image" content="/images/portrait.jpg">
       <meta itemprop="name" content="Maples">
       <meta itemprop="description" content="Talk is cheap. Show me the code.">
     </span>
@@ -253,7 +253,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
                 </span>
             </span>
 
@@ -359,7 +359,7 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/blog/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" rel="tag"><i class="fa fa-tag"></i> 浏览器</a>
+              <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" rel="tag"><i class="fa fa-tag"></i> 浏览器</a>
           </div>
 
         
@@ -368,11 +368,11 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/blog/2021/08/12/unstated-next-%E5%AE%9E%E7%8E%B0%E7%BB%84%E4%BB%B6%E9%97%B4%E6%95%B0%E6%8D%AE%E9%80%BB%E8%BE%91%E5%85%B1%E4%BA%AB/" rel="prev" title="unstated-next 实现组件间数据逻辑共享">
+    <a href="/2021/08/12/unstated-next-%E5%AE%9E%E7%8E%B0%E7%BB%84%E4%BB%B6%E9%97%B4%E6%95%B0%E6%8D%AE%E9%80%BB%E8%BE%91%E5%85%B1%E4%BA%AB/" rel="prev" title="unstated-next 实现组件间数据逻辑共享">
       <i class="fa fa-chevron-left"></i> unstated-next 实现组件间数据逻辑共享
     </a></div>
       <div class="post-nav-item">
-    <a href="/blog/2021/08/21/Inside-look-at-modern-web-browser-Part-2/" rel="next" title="深入理解现代 Web 浏览器 (Part 2)">
+    <a href="/2021/08/21/Inside-look-at-modern-web-browser-Part-2/" rel="next" title="深入理解现代 Web 浏览器 (Part 2)">
       深入理解现代 Web 浏览器 (Part 2) <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -441,27 +441,27 @@
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Maples"
-      src="/blog/images/portrait.jpg">
+      src="/images/portrait.jpg">
   <p class="site-author-name" itemprop="name">Maples</p>
   <div class="site-description" itemprop="description">Talk is cheap. Show me the code.</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/blog/archives/">
+          <a href="/archives/">
         
           <span class="site-state-item-count">39</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="/blog/categories/">
+            <a href="/categories/">
           
         <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/blog/tags/">
+            <a href="/tags/">
           
         <span class="site-state-item-count">34</span>
         <span class="site-state-item-name">tags</span></a>
@@ -476,7 +476,7 @@
         <a href="mailto:yangfeng@whu.edu.cn" title="E-Mail → mailto:yangfeng@whu.edu.cn" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
       <span class="links-of-author-item">
-        <a href="/blog/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
       </span>
   </div>
 
@@ -561,34 +561,34 @@
   </div>
 
   
-  <script src="/blog/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
-  <script src="/blog/lib/velocity/velocity.min.js"></script>
-  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+  <script src="//lib.baomitu.com/animejs/3.1.0/anime.min.js"></script>
+  <script src="//lib.baomitu.com/jquery/3.6.0/jquery.min.js"></script>
+  <script src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script src="/blog/js/utils.js"></script>
+<script src="/js/utils.js"></script>
 
-<script src="/blog/js/motion.js"></script>
-
-
-<script src="/blog/js/schemes/pisces.js"></script>
+<script src="/js/motion.js"></script>
 
 
-<script src="/blog/js/next-boot.js"></script>
-
-<script src="/blog/js/bookmark.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
+<script src="/js/next-boot.js"></script>
 
-
-  
+<script src="/js/bookmark.js"></script>
 
 
 
 
   
-<script src="/blog/js/local-search.js"></script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 
@@ -609,7 +609,7 @@ document.querySelectorAll('.pdfobject-container').forEach(element => {
     view     : 'FitH'
   };
   let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
-  let fullURL = `/blog/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
 
   if (NexT.utils.supportsPDFs()) {
     element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
@@ -622,7 +622,7 @@ document.querySelectorAll('.pdfobject-container').forEach(element => {
 
 <script>
 if (document.querySelectorAll('pre.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+  NexT.utils.getScript('//lib.baomitu.com/mermaid/8.14.0/mermaid.min.js', () => {
     mermaid.initialize({
       theme    : 'forest',
       logLevel : 3,
@@ -641,18 +641,18 @@ if (document.querySelectorAll('pre.mermaid').length) {
 
   
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+<link rel="stylesheet" href="//lib.baomitu.com/gitalk/1.7.2/gitalk.min.css">
 
 <script>
 NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+  NexT.utils.getScript('//lib.baomitu.com/gitalk/1.7.2/gitalk.min.js', () => {
     var gitalk = new Gitalk({
       clientID    : '8cc6c00e57d96b22dc32',
       clientSecret: '0f33f40938e14b244737ac9d0b9a27156f49e9e3',
       repo        : 'blog',
       owner       : 'Maple-pro',
       admin       : ['Maple-pro'],
-      id          : 'f4d702753c919f92a32f5f868a336911',
+      id          : '320e4d88b0cdb506d3c7e02f9690ad75',
         language: 'en',
       distractionFreeMode: true
     });
