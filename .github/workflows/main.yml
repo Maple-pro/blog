@@ -36,6 +36,7 @@ jobs:
             npm -g install npm@7.6.3
             npm install
             npm install -g hexo-cli
+            rm -f source/_posts/hello-world.md
             hexo clean
             hexo generate
       - name: setup aliyun oss
