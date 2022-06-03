@@ -652,8 +652,8 @@ gitalk:
   enable: true
   github_id: Maple-pro # GitHub repo owner
   repo: blog # Repository name to store issues
-  client_id: 8cc6c00e57d96b22dc32 # GitHub Application Client ID
-  client_secret: 0f33f40938e14b244737ac9d0b9a27156f49e9e3 # GitHub Application Client Secret
+  client_id: 85aa892ee1908fa2406a # GitHub Application Client ID
+  client_secret: 456f57e843a5fc1f9858ba41f49bbc26571e3309 # GitHub Application Client Secret
   admin_user: Maple-pro # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
   distraction_free_mode: true # Facebook-like distraction free mode
   # Gitalk's display language depends on user's browser or system environment
