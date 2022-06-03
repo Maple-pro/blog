@@ -33,6 +33,7 @@ jobs:
 
       - name: Setup Hexo Dependencies
         run: |
+            npm -g install npm@7.6.3
             npm install
             npm install -g hexo-cli
             hexo clean
