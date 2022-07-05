@@ -18,8 +18,6 @@ Hadoop实际上就是谷歌三宝的开源实现，Hadoop MapReduce对应Google 
 - HBase（或BigTable）是提供结构化数据服务的分布式数据库;
 - Hadoop MapReduce（或Google MapReduce）是一种并行计算的编程模型，用于作业调度。
 
-
-
 ## 2. Google文件系统GFS
 
 <img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210310144620112.png" alt="image-20210310144620112"  />
