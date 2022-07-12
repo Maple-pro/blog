@@ -7,7 +7,7 @@ mathjax:
 description: 记录 Windows 和 Ubuntu 双系统的安装，以及 Ubuntu 的美化和配置
 ---
 
-![image-20220711184552965](https://maples-ubuntu.oss-cn-hangzhou.aliyuncs.com/images/image-20220711184552965.png)
+![image-20220712162842874](https://maples-ubuntu.oss-cn-hangzhou.aliyuncs.com/images/image-20220712162842874.png)
 
 # 1 Ubuntu 和 Windows 双系统安装
 
@@ -72,7 +72,7 @@ Ubuntu 系统安装完成后，重启电脑后会进入 grub 命令行界面，�
 1. 进入设置界面，选择 Network -> Network Proxy -> Mannual；
 2. 设置如下图所示。
 
-![image-20220711183442252](https://maples-ubuntu.oss-cn-hangzhou.aliyuncs.com/images/image-20220711183442252.png)
+![image-20220712162640052](https://maples-ubuntu.oss-cn-hangzhou.aliyuncs.com/images/image-20220712162640052.png)
 
 ## 2.2 设置 Chrome Proxy
 
@@ -90,13 +90,52 @@ alias setproxy='export HTTP_PROXY=http://127.0.0.1:7890;export HTTPS_PROXY=https
 alias unsetproxy='unset HTTP_PROXY HTTPS_PROXY ALL_PROXY'
 ```
 
-# 3 zsh 和 oh-my-zsh 配置
+# 3 zsh、oh-my-zsh 和 vim-airline 配置
+
+zsh 和 oh-my-zsh 配置：
 
 1. 安装 zsh 和 oh-my-zsh；
 2. 设置 zsh 为默认 terminal：terminal -> preference -> profiles -> Command -> Custom command 设置为 zsh
 3. 在 .zshrc 中设置主题为 agnoster；
 4. 安装并设置 SourceCodePro 字体；
 5. 启用设置：`source ~/.zshrc`。
+
+vim airline 配置：
+
+1. Vim 配置 [Vundle 插件管理器](https://github.com/VundleVim/Vundle.vim)；
+2. 使用 Vundle 安装 [airline 插件](https://github.com/vim-airline/vim-airline)；
+3. 下载 [powerline 字体](https://github.com/powerline/fonts)；
+4. 下载 [vim-fugitive 插件](https://github.com/tpope/vim-fugitive)，此处可以直接 clone GitHub仓库到插件所在的文件夹，避免身份验证；
+5. 在 .vimrc 中配置，相关配置如下。
+
+> 使用 vim-fugitive 插件是为了在 airline 上显示 git 分支相关信息。
+
+```
+set nocompatible
+filetype off
+set laststatus=2
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'tpop/vim-fugitive'
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+let g:airline_theme="molokai"
+let g:airline_powerline_fonts=1
+set guifont="Source Code Pro for Powerline"
+let g:airline#extensions#branch#enabled=1
+			
+call vundle#end()
+filetype plugin indent on
+```
+
+效果如下：
+
+![image-20220712162555206](https://maples-ubuntu.oss-cn-hangzhou.aliyuncs.com/images/image-20220712162555206.png)
 
 # 4 软件安装
 
