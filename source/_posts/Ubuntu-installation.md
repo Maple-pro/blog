@@ -206,6 +206,8 @@ GitHub 项目地址: [abraunegg/onedrive](https://github.com/abraunegg/onedrive)
 2. idea
 3. wps
 4. wemeet
+5. vim (airline)
+6. SpaceVim
 
 # 5 开发环境安装
 
