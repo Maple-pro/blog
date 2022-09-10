@@ -3,7 +3,7 @@ title: 'CS144: 1. Internet and IP'
 date: 2021-04-08 15:42:50
 tags:
 categories: [学习笔记, CS144]
-description: Stanford课程CS144，介绍Internet和IP
+# description: Stanford课程CS144，介绍Internet和IP
 ---
 
 # 1. Network Applications
@@ -19,6 +19,8 @@ Blow we will introduce three examples: the world wide web, BitTorrent and Skype
 - **the world wide web**: A **client-server model**. A client opens a connection to a server and requests documents. The server responds with the  documents.
 - **BitTorrent**: A **peer-to-peer model**. Swarms of clients open connections to each other to exchange pieces of data, creating a dense network of connections.
 - **Skype**: A mix of the two models. When Skype clients can communicate directly, they do so in a peer-to-peer fashion. But sometimes the clients can’t  open connections directly, and so instead go through rendezvous or relay servers.
+
+<!--more-->
 
 ## 1.1 World Wide Web (HTTP)
 

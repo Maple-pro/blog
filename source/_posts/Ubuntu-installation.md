@@ -4,7 +4,7 @@ tags: []
 categories: [记录]
 date: 2022-07-11 17:35:51
 mathjax:
-description: 记录 Windows 和 Ubuntu 双系统的安装，以及 Ubuntu 的美化和配置
+# description: 记录 Windows 和 Ubuntu 双系统的安装，以及 Ubuntu 的美化和配置
 ---
 
 ![image-20220712162842874](https://maples-ubuntu.oss-cn-hangzhou.aliyuncs.com/images/image-20220712162842874.png)
@@ -14,6 +14,8 @@ description: 记录 Windows 和 Ubuntu 双系统的安装，以及 Ubuntu 的美
 目标：将 Ubuntu 20.04 装入移动硬盘中，不影响本地硬盘中 Windows 的使用。
 
 设备：256G 移动固态硬盘，8G U盘
+
+<!--more-->
 
 ## 1.1 安装步骤
 
