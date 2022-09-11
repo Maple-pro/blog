@@ -162,7 +162,6 @@ filetype plugin indent on
 ## 4.3 vscode
 
 - 官网下载 deb 文件安装，不要在 Ubuntu 软件商店安装，否则会无法输入中文；
-
 - 设置同步：在 Windows 中登录 vscode 账号并将设置传到云端，在 Ubuntu 中登录账号同步云端设置。
 
 ## 4.4 typora
@@ -183,11 +182,8 @@ filetype plugin indent on
 关键：
 
 1. Zotero Preferences -> Linked Attachment Base Directory：设置为 OneDrive 同步文件夹中子文件夹，且使用相对路径；
-
 2. Zotero Preferences -> Data Directory Location：保持默认设置即可；
-
 3. ZotFile Preferences -> Source Folder for Attaching New Files：设置为浏览器下载目录，用于 Attach New File功能；
-
 4. ZotFile Preferences -> Location of Files：和 1 中路径相同。
 
 ![image-20220711190232319](https://maples-ubuntu.oss-cn-hangzhou.aliyuncs.com/images/image-20220711190232319.png)

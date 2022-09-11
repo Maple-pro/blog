@@ -40,13 +40,13 @@ To execute the program, the **JVM** reads bytecodes and **just-in-time(JIT)** **
 - **Object-oriented**
 - **Architecture-neutral**
 - **Multithreaded (多线程的)**
-  进程 process ----&gt; 线程 thread（多个线程并发）
+  - 进程 process ----&gt; 线程 thread（多个线程并发）
 - **Interpreted (解释性的)**
 - **High performance(高性能的)**
 - **Distributed(分布式的)**
-  Java was designed with the distributed environment. It can be transmit, run over the internet.
+  - Java was designed with the distributed environment. It can be transmit, run over the internet.
 - **Dynamic(动态的)**
-  Class loader 将类动态加载如JVM中
+  - Class loader 将类动态加载如JVM中
 
 # 1.3 Different from C++
 

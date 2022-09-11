@@ -111,7 +111,6 @@ Network layer packets are called **datagrams**. They consist of some data and a 
 ### Process
 
 - The Network hands the datagram to the Link Layer below, telling it to send the datagram over the first link. (The Link layer is providing a **service** to the Network Layer.)
-
 - At the other end of the link is a  **router**. The Link Layer of the  router accepts the datagram  from the link, and hands it up to  the Network Layer in the router. The Network Layer on the  router examines the destination  address of the datagram, and is  responsible for routing the  datagram one hop at a time towards its eventual destination.  It does this by sending to the  Link Layer again, to carry it  over the next link. And so on  until it reaches the Network  Layer at the destination.
 
 ### Separation
@@ -249,28 +248,3 @@ application: stream of data
 transport: segments of data
 
 network: packets of data
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

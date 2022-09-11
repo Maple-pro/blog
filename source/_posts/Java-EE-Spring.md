@@ -28,9 +28,7 @@ description: Introduce to Spring framework.
 # 3. 反射
 
 - RT-TI (Run Time Type Identificaiton)
-
 - 反射的入口是Class类的对象
-
 - 反射在java.lang.reflect包中
 - 得到Class类对象的三种方式
 - 调用类的构造函数
@@ -82,9 +80,7 @@ public class TestReflect {
 # 4. Spring中的IoC & DI
 
 - IoC：运行时创建对象 (JavaBean对象)
-
 - DI：将创建的对象根据依赖关系注入进去
-
 - Spring是一个管理对象的容器，用<key, value>对的形式来管理
 
 # 5. Annotation的定义与使用

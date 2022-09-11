@@ -9,10 +9,13 @@ description: Introduce the method-call stack and activation records in java.
 # 3.1 Method-Call Stack and Activation Records
 
 ## 3.1.1 Stack data structure
+
  - **Pushing**: Placing a dish on the pile at the top
  - **Popping**: Removing a dish from the pile from the top
  - **LIFO** data structures: The last item pushed(inserted) on the stack is the first item popped(removed) from the stack. (**last-in, first-out**)
+
 ## 3.1.2 Activation Records
+
  - When a program calls a method, the called method must know how to return to its caller
    * The **return address** of the calling method is pushed onto the **method-call stack**
  - If a series of method calls occurs, the successive return addresses are pushed onto the stack in last-on, first-out order
@@ -25,6 +28,7 @@ description: Introduce the method-call stack and activation records in java.
   - 栈有大小限制
   - 对于stack空间，是根据方法的调用与返回来管理的，**不需要GC**
   - stack保存了方法的调用关系
+
 ```java
 //Demo.java
 public class Demo{
@@ -40,8 +44,11 @@ public class Demo{
  - main() -> a() -> b() -> c() 在一个**线程**中，
  - 一个java程序在运行时，有多少个**线程**就需要多少个**栈**，每个线程都有自己的栈空间
  - 一个栈中的方法可以跨对象，即一个线程中的方法可以跨对象，**线程只与方法有关**。因为方法不知道什么叫对象，非静态方法在实现时将**this指针** 首先压入栈中。
+
 # 3.2 Constructors
+
 ## 3.2.1 普通构造函数
+
  - **Roles** of the constructors：**Initializing objects**，instand of requesting memory.
  - Java requies a **constructor** that **initializes an object** of a class **when the object is created**.
  - Keyword **new** **requests memory** from the system to store an object, then calls the corresponding class's **constructor** to **initialize** the object.
@@ -51,7 +58,9 @@ public class Demo{
  - A constructor's **parameter list** specifies the data it requires to perform its task. 
  - Constructors **can't return values**, so they cannot specify a return type.
  - If you declare any constructors for a class, the Java compiler will not create a default constructor for that class.
+
 ## 3.2.2 静态构造函数
+
 ```java
 //Demo.java
 public class Demo(){
@@ -62,10 +71,12 @@ public class Demo(){
 	}
 }
 ```
+
  - 静态构造函数的**功能**：对**类**初始化，通常用于初始化类的**静态成员变量**
  - 调用时间：在**类定义被load到内存中**时，调用了静态构造函数，而不管有无类的对象
  - 不管有多少个对象，都只会调用**一次**静态构造函数
  - 如果在类中没有自己定义构造函数，框架会为我们生成一个默认构造函数；同样的，如果我们在类中定义了静态变量，而我们又没有定义静态构造函数，那么框架也会生成一个静态构造函数供我们调用
+
 ```java
 //Emp.java
 public class Emp(){
@@ -104,7 +115,9 @@ public class Emp(){
  - 如果一个类加载器只加载一个类，且方法区不做垃圾回收，则静态初始化只做一次
  - 静态构造方法只会有一个，如果写了多个，编译器会将其合在一起
  - 在字节码中，普通构造函数的函数名均为*init*，静态构造函数的函数名为*Cinit*
+
 ## 3.2.3 私有构造函数
+
 ```java
 //Emp.java
 class Emp{
@@ -140,8 +153,11 @@ Emp e1 = Emp.getInstance();
 ```
 
  - 若没有`Emp e1 = Emp.getInstance();`，没有对象会被创建
+
 # 3.3 Others
+
 ## 3.3.1 instanceof() 和 getClass()
+
 比较两个对象是否同属于一个类时，可以使用`instanceof()`和`getClass()`方法。但二者在判断上是有区别的：
 
 ```java
@@ -182,7 +198,9 @@ x getClass Child:  true
 
  - `instanceof()`：你是否属于**该类或该类的派生类**，考虑继承关系
  - `getClass()`：不考虑继承关系
+
 ## 3.3.2 Override and Overload
+
  - **Override（重写）**：覆盖一个方法并对其重写
    * 子类的方法与父类的方法的方法名、参数和返回值完全相同，即**方法的标志完全相同**
    * 是**多态性**的表现
@@ -197,8 +215,11 @@ x getClass Child:  true
     * 不能通过**访问范围**进行重载
     * 对于继承来说，如果某一方法在父类中是访问权限是priavte，那么就不能在子类对其进行重载，如果定义的话，也只是定义了一个新方法，而不会达到重载的效果
     * 调用哪个方法由运行时的环境决定，在运行时绑定（late blinding）
+
 ## 3.3.3 Others
+
 ### 一、定义初始化和构造初始化
+
 ```java
 //Emp.java
 package test;
@@ -231,7 +252,9 @@ Emp();
 
  - 定义初始化语句在编译后，会放到所有的构造函数的最前面
  - 每一段代码的执行都是由方法调用而来的，不会游离于方法之外
+
 ### 二、this(1)
+
 ```java
 //Emp.java
 package test;
@@ -248,6 +271,7 @@ class Emp{
  - **this**:
    * 类似于指针，`this.eid = eid`
    * `this(1)`：在一个构造函数中调用另外一个构造函数
+
 ### 三、声明变长参数的方法
 
 ```java
@@ -261,6 +285,7 @@ public static void add(int... x){
 ```
 
  - `int... x`：实际上，参数是一个int类型的数组
+
 ### 四、传参
 
 ```java
@@ -287,7 +312,9 @@ public class Demo{
 */
 ```
 Java中传参只有传值，上面的代码穿的是L的地址，本质上还是在传值
+
 ### 五、静态函数和静态成员变量
+
 - static与非static方法的区别：
   * static方法：没有this变量
   * 非static方法：有this变量，先将this压入栈中
@@ -295,7 +322,9 @@ Java中传参只有传值，上面的代码穿的是L的地址，本质上还是
 - 静态的方法不能访问非静态的成员变量
   * 因为静态方法没有this指针
 - 非静态方法可以访问静态成员变量
+
 ### 六、流程控制语句
+
 #### for循环
 
 ```java
@@ -347,5 +376,3 @@ class Demo
 }
 //可以通过标记中止外层循环
 ```
-
-  

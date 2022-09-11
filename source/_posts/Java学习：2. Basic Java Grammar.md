@@ -9,20 +9,27 @@ description: Basic Java grammar, data type
 # 2.1 Data Type
 
 ## 2.1.1 基本数据类型
+
 数值类型：byte, short, int, long, float, double
 其它类型：char, boolean
 （无unsigned类型）
 
 ### char
+
  - 一个char有两个字节；采用UCS-4字符集，UTF-8编码方案；
  - charset（字符集）：将字符与数值一一对应；
  - ASCⅡ：一个字符对应一个字节的编码；
  - GB2312：一个字符对应两个字节的编码；
  - Unicode：一个字符对应四个字节的编码，但表示时用两个字节，英文编码变为双字节，高字节补零；
+
 ## 2.1.2 引用数据类型
+
 ### 一、JVM内存结构
+
 ![JVM内存结构](https://img-blog.csdnimg.cn/20190920235826175.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDA0MjI3MA==,size_16,color_FFFFFF,t_70)
+
 ### 二、Java程序在内存中的位置
+
 *person.class* 文件
 ```java
 public class person
@@ -33,9 +40,11 @@ public class person
 }
 person p1, p2;
 ```
+
  - *person.class* 被load至内存区时，在方法区（**meta space**）中创建**class类的对象**；
  - person类的对象p1, p2在**Java堆**中创建，并由指针指向方法区中class类的对象；
  - object类是所有类的基类，*object* 类中有*getclass()* 方法，可以找到对象所属的类；
+
 <table>
 <tbody>
 <tr>
@@ -55,10 +64,14 @@ person p1, p2;
 </tr>
 </tbody>
 </table>
+
  - Java堆中有GC，方法区中没有GC，为持久代（Permanent generation）；
  - 类的方法在编译后生成一系列指令，放入**方法区**
+
 ## 2.1.3 Others
+
 ### 一、包装类
+
  - 8种基本数据类型不是面向对象的，没有对应的类，但每个基本数据类型都有对应的**包装类**（Wrapper Class）
  - **包装类**：Byte, Short, Integer, Character, Long, Float, Double
  - **自动装箱/拆箱**（Auto Boxing/Unboxing）:8种基本数据类型与其包装类会自动相互转换
@@ -70,7 +83,9 @@ person p1, p2;
     * int -> long (true)
     * Integer -> Long (false): Integer类与Long类没有继承关系
     * `Integer a = new Long();`: 错误
+
 ### 二、Examples
+
 ```java
 Integer i1 = 12;
 Integer i2 = i1;
@@ -87,7 +102,9 @@ System.out.println(i1 == i2)
 //"=="比较的是地址，即现在只有一个对象（重用）
 //当x <= 127时，为true，有一个对象；当x > 128时，为false，有两个对象
 ```
+
 ### 三、静态方法
+
 ```java
 public class Demo
 {
@@ -95,14 +112,18 @@ public class Demo
 	public void g(){}
 }
 ```
+
 在调用时，
+
 ```java
 Demo.f();
 //静态方法在实现时没有this参数，不会管是由谁调用的，与类的实例无关
 new Demo().g();
 //非静态方法在实现时会将this参数传入，aload_0[this]，将Demo的对象传入g()方法中
 ```
+
 ### 四、import和package
+
  - **import**
  - `import java.io.File`
  - `import java.lang.*`会自动加上，不用写

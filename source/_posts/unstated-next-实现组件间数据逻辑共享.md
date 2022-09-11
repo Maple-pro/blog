@@ -199,6 +199,5 @@ export function useContainer<Value, State = void>(
 
 1. 写 service  `common/service/index.js` 调用 bff 层的 rpc 接口
 2. hook 层存方法 `pages/index/hooks/*.js`
-
 3. connect 导出，`common/connect`
 4. 组件中使用 `connect` 或 `useStore` 使用 react Hooks 中的数据和方法
