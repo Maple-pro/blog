@@ -55,12 +55,12 @@ body{
 **表格样式**：
 
 ```css
-table,th,td{
-        border-collapse:collapse;
-        border:1px solid black;
-        margin:auto;
-	      text-align:center;
-        }
+table,th,td {
+    border-collapse:collapse;
+    border:1px solid black;
+    margin:auto;
+    text-align:center;
+}
 ```
 
 ## 缺点
