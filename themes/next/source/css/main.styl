@@ -45,3 +45,8 @@ for $inject_mixin in hexo-config('injects.mixin')
 // --------------------------------------------------
 for $inject_style in hexo-config('injects.style')
   @import $inject_style;
+
+.sidebar-inner, .post-block, .header-inner, .comments {
+  background: rgba(255, 255, 255, 0.71) !important;
+}
+
