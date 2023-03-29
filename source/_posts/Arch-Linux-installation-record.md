@@ -72,7 +72,7 @@ description:
     Server = http://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
     Server = http://mirrors.zju.edu.cn/archlinux/$repo/os/$arch
     ```
-   2.刷新镜像源：`pacman -Syy`
+   2. 刷新镜像源：`pacman -Syy`
 9. 安装基本包：`pacstrap /mnt base base-devel linux linux-firmware vim e2fsprogs ntfs-3g networkmanager` 
 10. 配置 Fstab
     1. 生成自动挂载分区的 fstab 文件：`genfstab -L /mnt >> /mnt/etc/fstab`
@@ -137,9 +137,9 @@ description:
 3. 安装 gnome 和 gdm-prime：`pacman -S gnome gdm-prime`
 4. 设置 gdm-prime 开机自启：`systemctl enable gdm-prime`
 5.  将 Wayland 切换为 Xorg：
-  1. `vim /etc/gdm/custom.conf`，取消 `#WaylandEnable=false` 的注释
-  2. 添加 `QT_QPA_PLATFORM=xcb` 到 `etc/environment` 中
-  3. 检测当前是 Wayland 还是 Xorg：`echo $XDG_SESSION_TYPE`
+    1. `vim /etc/gdm/custom.conf`，取消 `#WaylandEnable=false` 的注释
+    2. 添加 `QT_QPA_PLATFORM=xcb` 到 `etc/environment` 中
+    3. 检测当前是 Wayland 还是 Xorg：`echo $XDG_SESSION_TYPE`
 
 ### 2.2.3 安装中文字体
 
@@ -259,7 +259,8 @@ description:
 
 参考：[How to force hiDPI scaling mode on boot in Pop!_OS/Gnome](https://unix.stackexchange.com/questions/530748/how-to-force-hidpi-scaling-mode-on-boot-in-pop-os-gnome)
 
-1. Open the configuration file: `/usr/share/glib-2.0/schemas/org.gnome.desktop.interface.gschema.xml`
+1. Open the configuration file:
+    `/usr/share/glib-2.0/schemas/org.gnome.desktop.interface.gschema.xml`
 2. Change the default value to the scaling factor
     ```
     <key name="scaling-factor" type="u">
