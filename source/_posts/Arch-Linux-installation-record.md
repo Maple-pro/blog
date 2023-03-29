@@ -214,7 +214,22 @@ description:
 2. Steam HiDPI 设置：在 `/usr/share/applications/steam.desktop` 上添加启动环境变量 `Exec=env GDK_SCALE=2 /usr/bin/steam-runtime %U`
 3. [About desktop entry](https://wiki.archlinux.org/title/desktop_entries)
 
-### 2.3.4 其他
+### 2.3.4 OneDrive
+
+1. Install [OneDrive](https://aur.archlinux.org/packages/onedrive-abraunegg): `yay -S onedrive-abraunegg`
+2. Run OneDrive: `onedrive --synchronize`
+
+### 2.3.5 Printer
+
+> Reference: [CUPS](https://wiki.archlinux.org/title/CUPS)
+
+1. Install cups: `pacman -S cups`;
+2. Install cups-pdf: `pacman -S cups-pdf`;
+3. Start cups service: `systemctl start cups`;
+4. Install GUI application: `pacman -S system-config-printer`;
+5. Open web interface: http://localhost:631/
+
+### 2.3.6 其他
 
 1. dolphin
 2. konsole
@@ -223,11 +238,13 @@ description:
 5. yakuake
 6. linuxqq
 7. visual-studio-code-bin
-8. telegram
-9. [nvm](https://github.com/nvm-sh/nvm): Node Version Manager
-10. flameshot
-11. zsh & oh-my-zsh
-12. nvtop
+8. idea
+9. telegram
+10. [nvm](https://github.com/nvm-sh/nvm): Node Version Manager
+11. flameshot
+12. zsh & oh-my-zsh
+13. nvtop
+14. zotero (zotfile plugin)
 
 ## 2.4 系统美化
 
