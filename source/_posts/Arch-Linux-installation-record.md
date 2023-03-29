@@ -300,6 +300,8 @@ alias unsetproxy='unset HTTP_PROXY HTTPS_PROXY ALL_PROXY'
 
 alias reclash='sudo systemctl restart clash'
 
+alias updateclash="sudo wget 'https://api.balala.top/net/67d58cf047f2a63b?app=clash' -O /etc/clash/config.yaml"
+
 alias tonvidia="prime-offload;optimus-manager --switch nvidia"
 
 alias tointel="prime-offload;optimus-manager --switch integrated"
