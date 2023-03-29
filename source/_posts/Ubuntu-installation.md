@@ -66,7 +66,7 @@ Ubuntu 系统安装完成后，重启电脑后会进入 grub 命令行界面，�
 2. 启动 clash：`systemctl start clash`
 3. 关闭 clash：`systemctl stop clash`
 4. 查看 clash 运行状态：`systemctl status clash`
-5. 查看 clash 运行日志：`vim etc/clash/clash.log`
+5. 查看 clash 运行日志：`vim /etc/clash/clash.log`
 6. 拉取订阅服务器：`cd /etc/clash && sudo wget https://xxxxx && sudo mv xx.yaml config.yaml`
 
 ## 2.1 设置 System Proxy
