@@ -201,7 +201,7 @@ description:
 4. Set proxy in terminal:
    1. 将下面内容添加到 `~/.zshrc` 中
      ```
-     alias setproxy='export HTTP_PROXY=http://127.0.0.1:7890;export HTTPS_PROXY=https://127.0.0.1:7890;export ALL_PROXY=socks5://127.0.0.1:7891'
+     alias setproxy='export HTTP_PROXY=http://127.0.0.1:7890;export HTTPS_PROXY=http://127.0.0.1:7890;export ALL_PROXY=socks5://127.0.0.1:7891'
      alias unsetproxy='unset HTTP_PROXY HTTPS_PROXY ALL_PROXY'
      alias reclash='sudo systemctl restart clash'
      ```
@@ -295,7 +295,7 @@ description:
 - `alt + tab`: switch windows
 
 ```bash
-alias setproxy='export HTTP_PROXY=http://127.0.0.1:7890;export HTTPS_PROXY=https://127.0.0.1:7890;export ALL_PROXY=socks5://127.0.0.1:7891'
+alias setproxy='export HTTP_PROXY=http://127.0.0.1:7890;export HTTPS_PROXY=http://127.0.0.1:7890;export ALL_PROXY=socks5://127.0.0.1:7891'
 alias unsetproxy='unset HTTP_PROXY HTTPS_PROXY ALL_PROXY'
 
 alias reclash='sudo systemctl restart clash'
