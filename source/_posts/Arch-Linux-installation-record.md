@@ -237,14 +237,15 @@ description:
 4. Chrome
 5. yakuake
 6. linuxqq
-7. visual-studio-code-bin
-8. idea
-9. telegram
-10. [nvm](https://github.com/nvm-sh/nvm): Node Version Manager
-11. flameshot
-12. zsh & oh-my-zsh
-13. nvtop
-14. zotero (zotfile plugin)
+7. deepin-wine-wechat
+8. visual-studio-code-bin
+9. idea
+10. telegram
+11. [nvm](https://github.com/nvm-sh/nvm): Node Version Manager
+12. flameshot
+13. zsh & oh-my-zsh
+14. nvtop
+15. zotero (zotfile plugin)
 
 ## 2.4 系统美化
 
