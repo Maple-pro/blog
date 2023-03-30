@@ -152,10 +152,10 @@ description:
 ### 2.2.5 pacman 配置
 
 1. 添加 Arch Linux CN 源
-   1. 在 `/etc/pacman.conf` 末尾添加如下内容：
+   1. 在 `/etc/pacman.conf` 末尾添加如下内容：注意不要使用 tsinghua 源
        ```
        [archlinuxcn]
-       Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+       Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
        ```
    2. 刷新源：`pacman -Syy`
    3. 安装密钥：`pacman -S archlinuxcn-keyring`
@@ -200,11 +200,16 @@ description:
    2. Clash configuration file is in `~/.config/clash/`
 4. Set proxy in terminal:
    1. 将下面内容添加到 `~/.zshrc` 中
-     ```
-     alias setproxy='export HTTP_PROXY=http://127.0.0.1:7890;export HTTPS_PROXY=http://127.0.0.1:7890;export ALL_PROXY=socks5://127.0.0.1:7891'
-     alias unsetproxy='unset HTTP_PROXY HTTPS_PROXY ALL_PROXY'
-     alias reclash='sudo systemctl restart clash'
-     ```
+      ```
+      alias setproxy='export HTTP_PROXY=http://127.0.0.1:7890;export HTTPS_PROXY=http://127.0.0.1:7890;export ALL_PROXY=socks5://127.0.0.1:7891'
+      alias unsetproxy='unset HTTP_PROXY HTTPS_PROXY ALL_PROXY'
+
+      alias setgitproxy='git config --global http.proxy "http://127.0.0.1:7890";git config --global https.proxy "http://127.0.0.1:7890"'
+      alias unsetgitproxy='git config --global --unset http.proxy; git config --global --unset https.proxy'
+
+
+      alias reclash='sudo systemctl restart clash'
+      ```
 5.  [Clash web ui](http://clash.razord.top/#/proxies)
 6.  [Clash for windows bin](https://aur.archlinux.org/packages/clash-for-windows-bin)
 
@@ -239,7 +244,7 @@ description:
 6. linuxqq
 7. deepin-wine-wechat
 8. visual-studio-code-bin
-9. idea
+9. idea: 安装 Window Decorate Mode Switcher 插件用于隐藏 Top Bar
 10. telegram
 11. [nvm](https://github.com/nvm-sh/nvm): Node Version Manager
 12. flameshot
@@ -254,6 +259,7 @@ description:
 - [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/)
 - [Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
 - [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
+- [Hide Top Bar](https://extensions.gnome.org/extension/545/hide-top-bar/)
 
 ### 2.4.2 gnome-tweaks
 
@@ -298,6 +304,9 @@ description:
 ```bash
 alias setproxy='export HTTP_PROXY=http://127.0.0.1:7890;export HTTPS_PROXY=http://127.0.0.1:7890;export ALL_PROXY=socks5://127.0.0.1:7891'
 alias unsetproxy='unset HTTP_PROXY HTTPS_PROXY ALL_PROXY'
+
+alias setgitproxy='git config --global http.proxy "http://127.0.0.1:7890";git config --global https.proxy "http://127.0.0.1:7890"'
+alias unsetgitproxy='git config --global --unset http.proxy; git config --global --unset https.proxy'
 
 alias reclash='sudo systemctl restart clash'
 
