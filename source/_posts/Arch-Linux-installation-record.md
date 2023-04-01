@@ -132,6 +132,8 @@ description:
 
 ![20230329164517](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20230329164517.png)
 
+GNOME 安装：
+
 1. 安装显卡驱动：`sudo pacman -S xf86-video-intel`
 2. 安装 Xorg：`pacman -S xorg`
 3. 安装 gnome 和 gdm-prime：`pacman -S gnome gdm-prime`
@@ -140,6 +142,15 @@ description:
     1. `vim /etc/gdm/custom.conf`，取消 `#WaylandEnable=false` 的注释
     2. 添加 `QT_QPA_PLATFORM=xcb` 到 `etc/environment` 中
     3. 检测当前是 Wayland 还是 Xorg：`echo $XDG_SESSION_TYPE`
+
+KDE 安装：
+
+1. 安装显卡驱动和 Xorg
+2. 安装 KDE：`pacman -S plasma sddm`
+3. 设置 sddm 开机自启：`systemctl enable sddm`
+
+> GNOME 切换为 KDE：``systemctl disable gdm-prime
+
 
 ### 2.2.3 安装中文字体
 
@@ -230,9 +241,10 @@ description:
 
 1. Install cups: `pacman -S cups`;
 2. Install cups-pdf: `pacman -S cups-pdf`;
-3. Start cups service: `systemctl start cups`;
-4. Install GUI application: `pacman -S system-config-printer`;
-5. Open web interface: http://localhost:631/
+3. Start cups service: `systemctl enable cups; systemctl start cups`;
+4. Using Avahi: `pacman -S nss-mdns; systemctl enable avahi-daemon.service; systemctl start avahi-daemon.service`
+5. Install GUI application: `pacman -S system-config-printer`;
+6. Open web interface: http://localhost:631/
 
 ### 2.3.6 其他
 
@@ -241,7 +253,7 @@ description:
 3. bluetooth
 4. Chrome
 5. yakuake
-6. linuxqq
+6. linuxqq: 如何遇到崩溃退出，删除 `~/.config/QQ/`
 7. deepin-wine-wechat
 8. visual-studio-code-bin
 9. idea: 安装 Window Decorate Mode Switcher 插件用于隐藏 Top Bar
@@ -255,6 +267,8 @@ description:
 ## 2.4 系统美化
 
 ### 2.4.1 Extensions
+
+GNOME:
 
 - [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/)
 - [Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
@@ -363,6 +377,7 @@ Note (About grub):
 - pacman: `/var/log/pacman.log`
 - xorg: `/var/log/Xorg.0.log`
 - 系统日志：`journalctl -xe`
+- 查询 PID 日志：`journalctl _PID=888`
 - clash: 
   - `/etc/clash/log.log`
   - `systemctl status clash`
