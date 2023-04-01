@@ -153,7 +153,7 @@ KDE 安装：
 
 ![20230401195811](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20230401195811.png)
 
-> GNOME 切换为 KDE：``systemctl disable gdm-prime
+> GNOME 切换为 KDE：`systemctl disable gdm-prime`
 
 
 ### 2.2.3 安装中文字体
