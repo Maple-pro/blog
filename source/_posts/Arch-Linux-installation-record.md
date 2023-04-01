@@ -7,7 +7,7 @@ mathjax:
 description:
 ---
 
-![20230329144644](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20230329144644.png)
+![20230401195811](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20230401195811.png)
 
 本文记录了 Arch Linux 和 Windows 11 双系统安装和基本配置的流程。
 
@@ -143,11 +143,15 @@ GNOME 安装：
     2. 添加 `QT_QPA_PLATFORM=xcb` 到 `etc/environment` 中
     3. 检测当前是 Wayland 还是 Xorg：`echo $XDG_SESSION_TYPE`
 
+![20230329144644](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20230329144644.png)
+
 KDE 安装：
 
 1. 安装显卡驱动和 Xorg
 2. 安装 KDE：`pacman -S plasma sddm`
 3. 设置 sddm 开机自启：`systemctl enable sddm`
+
+![20230401195811](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20230401195811.png)
 
 > GNOME 切换为 KDE：``systemctl disable gdm-prime
 
