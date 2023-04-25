@@ -310,6 +310,17 @@ GNOME:
     ```
 3. Apply the change: `sudo glib-compile-schemas /usr/share/glib-2.0/schemas` 
 
+### 2.4.5 KDE Theme
+
+安装 [WhiteSur KDE Theme](https://github.com/vinceliuice/WhiteSur-kde)
+
+- Application Style: Breeze
+- Plasma Style: WhiteSur-dark
+- Colors: WhiteSur
+- Window Decorations: WhiteSur_x1.5
+- Icons: WhiteSur
+- Cursors: [McMojave Cursors](https://github.com/vinceliuice/McMojave-cursors)
+
 ## 2.5 Shortcuts & alias (KDE)
 
 - `Super + E`: open dolphin
