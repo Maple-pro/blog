@@ -310,14 +310,21 @@ GNOME:
     ```
 3. Apply the change: `sudo glib-compile-schemas /usr/share/glib-2.0/schemas` 
 
-### 2.4.5 Shortcuts & alias
+## 2.5 Shortcuts & alias (KDE)
 
 - `Super + E`: open dolphin
 - `Super + D`: hide all normal windows
 - `F1`: flameshot gui
 - `Super + i`: open setting
-- `Super + tab`: switch applications
+- `Super + tab`: switch activeties
 - `alt + tab`: switch windows
+- `Ctrl+F7`: Toggle present windows (Window Class)
+- `Ctrl+F10`: Toggle present windows (All desktop)
+- `Alt+Tab`: Switch between windows (All windows)
+- ``Alt+` `` : Switch between windows (Current application)
+- `Super+Tab`: Switch between workspace
+- `Ctrl+F1`: Switch to first virtual desktop
+- `Ctrl+F2`: Switch to second virtual desktop
 
 ```bash
 alias setproxy='export HTTP_PROXY=http://127.0.0.1:7890;export HTTPS_PROXY=http://127.0.0.1:7890;export ALL_PROXY=socks5://127.0.0.1:7891'
@@ -343,15 +350,15 @@ alias mountwin="sudo mkdir /run/media/yangfeng/Windows-SSD;sudo mount -o rw /dev
 alias umountwin="sudo umount -v /run/media/yangfeng/Windows-SSD;sudo rm -r /run/media/yangfeng/Windows-SSD"
 ```
 
-## 2.5 双系统相关问题
+## 2.6 双系统相关问题
 
-### 2.5.1 [Time standard](https://wiki.archlinux.org/title/Dual_boot_with_Windows#Time_standard)
+### 2.6.1 [Time standard](https://wiki.archlinux.org/title/Dual_boot_with_Windows#Time_standard)
 
-### 2.5.2 [Bluetooth pairing](https://wiki.archlinux.org/title/Dual_boot_with_Windows#Bluetooth_pairing)
+### 2.6.2 [Bluetooth pairing](https://wiki.archlinux.org/title/Dual_boot_with_Windows#Bluetooth_pairing)
 
 [bt-dualboot](https://github.com/x2es/bt-dualboot)
 
-### 2.5.3 更新 Bios 后启动不显示 GRUB 界面
+### 2.6.3 更新 Bios 后启动不显示 GRUB 界面
 
 > https://my.oschina.net/u/4418120/blog/3575719
 
@@ -374,9 +381,9 @@ Note (About grub):
 - grub 配置文件：/etc/default/grub 用户配置文件，可以配置主题、默认启动项等
 - grub 引导文件: /boot/grub/grub.cfg （grub-mkconfig 生成）
 
-## 2.6 其他
+## 2.7 其他
 
-### 2.6.1 日志
+### 2.7.1 日志
 
 - pacman: `/var/log/pacman.log`
 - xorg: `/var/log/Xorg.0.log`
@@ -386,7 +393,7 @@ Note (About grub):
   - `/etc/clash/log.log`
   - `systemctl status clash`
 
-### 2.6.2 配置文件
+### 2.7.2 配置文件
 
 - `~/.xinitrc`
 - `~/.xprofile`
@@ -397,7 +404,7 @@ pacman 配置文件：
 - `/etc/pacman.d/mirrorlist`
 - `/etc/pacman.conf`
 
-### 2.6.3 命令
+### 2.7.3 命令
 
 - 不进入图形界面，进入命令行：`Ctrl-Alt-F2`
 - optimus-manager
@@ -410,6 +417,38 @@ pacman 配置文件：
     # use glxinfo to show current GPU used
     glxinfo | grep "OpenGL render"
     ```
+### 2.7.4 触摸板手势
+
+1. 安装 [libinput-gestures](https://github.com/bulletmark/libinput-gestures) 和 xdotool：`yay -S libinput-gestures xdotool`
+2. 配置自定义手势：`nvim ~/.config/libinput-gestures.conf`
+
+```
+# Switch to next desktop
+gesture swipe right 4 xdotool key ctrl+F1
+# Switch to prev desktop
+gesture swipe left 4 xdotool key ctrl+F2
+
+# Present windows (current desktop)
+gesture swipe up 4 xdotool key ctrl+F9
+
+# Show desktop
+gesture swipe down 4 xdotool key super+d
+
+# Pinch
+gesture pinch in 2 xdotool key ctrl+minus
+gesture pinch out 2 xdotool key ctrl+plus
+```
+
+四指左右滑动切换虚拟桌面，四指上滑查看所有窗口，四指下滑显示桌面，两指缩放。
+
+### 2.7.5 字体配置
+
+参考：
+
+- [Linux fontconfig 的字体匹配机制](https://catcat.cc/post/2020-10-31/)
+- [用 fontconfig 治理 Linux 中的字体](https://catcat.cc/post/2021-03-07/)
+
+在 `~/.config/fontconfig/` 下添加配置文件 `fonts.conf`：[完整配置文件](https://gist.github.com/Maple-pro/8ffe02b11768ccd7291126b6cf2726d2)
 
 # 3. 相关文档和链接
 
