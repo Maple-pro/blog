@@ -461,6 +461,10 @@ gesture pinch out 2 xdotool key ctrl+plus
 
 在 `~/.config/fontconfig/` 下添加配置文件 `fonts.conf`：[完整配置文件](https://gist.github.com/Maple-pro/8ffe02b11768ccd7291126b6cf2726d2)
 
+### 2.7.6 关闭响声
+
+运行命令 `xset -b`，可以将其设为启动脚本。
+
 # 3. 相关文档和链接
 
 Arch Linux Documentation:
