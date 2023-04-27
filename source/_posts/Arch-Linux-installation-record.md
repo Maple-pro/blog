@@ -320,6 +320,7 @@ GNOME:
 - Window Decorations: WhiteSur_x1.5
 - Icons: WhiteSur
 - Cursors: [McMojave Cursors](https://github.com/vinceliuice/McMojave-cursors)
+- [Window title](https://aur.archlinux.org/packages/plasma5-applets-window-title)
 
 ## 2.5 Shortcuts & alias (KDE)
 
