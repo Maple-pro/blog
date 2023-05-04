@@ -188,6 +188,12 @@ KDE 安装：
 3.  安装 nouveau：`pacman -S xf86-video-nouveau`
 4.  添加 `prime-offload` 到 `~/.xinitrc` 中
 
+如何指定 Nvidia 显卡启动应用？
+
+1. 指定环境变量：`__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia command args...`
+2. 示例：`__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia glxgears -info | grep GL_RENDERER`
+3. 设置 alias：`alias nvidia="__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia"`
+
 ## 2.3 应用安装
 
 ### 2.3.1 中文输入法
@@ -357,6 +363,8 @@ alias showgpu="glxinfo | grep 'OpenGL renderer'"
 
 alias startyakuake="nohup yakuake > ~/Documents/log/yakuake.log &"
 alias startoptimusqt="nohup optimus-manager-qt > ~/Documents/log/optimus-manager-qt.log &"
+
+alias nvidia="__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia"
 
 alias mountwin="sudo mkdir /run/media/yangfeng/Windows-SSD;sudo mount -o rw /dev/nvme0n1p3 /run/media/yangfeng/Windows-SSD"
 alias umountwin="sudo umount -v /run/media/yangfeng/Windows-SSD;sudo rm -r /run/media/yangfeng/Windows-SSD"
