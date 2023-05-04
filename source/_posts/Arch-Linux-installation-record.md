@@ -7,7 +7,7 @@ mathjax:
 description:
 ---
 
-![20230401195811](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20230401195811.png)
+![20230504143256](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20230504143256.png)
 
 本文记录了 Arch Linux 和 Windows 11 双系统安装和基本配置的流程。
 
@@ -152,6 +152,8 @@ KDE 安装：
 3. 设置 sddm 开机自启：`systemctl enable sddm`
 
 ![20230401195811](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20230401195811.png)
+
+![20230504143057](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20230504143057.png)
 
 > GNOME 切换为 KDE：`systemctl disable gdm-prime`
 
@@ -437,6 +439,13 @@ pacman 配置文件：
     # use glxinfo to show current GPU used
     glxinfo | grep "OpenGL render"
     ```
+- `dmesg`: Write the kernel message to standard output
+- `lscpu`: Display information about the cpu architecture
+- `intel_gpu_top`: show intel gpu usage
+- `nvtop`: show nvidia gpu usage
+- `nvidia-smi`: show nvidia gpu usage
+- `conky`: show all gpu usage
+
 ### 2.7.4 触摸板手势
 
 1. 安装 [libinput-gestures](https://github.com/bulletmark/libinput-gestures) 和 xdotool：`yay -S libinput-gestures xdotool`
