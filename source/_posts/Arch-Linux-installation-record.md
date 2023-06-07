@@ -318,17 +318,28 @@ GNOME:
     ```
 3. Apply the change: `sudo glib-compile-schemas /usr/share/glib-2.0/schemas` 
 
+> **KDE per-display scaling**
+>
+> [Reference](https://www.reddit.com/r/kde/comments/l9z7wp/how_to_enable_perdisplay_scaling/)
+>
+> 1. 将显示器设置为 Extent to right
+> 2. `xrandr --output HDMI-0 2x2`
+> 3. `xrandr --output HDMI-0 1.5x1.5`
+
 ### 2.4.5 KDE Theme
 
 安装 [WhiteSur KDE Theme](https://github.com/vinceliuice/WhiteSur-kde)
 
 - Application Style: Breeze
-- Plasma Style: WhiteSur-dark
-- Colors: WhiteSur
-- Window Decorations: WhiteSur_x1.5
+- Plasma Style: Arc Dark / WhiteSur-dark
+- Colors: WhiteSurAlt / WhiteSur
+- Window Decorations: Breeze / WhiteSur_x1.5
 - Icons: WhiteSur
 - Cursors: [McMojave Cursors](https://github.com/vinceliuice/McMojave-cursors)
-- [Window title](https://aur.archlinux.org/packages/plasma5-applets-window-title)
+- Widgets:
+  - [Window title](https://aur.archlinux.org/packages/plasma5-applets-window-title)
+  - Global Menu
+  - Event Calendar
 
 ## 2.5 Shortcuts & alias (KDE)
 
