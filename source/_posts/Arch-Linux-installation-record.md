@@ -325,6 +325,8 @@ GNOME:
 > 1. 将显示器设置为 Extent to right
 > 2. `xrandr --output HDMI-0 2x2`
 > 3. `xrandr --output HDMI-0 1.5x1.5`
+>
+> 或者直接使用 alias 中的 `monleft` / `monright`
 
 ### 2.4.5 KDE Theme
 
@@ -356,6 +358,7 @@ GNOME:
 - `Super+Tab`: Switch between workspace
 - `Ctrl+F1`: Switch to first virtual desktop
 - `Ctrl+F2`: Switch to second virtual desktop
+- `Alt-Shift-F12`: toggle compositor
 
 ```bash
 alias setproxy='export HTTP_PROXY=http://127.0.0.1:7890;export HTTPS_PROXY=http://127.0.0.1:7890;export ALL_PROXY=socks5://127.0.0.1:7891'
@@ -379,8 +382,20 @@ alias startoptimusqt="nohup optimus-manager-qt > ~/Documents/log/optimus-manager
 
 alias nvidia="__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia"
 
+# Mount windows disk
 alias mountwin="sudo mkdir /run/media/yangfeng/Windows-SSD;sudo mount -o rw /dev/nvme0n1p3 /run/media/yangfeng/Windows-SSD"
 alias umountwin="sudo umount -v /run/media/yangfeng/Windows-SSD;sudo rm -r /run/media/yangfeng/Windows-SSD"
+
+# Start wine in zh_CN
+alias chwine="env LANG=zh_CN.UTF-8 wine"
+
+# Extend external monitor to left/right, scale it to 1.5x1.5, and set the built-in monitor refresh rate to 60MHz
+alias monleft="xrandr --output HDMI-0 --mode 1920x1080 --pos 0x0 --rotate normal --scale 2x2 --output eDP-1-1 --mode 2560x1600 --pos 2880x0 --rotate normal --rate 60.00;xrandr --output HDMI-0 --scale 1.5x1.5"
+alias monright="xrandr --output eDP-1-1 --mode 2560x1600 --pos 0x0 --rotate normal --rate 60.00 --output HDMI-0 --mode 1920x1080 --pos 2560x0 --rotate normal --scale 2x2;xrandr --output HDMI-0 --scale 1.5x1.5"
+
+# Restart KDE
+alias restartkde="kquitapp5 plasmashell || killall plasmashell && kstart5 plasmashell &"
+# restart kwin: kwin_x11 --replace
 ```
 
 ## 2.6 双系统相关问题
