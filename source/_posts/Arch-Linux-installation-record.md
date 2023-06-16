@@ -509,6 +509,17 @@ gesture pinch out 2 xdotool key ctrl+plus
 
 运行命令 `xset -b`，可以将其设为启动脚本。
 
+### 2.7.7 Failed to start Load/Save Screen Backlight Brightness
+
+现象：
+
+- 启动系统时出现 Failed to start Load/Save Screen Backlight Brightness of backlight:nvidia_0；
+- 系统运行 `journalctl -xe` 出现 ACPI Error 报错信息。
+
+解决方案：
+
+- 运行命令：`sudo systemctl mask systemd-backlight@backlight:nvidia_0.service`
+
 # 3. 相关文档和链接
 
 Arch Linux Documentation:
