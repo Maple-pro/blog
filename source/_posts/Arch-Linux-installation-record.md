@@ -258,7 +258,19 @@ KDE 安装：
 5. Install GUI application: `pacman -S system-config-printer`;
 6. Open web interface: http://localhost:631/
 
-### 2.3.6 其他
+### 2.3.6 flameshot
+
+flameshot HiDPI 设置：
+
+在 `/usr/share/applications/org.flameshot.Flameshot.desktop` 中修改 `Exec` 项为 `Exec=env QT_SCREEN_SCALE_FACTORS="1; 1" /usr/bin/flameshot`。
+
+> 参考：https://wiki.archlinux.org/title/HiDPI#Qt_5
+
+flameshot shortcuts 设置：
+
+在 KDE 设置中的 Shortcuts 界面添加命令 `env QT_SCREEN_SCALE_FACTORS="1; 1" flameshot gui`，添加快捷键 `F1` 和 `PrtSc`。
+
+### 2.3.7 其他
 
 1. dolphin
 2. konsole
