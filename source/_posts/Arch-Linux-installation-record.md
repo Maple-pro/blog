@@ -260,17 +260,34 @@ KDE 安装：
 
 ### 2.3.6 flameshot
 
-flameshot HiDPI 设置：
+问题：
+
+1. 外接显示器时，截图会出现屏幕错乱的情况；
+2. 贴图的大小与原本的大小不一致，且位置会偏移。
+
+解决方案（flameshot HiDPI 设置）：
 
 在 `/usr/share/applications/org.flameshot.Flameshot.desktop` 中修改 `Exec` 项为 `Exec=env QT_SCREEN_SCALE_FACTORS="1; 1" /usr/bin/flameshot`。
 
 > 参考：https://wiki.archlinux.org/title/HiDPI#Qt_5
 
+> 注：在 KDE 中设置开机自启动时，需要再设置一下启动时的环境变量。
+>
+> ![20230629184926](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20230629184926.png)
+
 flameshot shortcuts 设置：
 
 在 KDE 设置中的 Shortcuts 界面添加命令 `env QT_SCREEN_SCALE_FACTORS="1; 1" flameshot gui`，添加快捷键 `F1` 和 `PrtSc`。
 
-### 2.3.7 其他
+### 2.3.7 yakuake
+
+问题：使用外界屏幕时不居中的问题
+
+解决：在设置开机自启动时，需要设置环境变量。
+
+![20230629185221](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20230629185221.png)
+
+### 2.3.8 其他
 
 1. dolphin
 2. konsole
