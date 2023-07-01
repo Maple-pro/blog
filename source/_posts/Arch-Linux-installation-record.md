@@ -251,6 +251,8 @@ KDE 安装：
 1. Install [OneDrive](https://aur.archlinux.org/packages/onedrive-abraunegg): `yay -S onedrive-abraunegg`
 2. Run OneDrive: `onedrive --synchronize`
 
+安装图形化界面：[onedrivegui-git](https://aur.archlinux.org/packages/onedrivegui-git)
+
 ### 2.3.5 Printer
 
 > Reference: [CUPS](https://wiki.archlinux.org/title/CUPS)
