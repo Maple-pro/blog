@@ -239,7 +239,11 @@ KDE 安装：
 ### 2.3.3 Steam
 
 1. 安装 Steam：`pacman -S steam`
-2. Steam HiDPI 设置：在 `/usr/share/applications/steam.desktop` 上添加启动环境变量 `Exec=env GDK_SCALE=2 /usr/bin/steam-runtime %U`
+2. Steam HiDPI 设置：
+   1. 参考：https://wiki.archlinux.org/title/HiDPI#Steam
+   2. 修改 `/usr/share/applications/steam.desktop` 
+      1. 添加启动环境变量 `Exec=env GDK_SCALE=2 /usr/bin/steam-runtime %U` 
+      2. 或改为 `Exec=/usr/bin/steam-runtime -forcedesktopscaling 1.5 %U`
 3. [About desktop entry](https://wiki.archlinux.org/title/desktop_entries)
 
 ### 2.3.4 OneDrive
