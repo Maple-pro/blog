@@ -307,7 +307,10 @@ flameshot shortcuts 设置：
 10. telegram：图标模糊，同样设置环境变量 `env QT_SCREEN_SCALE_FACTORS="1; 1"`
 11. [nvm](https://github.com/nvm-sh/nvm): Node Version Manager
 12. flameshot
-13. zsh & oh-my-zsh
+13. zsh & oh-my-zsh:
+    1.  [zsh 主题配置](https://gist.github.com/Maple-pro/c3528b59bf2aaccaf1bcc459e6bd548a)
+    2.  [zsh 配置文件](https://gist.github.com/Maple-pro/296474db4107f64941e009b203bbe162)
+    3.  zsh 插件：[zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 14. nvtop
 15. zotero (zotfile plugin)
 
