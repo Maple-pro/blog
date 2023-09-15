@@ -313,6 +313,10 @@ flameshot shortcuts 设置：
     3.  zsh 插件：[zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 14. nvtop
 15. zotero (zotfile plugin)
+16. scrcpy: 安卓投屏工具
+17. uxplay: iOS 投屏工具
+18. Docker Desktop
+19. Kubectl
 
 ## 2.4 系统美化
 
