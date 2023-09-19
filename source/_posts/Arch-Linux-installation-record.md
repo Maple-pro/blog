@@ -547,7 +547,10 @@ gesture pinch out 2 xdotool key ctrl+plus
 
 在 `~/.config/fontconfig/` 下添加配置文件 `fonts.conf`：[完整配置文件](https://gist.github.com/Maple-pro/8ffe02b11768ccd7291126b6cf2726d2)
 
-Nerd Font: https://github.com/ryanoasis/nerd-fonts
+Nerd Font: 
+
+- https://github.com/ryanoasis/nerd-fonts
+- https://archlinux.org/groups/any/nerd-fonts/
 
 ### 2.7.6 关闭响声
 
