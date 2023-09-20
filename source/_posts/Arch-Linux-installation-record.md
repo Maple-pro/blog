@@ -317,6 +317,12 @@ flameshot shortcuts 设置：
 17. uxplay: iOS 投屏工具
 18. Docker Desktop
 19. Kubectl
+20. WPS
+    1.  问题：加粗字体无法正常显示
+    2.  解决方案：降级 freetype2 `yay -U https://arch-archive.tuna.tsinghua.edu.cn/2023/06-26/extra/os/x86_64/freetype2-2.13.0-1-x86_64.pkg.tar.zst`
+21. zip
+    1.  问题：中文乱码
+    2.  解决方案：指定编码方式 `unzip -O CP936 path/to/archive1.zip -d /path/to/output`
 
 ## 2.4 系统美化
 
