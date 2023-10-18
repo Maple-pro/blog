@@ -477,6 +477,70 @@ Note (About grub):
 - grub 配置文件：/etc/default/grub 用户配置文件，可以配置主题、默认启动项等
 - grub 引导文件: /boot/grub/grub.cfg （grub-mkconfig 生成）
 
+### 2.6.4 双系统文件互相访问
+
+#### Arch Linux -> Windows
+
+在 Dolphin 中点击挂载。
+
+或者
+
+在命令行中挂载：
+
+```bash
+# Mount windows disk
+alias mountwin="sudo mkdir /run/media/yangfeng/Windows-SSD;sudo mount -o rw /dev/nvme0n1p3 /run/media/yangfeng/Windows-SSD"
+alias umountwin="sudo umount -v /run/media/yangfeng/Windows-SSD;sudo rm -r /run/media/yangfeng/Windows-SSD"
+```
+
+#### Windows -> Arch Linux
+
+在 WSL 2 中挂载，参考：[Mount a Linux disk in WSL 2](https://learn.microsoft.com/en-us/windows/wsl/wsl2-mount-disk)
+
+命令：
+
+```powershell
+# Identify the disk
+GET-CimInstance -query "SELECT * from Win32_DiskDrive"
+
+# List and select the partitions to mount in WSL 2
+wsl --mount \\.\PHYSICALDRIVE1 --bare
+
+# List the partitions in wsl (run in wsl)
+λ ~/ lsblk
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0 389.5M  1 disk
+sdb      8:16   0     8G  0 disk [SWAP]
+sdc      8:32   0   256G  0 disk /mnt/wslg/distro
+                                 /
+sdd      8:48   0 931.5G  0 disk
+├─sdd1   8:49   0    16M  0 part
+└─sdd2   8:50   0 931.5G  0 part
+
+# Mount the selected partition
+wsl --mount \\.\PHYSICALDRIVE1 --partition 2
+
+# Access the disk content
+λ ~/ cd /mnt/wsl/PHYSICALDRIVE1p2
+
+# Unmount the disk
+wsl --unmount \\.\PHYSICALDRIVE1
+```
+
+省流：
+
+```powershell
+# Mount the selected partition
+wsl --mount \\.\PHYSICALDRIVE1 --partition 2
+
+# Access the disk content
+λ ~/ cd /mnt/wsl/PHYSICALDRIVE1p2
+
+# Unmount the disk
+wsl --unmount \\.\PHYSICALDRIVE1
+```
+
+
 ## 2.7 其他
 
 ### 2.7.1 日志
