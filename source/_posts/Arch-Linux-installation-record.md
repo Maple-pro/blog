@@ -323,6 +323,26 @@ flameshot shortcuts 设置：
 21. zip
     1.  问题：中文乱码
     2.  解决方案：指定编码方式 `unzip -O CP936 path/to/archive1.zip -d /path/to/output`
+22. picgo
+    1.  配置文件：`~/.picgo/config.json`
+    2.  上传文件重命名：
+        1.  插件：picgo-plugin-rename-file
+        2.  配置：
+            ```json
+            "picgo-plugin-rename-file": {
+               "format": "image-{y}{m}{d}-{rand}-{origin}"
+            }
+            ```
+    3.  alias:
+         ```bash
+         alias uploadimg='function _upload_image() {
+            local output=$(picgo upload)
+            local image_url=$(echo "$output" | grep -o "https://.*")
+            echo "![]($image_url)" | xclip -selection clipboard
+            echo "Image URL copied to clipboard: $image_url"
+         }
+         _upload_image'
+         ```
 
 ## 2.4 系统美化
 
