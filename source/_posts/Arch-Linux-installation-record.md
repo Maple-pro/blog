@@ -36,7 +36,7 @@ description:
 3. 从 U 盘中启动 Arch 安装系统；
 4. 连接网络
    1. 解除无线网卡的禁用：`rfkill unblock all`
-   2. 进入 iwctl：`iwctll`
+   2. 进入 iwctl：`iwctl`
    3. 列出电脑中的无线网卡：`device list`，得到无线网卡名称为 `wlan0`
    4. 列出所有无线网络：`station wlan0 get-networks`
    5. 连接无线网络：`station wlan0 connect WIFI_NAME`
