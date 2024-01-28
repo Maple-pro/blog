@@ -33,6 +33,7 @@ jobs:
 
       - name: Setup Hexo Dependencies
         run: |
+            npm config set strict-ssl false
             npm -g install npm
             npm install
             npm install -g hexo-cli
