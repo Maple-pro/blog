@@ -26,14 +26,14 @@ jobs:
       - name: Checkout Repository branch
         uses: actions/checkout@v3
 
-      - name: Setup Node.js 14.5.0
+      - name: Setup Node.js 20.11.0
         uses: actions/setup-node@master
         with:
-            node-version: '14.5.0'
+            node-version: '20.11.0'
 
       - name: Setup Hexo Dependencies
         run: |
-            npm -g install npm@7.6.3
+            npm -g install npm
             npm install
             npm install -g hexo-cli
             rm -f source/_posts/hello-world.md
