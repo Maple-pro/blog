@@ -413,20 +413,22 @@ GNOME:
 
 ## 2.5 Shortcuts & alias (KDE)
 
-- `Super + E`: open dolphin
-- `Super + D`: hide all normal windows
-- `F1`: flameshot gui
-- `Super + i`: open setting
-- `Super + tab`: switch activeties
-- `alt + tab`: switch windows
-- `Ctrl+F7`: Toggle present windows (Window Class)
-- `Ctrl+F10`: Toggle present windows (All desktop)
-- `Alt+Tab`: Switch between windows (All windows)
-- ``Alt+` `` : Switch between windows (Current application)
-- `Super+Tab`: Switch between workspace
-- `Ctrl+F1`: Switch to first virtual desktop
-- `Ctrl+F2`: Switch to second virtual desktop
-- `Alt-Shift-F12`: toggle compositor
+- `Meta + E`: open dolphin
+- `Meta + D`: hide all normal windows
+- `Print`: flameshot gui
+- `Meta + I`: open setting
+- `Meta + Tab`: switch activeties
+- `Alt + Tab`: switch windows
+- `Ctrl + F7`: Toggle present windows (Window Class)
+- `Ctrl + F10`: Toggle present windows (All desktop)
+- `Alt + Tab`: Switch between windows (All windows)
+- ``Alt + ` `` : Switch between windows (Current application)
+- `Meta + Tab`: Switch between workspace
+- `Ctrl + F1`: Switch to first virtual desktop
+- `Ctrl + F2`: Switch to second virtual desktop
+- `Alt + Shift + F12`: toggle compositor
+- `Meta + Ctrl + Right`: Window to Next Desktop
+- `Meta + Ctrl + Left`: Window to Previous Desktop
 
 ```bash
 alias setproxy='export HTTP_PROXY=http://127.0.0.1:7890;export HTTPS_PROXY=http://127.0.0.1:7890;export ALL_PROXY=socks5://127.0.0.1:7891'
