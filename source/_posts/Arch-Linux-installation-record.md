@@ -140,7 +140,7 @@ GNOME 安装：
 4. 设置 gdm-prime 开机自启：`systemctl enable gdm-prime`
 5.  将 Wayland 切换为 Xorg：
     1. `vim /etc/gdm/custom.conf`，取消 `#WaylandEnable=false` 的注释
-    2. 添加 `QT_QPA_PLATFORM=xcb` 到 `etc/environment` 中
+    2. 添加 `QT_QPA_PLATFORM=xcb` 到 `/etc/environment` 中
     3. 检测当前是 Wayland 还是 Xorg：`echo $XDG_SESSION_TYPE`
 
 ![img-20230329144644](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20230329144644.png)
@@ -417,7 +417,6 @@ GNOME:
 - `Meta + D`: hide all normal windows
 - `Print`: flameshot gui
 - `Meta + I`: open setting
-- `Meta + Tab`: switch activeties
 - `Alt + Tab`: switch windows
 - `Ctrl + F7`: Toggle present windows (Window Class)
 - `Ctrl + F10`: Toggle present windows (All desktop)
@@ -429,6 +428,9 @@ GNOME:
 - `Alt + Shift + F12`: toggle compositor
 - `Meta + Ctrl + Right`: Window to Next Desktop
 - `Meta + Ctrl + Left`: Window to Previous Desktop
+- `Meta + tab`: toggle present window
+- `Meta + w`: toggle overview
+- `Meta + g`: toggle grid view
 
 ```bash
 alias setproxy='export HTTP_PROXY=http://127.0.0.1:7890;export HTTPS_PROXY=http://127.0.0.1:7890;export ALL_PROXY=socks5://127.0.0.1:7891'
