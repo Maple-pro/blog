@@ -607,6 +607,7 @@ pacman 配置文件：
 - `nvtop`: show nvidia gpu usage
 - `nvidia-smi`: show nvidia gpu usage
 - `conky`: show all gpu usage
+- `sudo journalctl -b -1 | curl -F 'file=@-' 0x0.st`: 查看上一次启动的日志文件，并上传
 
 ### 2.7.4 触摸板手势
 
