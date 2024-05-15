@@ -164,7 +164,11 @@ KDE 安装：
 
 ### 2.2.4 配置网络
 
+参考文档：[Wiki: Network managers](https://wiki.archlinux.org/title/Network_configuration#Network_managers)
+
 开机自启 NetworkManager：`systemctl enable NetworkManager`
+
+> NetworkManager 和 dhcpcd 只能启动一个。
 
 ### 2.2.5 pacman 配置
 
@@ -184,6 +188,8 @@ KDE 安装：
 `pacman -S yay`
 
 ### 2.2.7 显卡配置
+
+> 请查看文章 「Arch 显卡配置」。
 
 1.  安装 Nvidia 显卡闭源驱动：`sudo pacman -S nvidia nvidia-prime nvidia-settings nvidia-utils opencl-nvidia lib32-nvidia-utils lib32-opencl-nvidia`
 2.  安装双显卡切换工具：`yay -S optimus-manager optimus-manager-qt`
