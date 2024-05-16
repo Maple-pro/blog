@@ -39,7 +39,7 @@ description:
 参考文档：
 - [Wiki: NVIDIA](https://wiki.archlinux.org/title/NVIDIA)
 
-最新版本安装：
+### 1.2.1 最新版本安装：
 
 - nvidia: NVIDIA drivers for linux (or nvidia-open)
 - nvidia-utils: NVIDIA drivers utilities, include OpenGL implementation and Vulkan driver
@@ -49,7 +49,7 @@ description:
 - nvidia-settings: Tools for configuring the NVIDIA graphics driver
 - nvidia-prime (extra): NVIDIA Prime Render Offload configuration and utilities
 
-特定旧版本安装（aur）：
+### 1.2.2特定旧版本安装（aur）：
 
 - nvidia-535xx-dkms: replacement for nvidia package
 - nvidia-535xx-utils
@@ -58,6 +58,20 @@ description:
 - lib32-opencl-nvidia-535xx
 - nvidia-535xx-settings
 - nvidia-prime (extra)
+
+### 1.2.3 DRM kernel mode settings
+
+参考文档：[Wiki: NVIDIA - DRM kernel mode settings](https://wiki.archlinux.org/title/NVIDIA#DRM_kernel_mode_setting)
+
+原因：
+
+- Wayland：使得合成器更加丝滑
+- Xorg：运行 [rootless Xorg](https://wiki.archlinux.org/title/Xorg#Rootless_Xorg)
+
+Early loading：
+
+1. 修改 mkinitcpio 配置文件 `/etc/mkinitcpio.conf`，添加模块 `nvidia nvidia_modeset nvidia_uvm nvidia_drm`
+2. 重新生成 initramfs 镜像：`sudo mkinitcpio -P`
 
 ## 1.3 Xorg 驱动安装
 
