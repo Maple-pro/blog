@@ -68,15 +68,21 @@ description:
 - Wayland：使得合成器更加丝滑
 - Xorg：运行 [rootless Xorg](https://wiki.archlinux.org/title/Xorg#Rootless_Xorg)
 
+步骤：
+
+- 在 grub.cfg 中添加内核模块参数 `nvidia_drm.modeset=1`（nvidia-util 应该是帮忙做了这件事）
+
 Early loading：
 
 1. 修改 mkinitcpio 配置文件 `/etc/mkinitcpio.conf`，添加模块 `nvidia nvidia_modeset nvidia_uvm nvidia_drm`
 2. 重新生成 initramfs 镜像：`sudo mkinitcpio -P`
 
+> [为什么要 early loading](https://bbs.archlinux.org/viewtopic.php?id=272241)
+
 验证：
 
 1. `sudo cat /sys/module/nvidia_drm/parameters/modeset` 应该输出 `Y`
-2. `ps -o user= -C Xorg` 不为 root
+2. `ps -o user= -C Xorg`
 
 ## 1.3 Xorg 驱动安装
 
