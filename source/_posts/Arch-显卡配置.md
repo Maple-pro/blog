@@ -41,7 +41,7 @@ description:
 
 最新版本安装：
 
-- nvidia: NVIDIA drivers for linux
+- nvidia: NVIDIA drivers for linux (or nvidia-open)
 - nvidia-utils: NVIDIA drivers utilities, include OpenGL implementation and Vulkan driver
 - lib32-nvidia-utils: NVIDIA drivers utilities (32-bit), include OpenGL implementation and Vulkan driver
 - opencl-nvidia: OpenCL implementation for NVIDIA
@@ -129,6 +129,8 @@ Arch Forum 中 [这篇帖子](https://bbs.archlinux.org/viewtopic.php?id=293400&
 
 ## 2.1 optimus-manager 安装
 
+> 如果是使用混合模式，则不必使用 optimus-manager
+
 安装：
 
 - optimus-manager
@@ -159,6 +161,9 @@ prime-run %command%
 # 生成 initramfs
 sudo mkinitcpio -P
 
+# 生成 grub.cfg
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
 # 查看 Xorg 驱动
 xrandr --listproviders
 
@@ -171,6 +176,16 @@ lspci | grep NVIDIA
 # 01:00.0 VGA compatible controller: NVIDIA Corporation AD107M [GeForce RTX 4060 Max-Q / Mobile] (rev a1)
 # 01:00.1 Audio device: NVIDIA Corporation Device 22be (rev a1)
 
+# 显示显卡驱动
+lspci -k | grep -A 2 -E "(VGA|3D)"
+# 00:02.0 VGA compatible controller: Intel Corporation Raptor Lake-S UHD Graphics (rev 04)
+#         Subsystem: Lenovo Device 3b53
+#         Kernel driver in use: i915
+# --
+# 01:00.0 VGA compatible controller: NVIDIA Corporation AD107M [GeForce RTX 4060 Max-Q / Mobile] (rev a1)
+#         Subsystem: Lenovo Device 3b53
+#         Kernel driver in use: nvidia
+
 # 测试显卡性能
 glxgears
 glxgears -info | grep GL_RENDERER
@@ -181,8 +196,12 @@ prime-run glxgears -info | grep GL_RENDERER
 # 查看 OpenGL 驱动情况
 eglinfo -B
 
+# 查看当前日志
+jounalctl -xef
+
 # 查看上一次启动的日志文件，并上传
 sudo journalctl -b -1 | curl -F 'file=@-' 0x0.st
+sudo journalctl -r -b -1 # 倒序
 
 # 列出所有活动的 service
 systemctl list-unit-files --state=enabled
@@ -215,9 +234,25 @@ nvidia-smi
 - 重启：`Alt-SysRq-b`（避免 hard reboot）
 - 触发 OOM：`Alt-SysRq-f`
 
-# 5. 其他
+# 5. memtest86+
 
-## 5.1 将 xorg-xbacklight 改为 light
+对内存做压力测试。
+
+参考文档：[Wiki: Stress testing - MemTest86+](https://wiki.archlinux.org/title/Stress_testing#MemTest86+
+)
+
+安装：
+
+- 安装 memtest86+-efi 包
+- 重新生成 grub.cgd
+
+启动：
+
+- 从 GRUB 的 memtest 选项中进入
+
+# 6. 其他
+
+## 6.1 将 xorg-xbacklight 改为 light
 
 参考文档：[Wiki: backlight](https://wiki.archlinux.org/title/backlight)
 
@@ -228,7 +263,7 @@ sudo pacman -Rs xorg-xbacklight
 yay -S light
 ```
 
-## 5.2 yakuake 外接屏幕不居中的问题
+## 6.2 yakuake 外接屏幕不居中的问题
 
 在 AutoStart 中添加环境变量：`env QT_SCREEN_SCALE_FACTORS="1.2;1.2" yakuake`
 
