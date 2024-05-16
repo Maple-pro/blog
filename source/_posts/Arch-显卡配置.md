@@ -73,6 +73,11 @@ Early loading：
 1. 修改 mkinitcpio 配置文件 `/etc/mkinitcpio.conf`，添加模块 `nvidia nvidia_modeset nvidia_uvm nvidia_drm`
 2. 重新生成 initramfs 镜像：`sudo mkinitcpio -P`
 
+验证：
+
+1. `sudo cat /sys/module/nvidia_drm/parameters/modeset` 应该输出 `Y`
+2. `ps -o user= -C Xorg` 不为 root
+
 ## 1.3 Xorg 驱动安装
 
 参考文档：
