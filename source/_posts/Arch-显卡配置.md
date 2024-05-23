@@ -293,3 +293,12 @@ yay -S light
 在 AutoStart 中添加环境变量：`env QT_SCREEN_SCALE_FACTORS="1.2;1.2" yakuake`
 
 > 由于 QT 升级到了 qt6，原本的 `1;1` 失效，需要将原本的 `1;1` 变为 `1.2;1.2`。
+
+## 6.3 环境变量配置文件
+
+- `~/.zshrc`
+- `~/.bashrc`
+- `~/.bash_profile`
+- `~/.xprofile`
+- `~/.pam_environment`
+- `/etc/environment`
