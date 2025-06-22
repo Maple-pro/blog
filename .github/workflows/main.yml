@@ -26,10 +26,10 @@ jobs:
       - name: Checkout Repository branch
         uses: actions/checkout@v3
 
-      - name: Setup Node.js 20.11.0
+      - name: Setup Node.js 22.9.0
         uses: actions/setup-node@master
         with:
-            node-version: '20.11.0'
+            node-version: '22.9.0'
 
       - name: Setup Hexo Dependencies
         run: |
