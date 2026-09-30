@@ -8,6 +8,6 @@ description: 记录 React.js 的一些知识点
 
 ## 生命周期
 
-![image-20210601233618839](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210601233618839.png)
+![image-20210601233618839](/assets/imported/3e4d9d98c6031fdd24e5.png)
 
-![image-20210601233647179](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210601233647179.png)
+![image-20210601233647179](/assets/imported/4c39a5c7ad8e9dd09f99.png)

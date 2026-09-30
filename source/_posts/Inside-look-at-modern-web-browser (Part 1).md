@@ -19,17 +19,17 @@ description: "介绍 Chrome 浏览器的架构以及 Servicification 和 Site Is
 
 首先是中央处理器（CPU）。CPU 可以被认为是计算机的大脑。一个 CPU 的内核，可以理解为一个员工，他可以一个接一个地处理输入进来的不同任务。它可以处理从数学到艺术的所有事情，同时也知道如何回复客户的电话。在过去，很多 CPU 都是单个芯片。一个内核就像是在同一个芯片的另一个 CPU。在现代的硬件中，通常是多核，使得手机和电脑有了更强的计算能力。
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210817224636528.png" alt="image-20210817224636528" style="zoom:80%;" />
+<img src="/assets/imported/a8d4de4b94b8df425980.png" alt="image-20210817224636528" style="zoom:80%;" />
 
 ### GPU
 
 图形处理器（GPU）是计算机中的另外一部分。不像 CPU，GPU 更擅长处理简单的事物，但能同时跨多个内核。就像它的名称描述的那样，它最开始是被用来做图像处理的。这也就是为什么『使用 GPU』和『GPU 支持』的图形内容往往与快速渲染和流畅交互相关联。近几年，伴随着 GPU 加速计算，越来越多的计算有了可能性。
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210817224701308.png" alt="image-20210817224701308" style="zoom:80%;" />
+<img src="/assets/imported/fd4c8eb1014d65d0b506.png" alt="image-20210817224701308" style="zoom:80%;" />
 
 当你在电脑或手机上打开一个应用时，CPU 和 GPU 驱动了程序的运行。通常来说，应用运行在 CPU 和 GPU 上需要使用到操作系统提供的机制。
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210817224909891.png" alt="image-20210817224909891" style="zoom: 80%;" />
+<img src="/assets/imported/56a5456ae017110cf92b.png" alt="image-20210817224909891" style="zoom: 80%;" />
 
 ## 程序在进程和线程上运行
 
@@ -37,7 +37,7 @@ description: "介绍 Chrome 浏览器的架构以及 Servicification 和 Site Is
 
 当我们启动应用时，进程会被创建。程序可能会创建多个线程去帮助它工作，但这是可选的。操作系统给进程一块内存空间用于执行，并且程序的所有状态信息都存放在这个私有的内存空间中。当程序关闭时，进程也会被杀死，同时分配的内存空间也会被释放。
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210817230837103.png" alt="image-20210817230837103" style="zoom:80%;" />
+<img src="/assets/imported/3f655cef9475a45b5a81.png" alt="image-20210817230837103" style="zoom:80%;" />
 
 一个进程可以请求操作系统启动另外一个进程来运行不同的任务。当上述事件发生时，另一部分的内存会被分配给新的进程。如果两个进程间需要通信，他们可以通过『进程间通信』（IPC）的方式来通信。许多应用都被设计成这样，因此当一个工作进程无响应时，它可以被另外一个进程唤醒，而不需要重启应用。
 
@@ -45,7 +45,7 @@ description: "介绍 Chrome 浏览器的架构以及 Servicification 和 Site Is
 
 那么 Web 浏览器时如何通过进程和线程来构建的呢？它可以是一个进程中有多个线程，或者是多个不同的进程通过 IPC 来通信。
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210817231528432.png" alt="image-20210817231528432" style="zoom:80%;" />
+<img src="/assets/imported/931cbb4d27bf415fc433.png" alt="image-20210817231528432" style="zoom:80%;" />
 
 这里需要注意的是，这些不同的架构是浏览器的实现细节。这里没有一个构建 Web 浏览器的标准。一个浏览器的实现方法可能和另外一个浏览器完全不同。
 
@@ -53,7 +53,7 @@ description: "介绍 Chrome 浏览器的架构以及 Servicification 和 Site Is
 
 在顶部，是「Browser Process」在和负责应用中其他部分的进程间进行协调。对于「Renderer Process」，会有多个进程被创建，并且分配到每个 tab 上。到目前为止，Chrome 尽可能给每个 tab 一个「Renderer Process」；而现在，它尝试给每个站点一个单独的「Renderer Process」，包括「iframes」。
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210817231840763.png" alt="image-20210817231840763" style="zoom:80%;" />
+<img src="/assets/imported/f24e0b8505231d4f2726.png" alt="image-20210817231840763" style="zoom:80%;" />
 
 ## 进程控制什么？
 
@@ -66,7 +66,7 @@ description: "介绍 Chrome 浏览器的架构以及 Servicification 和 Site Is
 | Plugin Process | 控制被网站使用的所有插件。比如，flash。 |
 | GPU Process | 在独立于其他进程的情况下处理 GPU 的任务。它被分割成独立的进程是因为 GPU 处理来自多个应用程序的请求，并绘制在同一个平面上。 |
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210817233606779.png" alt="image-20210817233606779" style="zoom:80%;" />
+<img src="/assets/imported/73f224df6372436324cf.png" alt="image-20210817233606779" style="zoom:80%;" />
 
 还有更多的进程，比如「Extension Process」和「Utility Process」。如果你想了解有多少个进程运行在 Chrome 浏览器上，进入 Chrome 的任务管理器，可以看到 Chrome 当前运行的所有进程和它们消耗的 CPU/Memory 资源。
 
@@ -92,7 +92,7 @@ description: "介绍 Chrome 浏览器的架构以及 Servicification 和 Site Is
 
 『站点隔离』是 Chrome 最近推出的功能，它对每一个跨站点的 iframe 都运行一个单独的「Renderer Process」。我们已经讨论过每个 tab 都有一个「Renderer Process」的模型，这个模型允许跨站点的 iframe 运行在一个和其他站点共享内存空间的进程中。在同一个「Renderer Process」中同时运行 a.com 和 b.com 看起来是没有问题的。『同源策略』是 Web 的核心安全模型，它确保一个站点不能未经允许从另外一个站点获取数据。绕过这个策略是安全攻击的基本目标。进程隔离是分割不同站点最有效的方式。随着 Meltdown 和 Spectre 漏洞的发现，我们对于使用进程区分站点的需求变得更加明显。自从 Chrome 67 以来，站点隔离在桌面上默认启动，tab 上每一个跨站点的 iframe 都有一个隔离的「Renderer Process」。
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210818001205978.png" alt="image-20210818001205978" style="zoom:80%;" />
+<img src="/assets/imported/97fccd0a6ad0ceff4b66.png" alt="image-20210818001205978" style="zoom:80%;" />
 
 启用『站点隔离』是一项多年的工程工作。『站点隔离』并不只是单纯地分配「Renderer Process」，它在根本上改变了 iframe 之间的通信方式。能在一个有着 iframe 的页面上打开『开发者工具』，意味着『开发者工具』做了一些幕后工作，使得让它看起来能和普通页面没有什么区别。即便是在页面上使用简单的 Ctrl + F 来查找，那也是在跨越多个「Renderer Process」在查找。这样你就你可以明白，为什么浏览器开发者说『站点隔离』的发布是一个重大里程碑。
 

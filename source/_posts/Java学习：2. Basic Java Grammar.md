@@ -26,7 +26,7 @@ description: Basic Java grammar, data type
 
 ### 一、JVM内存结构
 
-![JVM内存结构](https://img-blog.csdnimg.cn/20190920235826175.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDA0MjI3MA==,size_16,color_FFFFFF,t_70)
+![JVM内存结构](/assets/imported/1165f53813e054ba9d49.png)
 
 ### 二、Java程序在内存中的位置
 

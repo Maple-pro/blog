@@ -10,7 +10,7 @@ description: 介绍Google云计算的Google三宝：GFS, MapReduce, BigTable
 
 ## 1. Introduction
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/hadoop-an-industry-perspective-8-728.jpg" alt="Apache Hadoop Ecosystem"  />
+<img src="/assets/imported/2dabbd01282b66b6e28f.jpg" alt="Apache Hadoop Ecosystem"  />
 
 Hadoop实际上就是谷歌三宝的开源实现，Hadoop MapReduce对应Google MapReduce，HBase对应BigTable，HDFS对应GFS，Zookeepr对应Chubby。
 
@@ -20,7 +20,7 @@ Hadoop实际上就是谷歌三宝的开源实现，Hadoop MapReduce对应Google 
 
 ## 2. Google文件系统GFS
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210310144620112.png" alt="image-20210310144620112"  />
+<img src="/assets/imported/2e7dd2db8734d610ae10.png" alt="image-20210310144620112"  />
 
 ### 2.1 系统架构
 
@@ -42,7 +42,7 @@ Client与Chunk  Server之间直接传输数据流，同时由于文件被分成�
 
 使用租约机制来保障在跨多个副本的数据写入中保持顺序一致性，减轻master的负担，有主副本所在的Chunk Server来负责控制流水线的安排。
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/v2-73bf6805cb88448095875d3dd190d0af_720w.jpg" alt="img"  />
+<img src="/assets/imported/7f318d0341f0817e495f.jpg" alt="img"  />
 
 1. 客户端向 Master 询问要写的 Chunk 的**主副本和其他副本的位置**。如果还没有主副本，那么 Master 就通过租约授权一个。
 2. Master 会给客户端这些位置信息，客户端会将其缓存起来。并且除非主副本不可达或者其租约到期，客户端不会再向 Master 发送请求。
@@ -71,13 +71,13 @@ Client与Chunk  Server之间直接传输数据流，同时由于文件被分成�
 
 ### 3.1 编程模型
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210310153753017.png" alt="image-20210310153753017"  />
+<img src="/assets/imported/087570249ebddafddfe9.png" alt="image-20210310153753017"  />
 
 **Map函数**：对一部分原始数据进行指定的操作。每个Map操作都针对不同的原始数据，因此Map与Map之间是互相独立的，这使得它们可以充分并行化。
 
 **Reduce操作**：对每个Map所产生的一部分中间结果进行合并操作，每个Reduce所处理的Map中间结果是互不交叉的，所有Reduce产生的最终结果经过简单连接就形成了完整的结果集。
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210310154255885.png" alt="image-20210310154255885"  />
+<img src="/assets/imported/5d2435b944bb0bbbaba5.png" alt="image-20210310154255885"  />
 
 ### 3.2 容错机制
 

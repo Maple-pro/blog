@@ -18,11 +18,11 @@ mathjax: true
 - `Add (x, d)`：让$ A_x $增加$ d $
 - `Query (R)`：以$ O(log n) $的复杂度计算前缀和
 
-![image-20210315200852481](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210315200852481.png)
+![image-20210315200852481](/assets/imported/d59618fa3cc521b1dd89.png)
 
-![image-20210315200956732](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210315200956732.png)
+![image-20210315200956732](/assets/imported/48bd1ffbd35ec2781e5f.png)
 
-![image-20210315201046181](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210315201046181.png)
+![image-20210315201046181](/assets/imported/d06246002bb4805e3e72.png)
 
 注意：
 

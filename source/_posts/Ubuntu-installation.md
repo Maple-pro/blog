@@ -7,7 +7,7 @@ mathjax:
 # description: 记录 Windows 和 Ubuntu 双系统的安装，以及 Ubuntu 的美化和配置
 ---
 
-![image-20220712162842874](https://maples-ubuntu.oss-cn-hangzhou.aliyuncs.com/images/image-20220712162842874.png)
+![image-20220712162842874](/assets/imported/4fca2fed82c0d8eb2c89.png)
 
 # 1 Ubuntu 和 Windows 双系统安装
 
@@ -74,7 +74,7 @@ Ubuntu 系统安装完成后，重启电脑后会进入 grub 命令行界面，�
 1. 进入设置界面，选择 Network -> Network Proxy -> Mannual；
 2. 设置如下图所示。
 
-![image-20220712162640052](https://maples-ubuntu.oss-cn-hangzhou.aliyuncs.com/images/image-20220712162640052.png)
+![image-20220712162640052](/assets/imported/a7cb65c71a1867ce8ae4.png)
 
 ## 2.2 设置 Chrome Proxy
 
@@ -137,7 +137,7 @@ filetype plugin indent on
 
 效果如下：
 
-![image-20220712162555206](https://maples-ubuntu.oss-cn-hangzhou.aliyuncs.com/images/image-20220712162555206.png)
+![image-20220712162555206](/assets/imported/2e22784ebabf322054d7.png)
 
 # 4 软件安装
 
@@ -186,7 +186,7 @@ filetype plugin indent on
 3. ZotFile Preferences -> Source Folder for Attaching New Files：设置为浏览器下载目录，用于 Attach New File功能；
 4. ZotFile Preferences -> Location of Files：和 1 中路径相同。
 
-![image-20220711190232319](https://maples-ubuntu.oss-cn-hangzhou.aliyuncs.com/images/image-20220711190232319.png)
+![image-20220711190232319](/assets/imported/4b96060f178d12050be7.png)
 
 ## 4.7 dropbox
 

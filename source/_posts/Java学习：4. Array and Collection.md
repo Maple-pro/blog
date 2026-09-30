@@ -139,7 +139,7 @@ for(int i=0; i<a.length; i++{
 } //遍历方式2
 ```
 # 4.3 Colletion
-![Java集合框架图](https://img-blog.csdnimg.cn/20191019223739604.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDA0MjI3MA==,size_16,color_FFFFFF,t_70)
+![Java集合框架图](/assets/imported/326fac88b430121ea323.png)
 
 >  - 实线边框：实现类			
 >  -  折线边框：抽象类			

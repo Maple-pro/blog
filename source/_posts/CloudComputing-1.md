@@ -10,7 +10,7 @@ description: 介绍云计算和大数据
 
 ## 1. IaaS vs PaaS vs SaaS
 
-![preview](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/v2-1a82f8a4997b0ba53d801639d4c6706e_r.jpg)
+![preview](/assets/imported/95c40c5d46004d46be33.jpg)
 
 - IaaS: Infrastructure as a Service
   - a virtual machine
@@ -19,9 +19,9 @@ description: 介绍云计算和大数据
 
 ## 2. CAP Principle
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20210303161406.png"  />
+<img src="/assets/imported/0ec9b04da814efbaa42d.png"  />
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20210303161730.png"  />
+<img src="/assets/imported/3cd0f203c3c0b06c95f5.png"  />
 
 - Consistency（一致性）
   - 一个写操作返回成功，那么之后的读请求都必须读到这个新数据；如果返回失败，那么所有读操作都不能读到这个数据。所有节点访问同一份最新的数据。
@@ -48,7 +48,7 @@ description: 介绍云计算和大数据
 
 核心思想：如果无法做到强一致性，或者做到强一致性要付出很大的代价，那么应用可以根据自身业务特点，采用适当的方式来使系统达到最终一致性，只要对最终用户没有影响，或者影响是可接受的即可。
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20210303162448.png"  />
+<img src="/assets/imported/fc2491118d1fd2286e3f.png"  />
 
 ## 4. 奇数个节点（Zookeeper）
 

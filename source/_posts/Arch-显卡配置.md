@@ -9,7 +9,7 @@ description:
 
 前段时间电脑经常出现关机/重启时整个界面卡住，只能按住电源键强制重启的情况，到 [Arch Forum 发帖](https://bbs.archlinux.org/viewtopic.php?pid=2170412)后，发现是 NVIDIA 显卡驱动的问题，需要降级到 535xx。在降级的过程中发现，之前安装 Intel 显卡和 NVIDIA 显卡驱动时，安装了过时的驱动（博客害人，还是要看 wiki），因此这里将整个显卡驱动安装梳理一遍。
 
-![](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20240515-27e223-20240515155739.png)
+![](/assets/imported/fcf3b3850386d708e611.png)
 
 <!-- more -->
 
@@ -32,7 +32,7 @@ description:
 - lib32-vulkan-intel: Vulkan driver for Intel GPUs (32-bit)
 
 > 对于 Gen 11 及以上的 CPU，由于 xf86-video-intel 缺少对 11 代及以上 CPU 的支持，因此不要安装 xf86-video-intel，安装后可能导致界面卡死的情况。
-> ![](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20240515-a4bb0f-20240515161849.png)
+> ![](/assets/imported/0ffb4ca2d427472edc4c.png)
 
 ## 1.2 NVIDIA 显卡驱动
 
@@ -252,7 +252,7 @@ nvidia-smi
 
 使用：
 
-![](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20240515-4db948-20240515171441.png)
+![](/assets/imported/57d7c725498118c170bb.png)
 
 > 当界面卡住无响应时可以使用（内核 dump 时无法使用），SysRq 键即为 PrtSc 键。
 

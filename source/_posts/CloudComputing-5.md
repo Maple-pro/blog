@@ -18,7 +18,7 @@ proposers, acceptors, learners
 
 proposal, accept, majority, chosen, value
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210407142542380.png" alt="image-20210407142542380" style="zoom:80%;" />
+<img src="/assets/imported/4dbbecf1c4ff3a99af5f.png" alt="image-20210407142542380" style="zoom:80%;" />
 
 ## 1.1 算法的提出与证明
 
@@ -239,15 +239,15 @@ curator
 
 node-0001
 
-![image-20210412204429224](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210412204429224.png)
+![image-20210412204429224](/assets/imported/704e65f83ad0b559118d.png)
 
 node-0002
 
-![image-20210412204534447](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210412204534447.png)
+![image-20210412204534447](/assets/imported/75f1269b98e7d6065985.png)
 
 node-0003
 
-![image-20210412204616901](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210412204616901.png)
+![image-20210412204616901](/assets/imported/83beaad8eb4845cf34c9.png)
 
 可以发现有一个leader和两个follower。
 

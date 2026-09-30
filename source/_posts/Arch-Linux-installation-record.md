@@ -7,7 +7,7 @@ mathjax:
 description:
 ---
 
-![img-20230504143256](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20230504143256.png)
+![img-20230504143256](/assets/imported/f8b4bc78e6f07a0652e3.png)
 
 本文记录了 Arch Linux 和 Windows 11 双系统安装和基本配置的流程。
 
@@ -130,7 +130,7 @@ description:
 
 ### 2.2.2 图形界面安装
 
-![img-20230329164517](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20230329164517.png)
+![img-20230329164517](/assets/imported/22176e7db1ec822fa407.png)
 
 GNOME 安装：
 
@@ -143,7 +143,7 @@ GNOME 安装：
     2. 添加 `QT_QPA_PLATFORM=xcb` 到 `/etc/environment` 中
     3. 检测当前是 Wayland 还是 Xorg：`echo $XDG_SESSION_TYPE`
 
-![img-20230329144644](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20230329144644.png)
+![img-20230329144644](/assets/imported/f4ea82ae779ec0eb087c.png)
 
 KDE 安装：
 
@@ -151,9 +151,9 @@ KDE 安装：
 2. 安装 KDE：`pacman -S plasma sddm`
 3. 设置 sddm 开机自启：`systemctl enable sddm`
 
-![img-20230401195811](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20230401195811.png)
+![img-20230401195811](/assets/imported/5b64fb01696d8af33151.png)
 
-![img-20230504143057](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20230504143057.png)
+![img-20230504143057](/assets/imported/fe18faf116ea814307bf.png)
 
 > GNOME 切换为 KDE：`systemctl disable gdm-prime`
 
@@ -285,7 +285,7 @@ KDE 安装：
 
 > 注：在 KDE 中设置开机自启动时，需要再设置一下启动时的环境变量。
 >
-> ![img-20230629184926](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20230629184926.png)
+> ![img-20230629184926](/assets/imported/549b72c0d1f0d71a3157.png)
 
 flameshot shortcuts 设置：
 
@@ -297,7 +297,7 @@ flameshot shortcuts 设置：
 
 解决：在设置开机自启动时，需要设置环境变量。
 
-![img-20230629185221](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/20230629185221.png)
+![img-20230629185221](/assets/imported/45ac776a10e9fee37152.png)
 
 ### 2.3.8 其他
 

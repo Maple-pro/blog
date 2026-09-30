@@ -24,7 +24,7 @@ Blow we will introduce three examples: the world wide web, BitTorrent and Skype
 
 ## 1.1 World Wide Web (HTTP)
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409114932469.png" alt="image-20210409114932469" style="zoom:80%;" />
+<img src="/assets/imported/8562b52b4b9e75ab1e2e.png" alt="image-20210409114932469" style="zoom:80%;" />
 
 HTTP: Hypertext Transfer Protocol
 
@@ -36,7 +36,7 @@ Model: Client sends a request by writing to the connection, the server reads the
 
 ## 1.2 BitTorrent
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409115424186.png" alt="image-20210409115424186" style="zoom:80%;" />
+<img src="/assets/imported/596c3f0d1adc889e30bb.png" alt="image-20210409115424186" style="zoom:80%;" />
 
 BitTorrent is a program that allows people to share and exchange large files.
 
@@ -56,7 +56,7 @@ Furthermore, when a new client **joins the swarm**, it might tell this  new clie
 
 ## 1.3 Skype
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409120641088.png" alt="image-20210409120641088" style="zoom:80%;" />
+<img src="/assets/imported/5c1e81860d3cc14f3a62.png" alt="image-20210409120641088" style="zoom:80%;" />
 
 **Skype**: the popular voice, chat, and video service. You have two personal computers requesting data from each other
 
@@ -64,7 +64,7 @@ Furthermore, when a new client **joins the swarm**, it might tell this  new clie
 
 So the complication here is that if the client A wants to call the client B, it can’t open a connection. Skype  has to work around this.
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409120932994.png" alt="image-20210409120932994" style="zoom:80%;" />
+<img src="/assets/imported/a8a70adaf38600a1911d.png" alt="image-20210409120932994" style="zoom:80%;" />
 
 **Rendezvous server**: When you log into Skype, your client opens connections to a network of control servers.
 
@@ -72,11 +72,11 @@ So the complication here is that if the client A wants to call the client B, it 
 
 This is called a **reverse connection** because it  reverses the expected direction for initiating the connection. Client A is trying to connect to client B, but instead client B opens a connection to client A.
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409121246937.png" alt="image-20210409121246937" style="zoom:80%;" />
+<img src="/assets/imported/a1a19d284f07402ffe15.png" alt="image-20210409121246937" style="zoom:80%;" />
 
 What does Skype do if both clients are behind NATs?
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409121357730.png" alt="image-20210409121357730" style="zoom:80%;" />
+<img src="/assets/imported/9ee21d6de3a6c46fab03.png" alt="image-20210409121357730" style="zoom:80%;" />
 
 **Relay**: A kind of server. Relays can’t be  behind NATs.
 
@@ -84,7 +84,7 @@ If both client A and client B are behind NATs, then the communicate through a  r
 
 # 2. The 4 Layer Internet Model
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409122652010.png" alt="image-20210409122652010" style="zoom:80%;" />
+<img src="/assets/imported/62fe7a2ef247fe1d6af2.png" alt="image-20210409122652010" style="zoom:80%;" />
 
 Each layer  has a different responsibility,  with each layer building a  service on top of the one below,  all the way to the top where we  have the bi-directional reliable  byte stream communication  between applications.
 
@@ -100,7 +100,7 @@ The Link Layer's **job**: carry the data over one link at a time.
 
 ## 2.2 Network Layer
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409123615601.png" alt="image-20210409123615601" style="zoom:80%;" />
+<img src="/assets/imported/71d638b9f0a7bd28f88c.png" alt="image-20210409123615601" style="zoom:80%;" />
 
 The network layer's **job**: deliver packets end-to-end across the Internet from the source to the destination.
 
@@ -140,13 +140,13 @@ HTTP (Hypertext Transfer Protocol)
 
 Each layer communicates with its peer layer: each layer is only  communicating with the same  layer at the other end of the link  or Internet, without regard for  how the layer below gets the  data there.
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409125350838.png" alt="image-20210409125350838" style="zoom:80%;" />
+<img src="/assets/imported/cc69c28476bfc3d67f75.png" alt="image-20210409125350838" style="zoom:80%;" />
 
 ## 2.6 Other
 
 ### IP
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409125453888.png" alt="image-20210409125453888" style="zoom:80%;" />
+<img src="/assets/imported/f7242bc05760d94e741a.png" alt="image-20210409125453888" style="zoom:80%;" />
 
 IP: the thin waist of the Internet
 
@@ -154,7 +154,7 @@ IP is the only choice if we want to use the Internet.
 
 ### OSI Model
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409125603400.png" alt="image-20210409125603400" style="zoom:80%;" />
+<img src="/assets/imported/c2029a41e1ef4e98231a.png" alt="image-20210409125603400" style="zoom:80%;" />
 
 7-layer Open Systems Interconnection model --- OSI model
 
@@ -178,7 +178,7 @@ features:
 
 ## 3.1 The Internet Protocol
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409162154225.png" alt="image-20210409162154225" style="zoom:80%;" />
+<img src="/assets/imported/e99723fcb2fc1aeabb28.png" alt="image-20210409162154225" style="zoom:80%;" />
 
 **IP datagrams** consist of a header and some data.
 
@@ -192,7 +192,7 @@ IP send the datagram to the Link Layer that puts it inside a **Link Frame**, suc
 
 ## 3.2 The IP Service Model
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210409162645925.png" alt="image-20210409162645925" style="zoom:80%;" />
+<img src="/assets/imported/2ccb5cd808f96618d5fb.png" alt="image-20210409162645925" style="zoom:80%;" />
 
 The IP service sends **Datagrams** from end host to end host; it is **unreliable**, but makes a **best-effort** to deliver the datagrams. The network maintains **no per-flow state** associated with the datagrams.
 
@@ -219,7 +219,7 @@ The IP service sends **Datagrams** from end host to end host; it is **unreliable
 
 ## 3.5 IPv4 Datagram
 
-<img src="https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210603232035399.png" alt="image-20210603232035399" style="zoom:80%;" />
+<img src="/assets/imported/5d2cb6027d1493b29a31.png" alt="image-20210603232035399" style="zoom:80%;" />
 
 - Destination IP Address
 - Source IP Address

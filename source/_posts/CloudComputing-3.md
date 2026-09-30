@@ -13,11 +13,11 @@ description: 介绍云计算和大数据
 - 实现了本地环境与云端环境的高一致性
 - 通过6个Namespace和Cgroup为每个应用创建隔离的运行环境
 
-![image-20210317142915755](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210317142915755.png)
+![image-20210317142915755](/assets/imported/b8e2a2da1015186f70b5.png)
 
 # 2. Container VS VM (Virtual Machine)
 
-![image-20210317143240171](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210317143240171.png)
+![image-20210317143240171](/assets/imported/f8fe9a7896872e6a3df8.png)
 
 - Virtual Machine
   - Hypervisor：例如Win10等操作系统
@@ -31,7 +31,7 @@ description: 介绍云计算和大数据
   - 优点：占用资源小，响应速度快
   - 缺点：隔离性没有VM好（一定是缺点吗？）
 
-![image-20210317144952233](https://maples31-blog.oss-cn-beijing.aliyuncs.com/img/image-20210317144952233.png)
+![image-20210317144952233](/assets/imported/6eb8879a2ff1717d863f.png)
 
 
 
