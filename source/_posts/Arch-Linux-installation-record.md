@@ -4,7 +4,7 @@ tags: []
 categories: [记录]
 date: 2023-03-28 18:10:14
 mathjax:
-description:
+description: "记录 Intel 与 NVIDIA 双显卡设备上安装 Arch Linux 和 Windows 11 双系统的全过程，涵盖分区、GRUB 引导、桌面环境、输入法、常用软件及 HiDPI 配置，并整理双系统时间、蓝牙和文件互访等问题的处理方法。"
 ---
 
 ![img-20230504143256](/assets/imported/f8b4bc78e6f07a0652e3.png)

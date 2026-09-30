@@ -3,7 +3,7 @@ title: '云计算：5. 分布式锁服务Chubby'
 date: 2021-04-07 14:09:36
 tags:
 categories: [学习笔记, 云计算]
-description: 介绍google的分布式锁服务---Chubby
+description: "围绕分布式系统的强一致性整理 Paxos 的角色、两阶段流程与多数派机制，以议员投票示例分析提案竞争，并介绍 Multi-Paxos、Fast-Paxos 及 ZooKeeper 集群搭建实践。"
 ---
 
 > 这里我们讨论强一致性算法

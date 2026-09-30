@@ -4,7 +4,7 @@ tags: []
 categories: [记录]
 date: 2024-05-12 00:26:09
 mathjax:
-description:
+description: "从关机和重启时界面冻结的问题出发，梳理 Arch Linux 的 Intel、NVIDIA 驱动安装、535xx 版本降级、DRM 设置与双显卡切换，补充 PRIME 调用、SysRq 应急操作及外接屏幕配置记录。"
 ---
 
 前段时间电脑经常出现关机/重启时整个界面卡住，只能按住电源键强制重启的情况，到 [Arch Forum 发帖](https://bbs.archlinux.org/viewtopic.php?pid=2170412)后，发现是 NVIDIA 显卡驱动的问题，需要降级到 535xx。在降级的过程中发现，之前安装 Intel 显卡和 NVIDIA 显卡驱动时，安装了过时的驱动（博客害人，还是要看 wiki），因此这里将整个显卡驱动安装梳理一遍。

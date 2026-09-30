@@ -3,7 +3,7 @@ title: WordPress 建站记录
 date: 2021-03-13 18:11:00
 tags: 
 categories: [记录]
-description: Record how I build my WordPress site.
+description: "记录个人 WordPress 博客的搭建过程，包括域名与服务器选择、域名解析、远程连接及 Nginx、MySQL、PHP 的安装，并整理常用插件、主题、字体和表格样式的配置经验。"
 ---
 
 ## 域名和服务器选择

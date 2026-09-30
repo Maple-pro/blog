@@ -4,7 +4,7 @@ date: 2021-08-21 00:21:25
 tags: [浏览器]
 categories: [前端]
 mathjax: false
-description: "当用户请求一个站点时，浏览器做了什么准备工作去渲染页面？<br/>翻译自：https://developers.google.com/web/updates/2018/09/inside-browser-part2"
+description: "沿着地址栏输入 URL 到页面开始呈现的过程，介绍 Chrome 的导航流程：处理输入、发起请求、检查响应、选择渲染进程与提交导航，并讨论跨站导航、Service Worker 和导航预加载。"
 ---
 
 # Part 2. 在浏览器导航（Navigation）过程中，发生了什么？

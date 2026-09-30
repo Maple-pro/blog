@@ -3,7 +3,7 @@ title: 'Java EE: Spring'
 date: 2021-03-15 16:44:51
 tags: [JavaEE]
 categories: [学习笔记, JavaEE]
-description: Introduce to Spring framework.
+description: "整理 Spring 入门中的核心概念，包括 IoC、DI 与 AOP、面向对象的 SOLID 原则、Java 反射和注解机制，并记录依赖注入遇到多个接口实现时的处理细节。"
 ---
 
 > Spring; SpringMVC; Mybatis: ORM的一种(object ralation Mapping)，轻量级

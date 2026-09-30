@@ -3,7 +3,7 @@ title: Java学习：1. Introduction to Java
 date: 2021-03-13 19:07:36
 categories: [学习笔记, Java]
 tags: [Java]
-description: Introduce to java basic information
+description: "介绍 Java 程序从编辑、编译到类加载、字节码验证和执行的流程，整理 JVM、解释执行与 JIT 的关系，并对比 Java 与 C++ 的语言特性，补充类库与 Class 类的基础知识。"
 ---
 
 # 1.1 A Typical Java Development Environment

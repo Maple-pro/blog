@@ -3,7 +3,7 @@ title: "Codeforces 618 (Div.2)"
 date: 2021-03-13 19:40:36
 categories: [题解]
 mathjax: true
-description: Codeforces Round 618, div.2
+description: "整理 Codeforces Round 618 的题解与 C++ 实现，包含数组消零、中位数差值的证明、位运算下的最优首元素选择，以及 Aerodynamic 的解题记录。"
 ---
 
 ## 1300A. Non-zero*

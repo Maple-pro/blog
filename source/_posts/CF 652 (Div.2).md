@@ -3,7 +3,7 @@ title: "Codeforces 652 (Div.2)"
 date: 2021-03-13 19:24:36
 categories: [题解]
 mathjax: true
-description: Codeforces Round 652, div.2
+description: "记录 Codeforces Round 652 的前两题解法：利用正多边形外角判断 FashionanLee，定位二进制串中首个 1 和末个 0 处理 AccurateLee；RationalLee 部分尚待补充。"
 ---
 
 ## A. FashionanLee*

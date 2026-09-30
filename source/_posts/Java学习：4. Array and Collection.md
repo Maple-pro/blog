@@ -3,7 +3,7 @@ title: Java学习：4. Array and Collection
 date: 2021-03-13 19:14:36
 categories: [学习笔记, Java]
 tags: [Java]
-description: Introduce the array and collection in java.
+description: "整理 Java 枚举、数组与集合框架，介绍数组初始化及内存组织，对比 List、Set、Map 的常用实现，并讨论 equals、hashCode、排序比较器和迭代器的使用。"
 ---
 
 # 4.1 枚举

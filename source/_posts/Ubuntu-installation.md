@@ -4,7 +4,7 @@ tags: []
 categories: [记录]
 date: 2022-07-11 17:35:51
 mathjax:
-# description: 记录 Windows 和 Ubuntu 双系统的安装，以及 Ubuntu 的美化和配置
+description: "记录将 Ubuntu 20.04 安装到移动固态硬盘、保留本机 Windows 启动的过程，涵盖分区与引导修复、Clash 代理、开发工具安装、终端和桌面美化，以及 Ubuntu 与 iOS 的文件传输配置。"
 ---
 
 ![image-20220712162842874](/assets/imported/4fca2fed82c0d8eb2c89.png)

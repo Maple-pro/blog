@@ -3,7 +3,7 @@ title: "Edu Codeforces R 90 (Div.2)"
 date: 2021-03-13 19:20:36
 categories: [题解]
 mathjax: true
-description: Educational Codeforces Round 90, div.2
+description: "整理 Educational Codeforces Round 90 的前三题，分别用价格临界条件、0 与 1 数量的奇偶性，以及前缀遍历优化处理甜甜圈购买、01Game 和 Pluses and Minuses；第四题尚未展开。"
 ---
 
 ## A. Donut Shops*

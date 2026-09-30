@@ -3,7 +3,7 @@ title: unstated-next 实现组件间数据逻辑共享
 date: 2021-08-12 20:59:14
 tags: [React, Hooks, unstated-next]
 categories: [学习笔记, React]
-description: 介绍 unstated-next 这个 React 状态管理库，Context -> useContext -> unstated-next 这个过程中的演变
+description: "从 Context 和 useContext 的使用讲起，分析自定义 Hook 共享逻辑却不共享状态的问题，介绍 unstated-next 如何封装 Hook、注入 Provider 并访问共享状态，最后整理实际项目中的代码分层。"
 ---
 
 > https://github.com/jamiebuilds/unstated-next

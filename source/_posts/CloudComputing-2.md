@@ -3,7 +3,7 @@ title: '云计算：2. Google云计算'
 date: 2021-03-15 16:44:51
 tags: 
 categories: [学习笔记, 云计算]
-description: 介绍Google云计算的Google三宝：GFS, MapReduce, BigTable
+description: "整理 Google 云计算体系与 Hadoop 生态的对应关系，重点介绍 GFS 的角色分工、数据读写及容错设计，以及 MapReduce 的编程模型和故障处理，并关联 Java Stream 的数据处理方式。"
 ---
 
 # 云计算：2. Google云计算

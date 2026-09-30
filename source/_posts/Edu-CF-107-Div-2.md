@@ -4,7 +4,7 @@ date: 2021-04-13 23:04:31
 tags: [贪心, 构造算法, 大模拟]
 categories: [题解]
 mathjax: true
-description: Educational Codeforces Round 107, div.2
+description: "整理 Educational Codeforces Round 107 的 A、B、C 三题，涵盖评价分组的贪心策略、指定最大公约数长度的数值构造，以及只维护各颜色首张卡片位置的牌堆模拟，并附 C++ 实现。"
 ---
 
 ## A. Review Site

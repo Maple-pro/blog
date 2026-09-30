@@ -71,3 +71,33 @@
 @import 'post-copyright' if (hexo-config('creative_commons.post'));
 
 @import 'post-followme' if (hexo-config('follow_me'));
+
+// Description from front matter, displayed before the article content.
+.post-body .post-summary {
+  background: #f4f7fa;
+  border-left: 3px solid #6087a8;
+  border-radius: 0 6px 6px 0;
+  color: #465567;
+  margin-bottom: 32px;
+  padding: 18px 22px;
+  text-align: left;
+
+  .post-summary-label {
+    color: #527696;
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.9;
+    margin: 0;
+  }
+
+  +mobile() {
+    padding: 14px 16px;
+  }
+}

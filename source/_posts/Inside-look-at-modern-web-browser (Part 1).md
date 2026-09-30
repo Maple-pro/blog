@@ -4,7 +4,7 @@ date: 2021-08-17 22:04:04
 tags: [浏览器]
 categories: [前端]
 mathjax: false
-description: "介绍 Chrome 浏览器的架构以及 Servicification 和 Site Isolation 特性。<br/>翻译自: https://developers.google.com/web/updates/2018/09/inside-browser-part1"
+description: "翻译并梳理 Chrome 浏览器的多进程架构，从 CPU、GPU、进程与线程讲起，介绍各类浏览器进程的职责、多进程的优点，以及 Servicification 和站点隔离的设计。"
 ---
 
 # Part 1. CPU, GPU, 内存和多线程架构

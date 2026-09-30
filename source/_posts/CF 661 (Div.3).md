@@ -3,7 +3,7 @@ title: "Codeforces 661 (Div.3)"
 date: 2021-03-13 19:22:36
 categories: [题解]
 mathjax: true
-description: Codeforces Round 661, div.3
+description: "整理 Codeforces Round 661 的两道基础贪心题：排序后检查相邻元素差值解决 Remove Smallest，以两组礼物的最小值计算 Gifts Fixing 的最少调整次数，并附 C++ 代码。"
 ---
 
 > 我胡汉三又回来啦，这段时间会更新题解和MIT6.828的内容，可能会更其他的学习笔记什么的

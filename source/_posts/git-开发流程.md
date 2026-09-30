@@ -4,7 +4,7 @@ tags: [GIT]
 categories: [记录]
 date: 2021-09-14 20:34:21
 mathjax: false
-description: 记录常用的 git 开发流程
+description: "记录迭代分支与本地开发分支配合的 Git 工作流程，通过命令示例串联代码开发、提交、分支同步和合并操作，作为日常协作开发的查阅笔记。"
 ---
 
 远程迭代分支：`origin sprint_0804`

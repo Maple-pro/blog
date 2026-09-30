@@ -3,7 +3,7 @@ title: 'CS144: 1. Internet and IP'
 date: 2021-04-08 15:42:50
 tags:
 categories: [学习笔记, CS144]
-# description: Stanford课程CS144，介绍Internet和IP
+description: "整理 Stanford CS144 关于 Internet 与 IP 的课程笔记，从 HTTP、BitTorrent 和 Skype 的通信模式入手，介绍互联网四层模型、IP 服务与 IPv4 数据报，以及分组传输的基本概念。"
 ---
 
 # 1. Network Applications

@@ -3,7 +3,7 @@ title: '云计算：4. BigTable'
 date: 2021-03-31 14:12:25
 tags:
 categories: [学习笔记, 云计算]
-description: 介绍Google三宝中的分布式结构化数据表BigTable和HBase
+description: "记录 Bigtable 的基本数据模型：通过行关键字、列关键字与时间戳共同索引数据，将分布式结构化存储表示为多维映射表。当前内容聚焦数据模型。"
 ---
 
 # 云计算：4. BigTable

@@ -3,7 +3,7 @@ title: Java学习：2. Basic Java Grammar
 date: 2021-03-13 19:10:36
 categories: [学习笔记, Java]
 tags: [Java]
-description: Basic Java grammar, data type
+description: "整理 Java 基本类型与引用类型、对象和类在 JVM 中的位置，以及包装类、自动装箱和不变类的概念，补充静态方法、包与导入、对象比较和访问范围等基础语法笔记。"
 ---
 
 # 2.1 Data Type

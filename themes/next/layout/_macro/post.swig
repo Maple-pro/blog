@@ -154,9 +154,6 @@
             </span>
           {%- endif %}
 
-          {%- if post.description and (not theme.excerpt_description or not is_index) %}
-            <div class="post-description">{% if is_index %}{{ strip_html(post.description) | escape }}{% else %}{{ post.description }}{% endif %}</div>
-          {%- endif %}
 
         </div>
       </header>
@@ -166,6 +163,13 @@
     {### POST BODY ###}
     {#################}
     <div class="post-body{%- if post.direction and post.direction.toLowerCase() === 'rtl' %} rtl{%- endif %}" itemprop="articleBody">
+
+      {%- if not is_index and post.description %}
+        <aside class="post-summary" aria-label="文章摘要">
+          <span class="post-summary-label">摘要</span>
+          <p>{{ strip_html(post.description) | escape }}</p>
+        </aside>
+      {%- endif %}
 
       {# Gallery support #}
       {%- if not is_index and post.photos and post.photos.length %}
@@ -177,7 +181,7 @@
       {%- endif %}
 
       {%- if is_index %}
-        {%- if post.description and theme.excerpt_description %}
+        {%- if post.description %}
           <p>{{ strip_html(post.description) | escape }}</p>
           <!--noindex-->
           {%- if theme.read_more_btn %}

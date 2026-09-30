@@ -3,7 +3,7 @@ title: '云计算：1. 大数据与云计算'
 date: 2021-03-15 16:44:51
 tags: 
 categories: [学习笔记, 云计算]
-description: 介绍云计算和大数据
+description: "梳理大数据与云计算的基础概念，对比 IaaS、PaaS、SaaS，解释 CAP 中一致性、可用性与分区容错的取舍，以及 BASE 的最终一致性思想，并说明 ZooKeeper 集群采用奇数节点的原因。"
 ---
 
 # 云计算：1. 大数据与云计算

@@ -1,6 +1,6 @@
 ---
 title: Hello World
-description: How to use hexo
+description: "Hexo 默认入门文章，列出创建文章、启动本地服务器、生成静态文件和部署站点的基本命令，并提供对应的官方文档入口。"
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 

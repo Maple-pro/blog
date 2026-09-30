@@ -3,7 +3,7 @@ title: Java学习：3. Methods
 date: 2021-03-13 19:12:36
 categories: [学习笔记, Java]
 tags: [Java]
-description: Introduce the method-call stack and activation records in java.
+description: "从方法调用栈与栈帧解释 Java 方法的执行和返回，整理构造函数、重写与重载、参数传递、静态成员及常用流程控制，帮助理解方法调用与对象初始化之间的关系。"
 ---
 
 # 3.1 Method-Call Stack and Activation Records

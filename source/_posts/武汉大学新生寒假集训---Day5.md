@@ -3,7 +3,7 @@ title: 武汉大学新生寒假集训---Day5
 date: 2021-03-13 19:16:36
 categories: [题解]
 mathjax: true
-description: Editorial for training in WHU, day 5.
+description: "记录武汉大学新生寒假集训第五天的部分题解，涵盖结构体排序、公式推导、阶乘取模和斐波那契规律，并总结字符串读入、循环终止与整数溢出的注意事项。"
 ---
 
 > 开始写题解了，一方面做一个记录，一方面督促自己。奥里给！

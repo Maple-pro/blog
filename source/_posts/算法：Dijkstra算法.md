@@ -3,7 +3,7 @@ title: 算法：Dijkstra算法
 date: 2021-04-13 10:53:32
 tags: [图, dfs, 最短路]
 categories: [算法]
-description: Dijkstra + DFS的板子
+description: "整理 Dijkstra 与 DFS 配合处理多重最优标准的模板：先保存所有距离最短的路径，再遍历比较费用或其他指标，并以 PAT Travel Plan 展示前驱维护和路径选择的实现。"
 mathjax: true
 ---
 

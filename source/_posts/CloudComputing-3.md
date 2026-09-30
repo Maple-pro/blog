@@ -3,7 +3,7 @@ title: '云计算：3. 容器'
 date: 2021-03-17 14:12:43
 tags: [Docker]
 categories: [学习笔记, 云计算]
-description: 介绍云计算和大数据
+description: "介绍 Docker 镜像如何打包应用及依赖，对比容器与虚拟机的架构、资源开销和隔离特点，并列举 Kubernetes、Mesos、Docker Swarm 等容器编排引擎；网络与存储等章节尚待展开。"
 ---
 
 # 1. Docker镜像

@@ -3,7 +3,7 @@ title: 算法：SPFA算法
 date: 2021-04-14 19:06:09
 tags: [图, 最短路]
 categories: [算法]
-description: SPFA的板子
+description: "记录 SPFA 对 Bellman-Ford 的队列优化思路，只在顶点距离变化后继续松弛相关边，并给出伪代码、C++ 模板及入队状态维护方式，作为最短路算法的查阅笔记。"
 mathjax: true
 ---
 

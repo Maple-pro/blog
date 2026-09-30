@@ -3,7 +3,7 @@ title: "Codeforces 620 (Div.2)"
 date: 2021-03-13 19:30:36
 categories: [题解]
 mathjax: true
-description: Codeforces Round 620, div.2
+description: "整理 Codeforces Round 620 的解题思路与实现，重点讨论回文字符串拼接、温度可行区间维护，以及根据大小关系构造最短和最长 LIS 的排列，并记录编码中的注意事项。"
 ---
 
 今天被自己写的代码恶心到了……挂出来引以为戒
