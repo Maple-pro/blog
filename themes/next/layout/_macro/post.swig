@@ -155,7 +155,7 @@
           {%- endif %}
 
           {%- if post.description and (not theme.excerpt_description or not is_index) %}
-            <div class="post-description">{{ post.description }}</div>
+            <div class="post-description">{% if is_index %}{{ strip_html(post.description) | escape }}{% else %}{{ post.description }}{% endif %}</div>
           {%- endif %}
 
         </div>
@@ -168,7 +168,7 @@
     <div class="post-body{%- if post.direction and post.direction.toLowerCase() === 'rtl' %} rtl{%- endif %}" itemprop="articleBody">
 
       {# Gallery support #}
-      {%- if post.photos and post.photos.length %}
+      {%- if not is_index and post.photos and post.photos.length %}
         <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
           {%- for photo in post.photos %}
             <img src="{{ url_for(photo) }}" itemprop="contentUrl">
@@ -178,7 +178,7 @@
 
       {%- if is_index %}
         {%- if post.description and theme.excerpt_description %}
-          <p>{{ post.description }}</p>
+          <p>{{ strip_html(post.description) | escape }}</p>
           <!--noindex-->
           {%- if theme.read_more_btn %}
             <div class="post-button">
@@ -189,7 +189,7 @@
           {%- endif %}
           <!--/noindex-->
         {% elif post.excerpt %}
-          {{ post.excerpt }}
+          <p>{{ strip_html(post.excerpt) | escape }}</p>
           <!--noindex-->
           {%- if theme.read_more_btn %}
             <div class="post-button">
@@ -200,7 +200,7 @@
           {%- endif %}
           <!--/noindex-->
         {% else %}
-          {{ post.content }}
+          <p>{{ strip_html(post.content) | escape }}</p>
         {%- endif %}
       {% else %}
         {{ post.content }}
